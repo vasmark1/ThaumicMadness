@@ -1,0 +1,35 @@
+package com.vasmark.thaumicmadness.mixins;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.item.ItemStack;
+
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Redirect;
+
+import com.vasmark.thaumicmadness.client.AtlasRevealerHandler;
+import com.vasmark.thaumicmadness.item.ModItems;
+
+import makeo.gadomancy.client.renderers.tile.RenderTileNodeBasic;
+import thaumcraft.api.nodes.IRevealer;
+
+@Mixin(value = RenderTileNodeBasic.class, remap = false)
+public class MixinRenderTileNodeBasic {
+
+    @Redirect(
+        method = "renderTileEntityAt(Lnet/minecraft/tileentity/TileEntity;DDDFF)V",
+        at = @At(
+            value = "INVOKE",
+            target = "Lnet/minecraft/entity/player/InventoryPlayer;armorItemInSlot(I)Lnet/minecraft/item/ItemStack;",
+            remap = true))
+    private static ItemStack mymodid$revealGadomancyNodes(InventoryPlayer inventory, int slot) {
+        ItemStack realStack = inventory.armorItemInSlot(slot);
+        if (slot == 3 && (realStack == null || !(realStack.getItem() instanceof IRevealer))) {
+            if (AtlasRevealerHandler.hasThaumonomiconAtlas(Minecraft.getMinecraft().thePlayer)) {
+                return new ItemStack(ModItems.itemThaumonomiconAtlas);
+            }
+        }
+        return realStack;
+    }
+}

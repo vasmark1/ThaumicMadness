@@ -1,0 +1,155 @@
+tc.research_category.ADVTHAUM=Advanced Thaumaturgy
+itemGroup.advthaum=Advanced Thaumaturgy
+tc.research_name.TESTBUILD=Test Build Notes
+tc.research_text.TESTBUILD=DISCLAIMER
+
+# block names
+tile.blockAltarDeployer.name=Altar Deployer
+
+tile.blockWandbench.name=Wandbench
+at.research.wandbench.title=Wandbench
+at.research.wandbench.desc=Tool Tinkering
+at.research.wandbench.pg1=Dummy
+
+tile.at.modifier.name=Node Modifier
+tile.at.modifier.desc=Allows you to slowly modify jarred|nodes using various essentia types.
+
+tile.at.fertilizer.name=Thaumic Fertilizer
+tile.at.fertilizer.desc=Keeps a 8x8 area of farmland hydrated,|and randomly fertilizes any|saplings or crops.
+
+item.at.mercurialrod.name=Mercurial Rod
+item.at.mercurialrod.desc=A length of crystallized silverwood,|veined with gleaming rivulets|of solidified quicksilver.
+
+item.at.endstonechunk.name=Infused Endstone Chunk
+
+item.at.mercurialwand.name=Mercurial Crystal Wand
+item.Wand.mercurial.rod=Mercurial
+
+item.at.aerosphere.name=Aerosphere
+
+item.at.arcanecrystal.name=Arcane Crystal
+item.at.arcanecrystal.0.name=Inert Arcane Crystal
+item.at.arcanecrystal.1.name=Recharge Crystal
+item.at.arcanecrystal.2.name=Compound Drain Crystal
+item.at.arcanecrystal.3.name=Drain Multiplier Crystal
+item.at.arcanecrystal.4.name=Stabilizer Crystal [WIP]
+item.at.arcanecrystal.5.name=Vis Discount Crystal
+item.at.arcanecrystal.6.name=Potency Crystal
+
+item.at.arcanecrystal.20.name=Flux Dissipation Crystal
+item.at.arcanecrystal.21.name=Watchful Crystal
+item.at.arcanecrystal.22.name=Healing Crystal
+item.at.arcanecrystal.23.name=Shocking Crystal
+item.at.arcanecrystal.24.name=Burning Crystal
+item.at.arcanecrystal.25.name=Frosty Crystal
+
+at.microlith.0.name=Microlith Base
+at.microlith.1.name=Flux Dissipator
+at.microlith.2.name=Watchful Eye [WIP]
+at.microlith.3.name=Healing Sentry [WIP]
+at.microlith.4.name=Electrocution Sentry [WIP]
+at.microlith.5.name=Burning Sentry [WIP]
+at.microlith.6.name=Packed Ice Sentry [WIP]
+
+chat.microlith.activated=%s activated
+chat.microlith.deactivated=%s deactivated
+
+
+at.research.microlithflux.pg1=Drawing on the properties of both Entropy and Ordo, you've affixed a crystal that will evaporate nearby flux goo and gas.  When evaporating gas, there is a chance it will recover some of the taint in the form of Vitium.
+at.research.microlithwatcher.pg1=Imbuing a crystal with Sensus has created a crystal that will keep an eye on chunks around it, chunkloading them.  It will load a 3x3 area around the chunk it is placed in.  Right click the Microlith to toggle a border outlining the loaded chunks.
+
+tile.at.creativenode.name=Creative Aura Node
+tile.at.creativenode.desc=Places an aura node that contains 100 of each|primal aspect, and never drains.|Creative Only
+
+tile.at.etherealjar.name=Ethereal Jar
+item.at.etherealjar.name=Ethereal Jar
+tile.at.etherealjar.desc=A slightly advanced version of the|Warded Jar, capable of holding 256 essentia.  They are incredibly dense, though, and only stack to 4.
+
+tile.at.essentiaengine.name=Essentia Engine
+tile.at.essentiaengine.desc=Consumes various types of essentia|from nearby jars to produce energy.
+
+item.at.voidcage.name=Wand Focus: Void Cage
+
+at.research.mercurialcore.title=Mercurial Wand Core
+at.research.mercurialcore.desc=Five, five, five rods in one!
+at.research.mercurialcore.pg1=You've discovered a way to infuse a nether star, liquid quicksilver and the essence of multiple silverwood wand cores into a new core that can hold much larger amounts of vis.<BR><LINE><BR>"What a delightful find!  The Wither had in it's possession (I avoid thinking about what it's made of, exactly) an intricate, beautiful crystal of some sort.  After peering through  my Thaumometer at this jewel for days on end, I discovered a way to infuse the crystal and several silverwood cores, along with some quicksilver, into a remarkable
+at.research.mercurialcore.pg2=wand core capable of storing vast amounts of vis.<BR>This will certainly make node collecting easier, as well as clear up some room in my already-crowded satchel.<BR>The creation process is marvelously complex; the infusion altar shuddered and nearly exploded upon my first attempt to craft this beauty.  The essentia required to stabilize the infusion is quite excessive; I must restock my supplies posthaste..."<BR><BR>"Addendum:  It appears that the fluid nature of the mercurial quicksilver allows this core to adapt its capacity to that of any wand core you've discovered, to a point.  Absolutely amazing, this thing is."
+
+at.research.mercurialwand.title=Mercurial Crystal Wand
+at.research.mercurialwand.desc=(Almost) all the vis!
+at.research.mercurialwand.pg1=The fruits of long hours of experimenting, resource collecting, and a significant amount of flux goo and gas cleanup, explosions, lightning zaps, and disintegrated caps gleams before you in all it's remarkable glory.  The Mercurial Wand, capable of storing enough vis to last the entire day.  Not only that, the wand can be enhanced and upgraded via various crystals.<BR><LINE><BR>"At last, it is done, and it is a breathtaking thing to behold.  Sunlight glints off of the gleaming crystal rod, and reflects sharply
+at.research.mercurialwand.pg2=off of the solidified quicksilver inlaid in intricate rune patterns upon the handle.  I am the envy of thaumaturgists everywhere, but I will not hoard this knowledge to myself.  Discoveries such as this can benefit everyone, and I am no knowledge hoarder."
+
+at.research.nodemodifier.title=Node Modifier
+at.research.nodemodifier.desc=They're not all bad...
+at.research.nodemodifier.pg1=After intently studying the relationship between vis and essentia, you have deduced a method to change the very nature of aura nodes.  Simply place the required essentia nearby, then place the required essences on nearby pedestals.  Finally, place a jarred node on the modifier and right click the modifier to open the GUI.  Essentia and essence types can be viewed by selecting an operation.<BR>Pedestal placement must be within 4 blocks, but is not required to be symmetrical like the infusion altar pedestals.  An example setup is provided on the Mystical Construct page.
+at.research.nodemodifier.pg2="I knew it!  They are not all lost!  While the practice of jarring nodes more often than not tends to weaken them to the point of being nearly useless, they are still salvagable, albeit with some essentia and a few essences.  After some more work, I have discovered a way to increase the node's maximum aspect amount, as well as actually adding an aspect to a node.  Brilliant!"
+
+at.research.fertilizer.title=Thaumic Fertilizer
+at.research.fertilizer.desc=Ermahgerd, WERTER SPERLINKLURZ!
+at.research.fertilizer.pg1=While not what one would call 'advanced', you have cobbled together a device that consumes the extra Aqua essentia you have laying about to water and fertilize an 8x8 swath of farmland or saplings around the sprinkler.  Because it is not directly fueled with bonemeal, the fertilization process is random, but it does occur often enough to merit the active collection of Aqua essentia.<BR><LINE><BR>"It is an invention of convenience, not of cutting edge experiementation, but it does keep those blasted golems busy."
+
+at.research.etherealjar.title=Ethereal Jar
+at.research.etherealjar.desc=*crashes through wall* OHHH YEAH!
+at.research.etherealjar.pg1=Your research of essentia's application to mystical artifacts through infusion have lead you to the ultimate conclusion that every mid-level thaumaturge dreads to hear; I need more!  By combining several mundane Warded Jars with various ingredients, you can create a stronger jar with an inside bigger than the outside (how does that happen?).<BR><LINE><BR>"A fellow colleague, a devilish succubus of a woman, was showing off her infusion altar setup to me one evening.  There were jars littered EVERYWHERE.  Some of her infusions required more essentia than even
+at.research.etherealjar.pg2=my wildest recipes.  We got to discussing the application of Vacuos to the Warded Jar, but the jar just couldn't handle the pressure.  However, by replacing the plain slab lid with several Silverwood pieces, coating the inside of the glass with Quicksilver, and reinforcing the structure with some crystal cluster, we were able to create a jar capable of storing four times the normal amount of essentia.  Strangely enough, they are the same size as a plain Warded Jar, leading me to believe there is some physics-defying going on here.  I love thaumaturgy!"
+
+at.research.essentiaengine.title=Essentia Engine
+at.research.essentiaengine.desc=Essentia-lly free power!
+at.research.essentiaengine.pg1=They're everywhere.  Jars and jars... and JARS of essentia.  Now, something to use up some of it.<BR>Produces 10mj/t, 1800 mj total per coal equivalent. (yes, recipe needs nerfed - Lyc)<LINE>"I simply can't tolerate dumping excess essentia into the air, but there is not much to use some of it for.  Until now.  This little 'engine' should burn off any of the primal aspects, as well as Herba, Arbor, Saxum, and Potentia.  Perhaps in time, I can modify it to use other types."
+
+at.research.voidcage.title=Wand Focus Void Cage
+at.research.voidcage.desc=?
+at.research.voidcage.withtt.pg1=Impressed by the usefulness of the Dislocation Focus, you have concocted a method to imbue one with enough magic to temporarily support life inside whatever space the focus crams a block into.<BR><LINE><BR>"Add a little Aer to allow the subject to breathe, some Messis and Aqua to support proper digestion, and X to slow the creature's metabolism to near nothing, so to preserve their life.  It's probably not a great idea to leave the subject inside the Focus for too long, the void seethes with Vitium and it tends to corrupt the target before too long."
+at.research.voidcage.nott.pg1=You have concocted a method to imbue a crystal with enough magic to temporarily support life inside a small pocket void.<BR><LINE><BR>"Add a little Aer to allow the subject to breathe, some Messis and Aqua to support proper digestion, and X to slow the creature's metabolism to near nothing, so to preserve their life.  It's probably not a great idea to leave the subject inside the Focus for too long, the void seethes with Vitium and it tends to corrupt the target before too long."
+
+at.research.arcanecrystal.title=Arcane Crystals
+at.research.arcanecrystal.desc=No such thing as overpowered.
+at.research.arcanecrystal.pg1=The End contains obelisks very similar to the totem structures we find in the Overworld.  They appear to draw energy directly from the endstone present.  You've come up with a way to infuse magical properties into the endstone.  Smelting the chunk results in an inert arcane crystal, ready for various thaumaturgical applications.<LINE>"The dragon was no match for us without his healing obelisks.  Hmm, healing obelisk..."
+
+at.research.rechargeupgrade.desc=It keeps going and going and going and...
+at.research.rechargeupgrade.pg1=By combining the recharging properties of the six basic wand cores and infusing them into an Arcane Crystal, you were able to fashion an upgrade for the Mercurial Wand that recharges the wand up to 15% of it's maximum capacity.<LINE>"There!  That should restore the wand's vis just enough for me to jar a node, if necessary."
+at.research.upgradedrain.pg1=Mixing some of the alien properties of ender pearls with a hodgepodge of seemingly random items into an Arcane Crystal results in a Mercurial Wand upgrade that somehow doubles the amount of vis received when tapping a node.<LINE>"This is quite nice.  This crystal allows the wand to drain one vis from a node, but receive two.  That'll cut recharge time in half.  I did find that surrounding a potato with nasty spider eyes quickly made it poisonous."
+at.research.upgradecompound.pg1=Infusing the properties of several arcane furnaces into an Arcane Crystal has resulted in a Mercurial Wand upgrade that can drain compound aspects from nodes and break them down into their primal aspects.  The amazing thing, however, is that the more complex the aspect, the more primal aspects you receive.<LINE>"Oh my...  I knew breaking down compound aspects would be amazing, but I had no idea you could net ten primal vis from one point of a compound aspect."
+at.research.upgradediscount.pg1=Taking several pieces of Enchanted Fabric with it's natural ability to reduce vis cost, you add the stability of crystal clusters, and impart those qualities into an Arcane Crystal.  The result is an upgrade for the Mercurial Wand that gives a 10% vis discount.<LINE>"If we keep developing gear that imparts a vis discount, we will soon be able to recharge our wands simply by crafting items."
+at.research.upgradestabilizer.pg1=Drawing upon the properties of the purest Ordo clusters, you have imparted an Arcane Crystal with the ability to significantly reduce both the initial instability of an infusion, as well as limiting the rising instability caused by missing items in an infusion while you are close to the altar.<LINE>"Pssh, candles?  Skulls all over my floor?  I don't bother with that rot any more, I have THIS!"  *evil cackle which trails off into akward silence*
+at.research.upgradepotency.pg1=Combinng many of the properties of items used in various foci, you've created an Arcane Crystal that gives a built-in Potency II enchant that stacks with any actual enchantments alreadyt present on the wand.<LINE>"Potency III is fine.  But Potency V?" *cackles as he electrocute various things*
+
+at.research.microlith.title=The Microlith
+at.research.microlith.desc=?
+at.research.microlith.pg1=They randomly dot the landscape, a coalesced knot of dark energy tainting the nearby land.  To those who have access to other worlds, they occasionally loom over the landscape, a much larger version that lacks the corrupt node inside.  Through diligent study and hard work, you have uncovered a way to both purify and harness these malignant energies, and repurpose them for dozens of uses.<LINE>Don't worry.  Many, MANY fun things to come! - Lycaon
+at.research.microlith.pg2="They make me sick, and send chills down my spine, but the energy they contain is immense.  Whipping out my trusty Pickaxe of the Core, I harvest the dark totem, careful to jar the node in the top for purification in the Node Modifier.  The totems and tiles... they can be repurposed.  While I cannot directly cleanse their taint, a properly fashioned crystal on the top should replace the old sinister node and redirect some of that awesome power."<BR>"For a while, I debated calling them microliths, but a fellow thaumaturge suggested Microliths, which seems less silly.  I did reply, though, 'You sure know how to kill a joke.'"
+
+
+
+at.nodeModifier.start=Start
+at.nodeModifier.beginText=Begin modification by placing a jarred node on the Node Modifier.
+at.nodeModifier.invalidBeginText=Invalid modification target.  Begin modification by placing a jarred node on the Node Modifier.
+at.nodeModifier.idle.name=Idle
+at.nodeModifier.addPure.name=Add Pure
+at.nodeModifier.addAspect.name=Add Aspect
+at.nodeModifier.addBright.name=Add Bright
+at.nodeModifier.addHungry.name=Add Hungry
+at.nodeModifier.addSinister.name=Add Sinister
+at.nodeModifier.addTaint.name=Add Tainted
+at.nodeModifier.removePale.name=Remove Pale
+at.nodeModifier.increaseAspect.name=Increase Aspect
+at.nodeModifier.removeFade.name=Remove Fading
+at.nodeModifier.removeHunger.name=Remove Hungry
+at.nodeModifier.removeTaint.name=Remove Tainted
+at.nodeModifier.makeStable.name=Remove Unstable
+at.nodeModifier.removeSinister.name=Remove Sinister
+at.nodeModifier.idle.desc=Idle
+at.nodeModifier.addPure.desc=Allows you to infuse a node with <something>, transforming it to a Pure node.
+at.nodeModifier.addAspect.desc=Allows you to infuse a node with a brand new aspect.
+at.nodeModifier.addBright.desc=Allows you to boost a node's brightness, increasing it's rate of regeneration.
+at.nodeModifier.addHungry.desc=Allows you to corrupt a node, causing it to consume anything in it's vicinity.
+at.nodeModifier.addSinister.desc=Infuses a node with Exanimus, weaving darkness into it and causing it to become Sinister.
+at.nodeModifier.addTaint.desc=Allows you to corrupt a node with Vitium, causing it to become tainted.
+at.nodeModifier.removePale.desc=Allows you to strengthen a node with Auram, causing it to become normal, and thus increasing it's regeneration rate.
+at.nodeModifier.increaseAspect.desc=Allows you to strengthen a node's existing aspects with Auram, causing it to incrase the node's maximum capacity by one.
+at.nodeModifier.removeFade.desc=Allows you to infuse a node with Auram, causing it to become stronger, and able to regenerate it's aspects.
+at.nodeModifier.removeHunger.desc=Allows you to imbue a node with Granum, sating it's violent hunger and returning it to normal functionality.
+at.nodeModifier.removeTaint.desc=Allows you to corrupt a node with Ordo, filtering the tainted essence from the node.
+at.nodeModifier.makeStable.desc=Allows you to corrupt a node with Ordo, stabilizing the weak node..
+at.nodeModifier.removeSinister.desc=Removes the dark energies from a node, canceling out it's Sinister quality.

@@ -1,0 +1,37 @@
+tc.research_category.KNOWLEDGE=Thaumaturgical Knowledge
+knowledge_research_page.dupe.1=Your tests with the multiplication of simple objects led you you to conquer far greater goals. Now most non-renewable resources sprout from your intellect.<BR>Some of the rarest materials still elude you, but one day...
+tc.research_name.DUPE=Additional duplications
+tc.research_text.DUPE=Alchemy at its finest.
+knowledge_research_page.ent.1=Perditio is no doubt one of the most interesting aspects you've encountered so far.<BR>Now you can harness its full potential.
+tc.research_name.ENT=Additional entropic processings
+tc.research_text.ENT=Is this useful?
+knowledge_research_page.man.1=The very definition of thaumaturgy is to use magic to give new shapes and purposes to pre-existing objects.<BR>But finding new ways to synthesize them is an excellent trick, too.
+tc.research_name.MAN=Additional manufactures
+tc.research_text.MAN=Farm all the things!
+knowledge_research_page.thaumicgen.1=Your trials with the Thaumatorium finally gave their fruits. While even mundane men are aware of how lava and water can react and form cobblestone, this peculiar device is able to replicate that attribute, if provided with Perditio centivis and with a cobblestone block directly underneath.<BR>Also, it seems capable to store some fluids inside.<BR><BR>You wonder what adding essentia to the mix could bring to the table...
+tc.research_name.THAUMICGEN=Thaumic generator
+tc.research_text.THAUMICGEN=The answer to all your problems.
+knowledge_research_page.thaumicgen.2=Digging deeper into your new toy's nature brought some interesting news. While if supplied with Perditio vis it will generate cobblestone, it will try to replicate the block that stands under it and, if a way to alchemize the latter if found, to draw essentia and vis.<BR>Some recipes may require a fluid...<BR><BR>1) Cobblestone: §8Perditio§0 CV.<BR>2) Dirt:§3 Aqua§0 CV,§2 Terra§0 essentia.<BR>3) Obsidian:§8 Ordo§0 CV,§3 Aqua§0 essentia, 1 lava bucket.<BR><BR>It may be able to replicate even more things you don't know about yet...
+knowledge_research_page.shardore.1=While digging, you noticed that you could drain with your wand some vis from infused ores. However, that vis appeared not adapt to being siphoned and precipitated in ethereal essence instead.<BR>What remained was a curious crystallized stone, which seems imbued with...something. It has no magic per se, but you can sense a strong affinity...
+knowledge_research_page.shardore.2=Further research revealed that this stone can be converted back to any infused ore, if soaked in some primal essentia and a whiff of §5Praecantatio§0. Right now, it sounds not too useful.<BR> If only you could figure a way to mass-produce this stone...
+tc.research_name.SHARDORE=Primal shard crystallization
+tc.research_text.SHARDORE=Sine qua non
+
+
+
+itemGroup.knowledge=Thaumaturgical Knowledge
+
+# VERSION
+tk.version.outdated=Your Thaumaturgical Knowlegde build is outdated.<BR>Latest build is %s, you are running %s.
+tk.version.uptodate=You have the latest Thaumaturgical Knowledge build. Good job!
+
+
+
+tile.benway_knowledge_thaumtank.name=Thaumaturge's Tank
+tile.benway_knowledge_dummytg.0.name=LOLQUE
+tile.benway_knowledge_dummytg.4.name=Thaumic Generator
+tile.benway_knowledge_dummytg.9.name=Thaumic Generator
+tile.benway_knowledge_misc.0.name=Imbued Stone
+tile.benway_knowledge_misc.1.name=Dio cancaro
+tile.benway_knowledge_wooden.0.name=Thaumaturge's Shelve
+

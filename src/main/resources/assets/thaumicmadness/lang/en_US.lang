@@ -1,0 +1,71 @@
+# Creative Tab
+itemGroup.thaumicmadness=Thaumic Madness
+
+# Blocks
+tile.thaumicmadness.infused_dirt.name=Infused Earth
+
+# Warp Overlay Tooltip
+mymod.warp.title=Warp Level
+mymod.warp.perm=Permanent Warp
+mymod.warp.sticky=Normal Warp
+mymod.warp.temp=Temporary Warp
+mymod.warp.sane=Your mind is completely clear and sane.
+mymod.warp.minor=You feel a faint, distant whisper...
+mymod.warp.moderate=Unsettling visions cloud your mind.
+mymod.warp.severe=Madness and eldritch horrors consume your thoughts!
+
+# Warp NEI Buttons
+mymod.warp.btn.clear.title=Clear Warp (0)
+mymod.warp.btn.clear.desc=Resets all permanent, normal, and temporary warp to zero.
+mymod.warp.btn.max.title=Max Warp (100)
+mymod.warp.btn.max.desc=Sets warp to high eldritch levels (50 perm + 50 sticky).
+mymod.warp.btn.sub.title=Reduce Warp (-10)
+mymod.warp.btn.sub.desc=Removes 10 points of warp (temporary first, then sticky, then permanent).
+mymod.warp.btn.add.title=Increase Warp (+10)
+mymod.warp.btn.add.desc=Adds 10 points of temporary warp.
+
+# Chat feedback messages
+mymod.warp.msg.cleared=§d[Thaumic Madness] §aAll Warp levels have been cleared to 0.
+mymod.warp.msg.added=§d[Thaumic Madness] §cAdded %s points of temporary Warp.
+mymod.warp.msg.reduced=§d[Thaumic Madness] §bReduced %s points of Warp.
+mymod.warp.msg.max=§d[Thaumic Madness] §5Warp set to Maximum level (100).
+
+# Thaumcraft Research
+tc.research_category.MYMOD=Thaumic Madness
+tc.research_name.INFUSED_DIRT=Infused Earth
+tc.research_text.INFUSED_DIRT=[TM] Basic soil infusion
+tc.research_page.INFUSED_DIRT.1=By channeling the elemental energy of Terra into common soil on the Infusion Altar, you have created Infused Earth. This mystical soil resonates with natural earthy vibrations, serving as a fertile foundation for advanced thaumaturgical botany and alchemy.
+
+tc.research_name.CONSTANT_VIGILANCE=Constant Vigilance
+tc.research_text.CONSTANT_VIGILANCE=[TM] Passive sanity sensing
+tc.research_page.CONSTANT_VIGILANCE.1=Keeping the Sanity Checker in your inventory now continuously monitors your mental stability, displaying the Warp meter directly on your interface without needing to hold the device.
+
+# Thaumaturgical Atlas Items and Research
+item.thaumonomicon_atlas.name=All-Seeing Thaumonomicon
+item.thaumonomicon_atlas.desc1=§6Knowledge of the Cosmos and the Earth
+item.thaumonomicon_atlas.desc2=§b[Shift + Right-Click] §7Open Aura Node Atlas
+item.thaumonomicon_atlas.desc3=§5All-Seeing Eye: Reveals aura nodes and vis flows
+tc.research_name.THAUMONOMICON_ATLAS=All-Seeing Thaumonomicon
+tc.research_text.THAUMONOMICON_ATLAS=Unification of Knowledge, Revealing, and Cartography
+tc.research_page.THAUMONOMICON_ATLAS.1=By combining Goggles of Revealing, a Thaumometer, and a Vis-sensitive Amulet with your Thaumonomicon on an Infusion Matrix, you have created the All-Seeing Thaumonomicon.<BR>This mystical tome grants you the vision of Goggles of Revealing simply while carried in your inventory.<BR>Right-clicking opens your Thaumonomicon as usual, while Shift + Right-Clicking opens the magical Node Atlas to track and locate all surveyed aura nodes.
+tc.research_page.THAUMONOMICON_ATLAS.2=The built-in Atlas features compass navigation pointing towards any selected aura node in the world.
+
+# Node Tracker GUI
+nodetracker.gui.title=Aura Node Atlas
+nodetracker.gui.search=Search...
+nodetracker.gui.empty=No nodes recorded yet. Right-click an Aura Node with a Thaumometer to add it!
+nodetracker.type.normal=Normal
+nodetracker.type.unstable=Unstable
+nodetracker.type.dark=Sinister
+nodetracker.type.tainted=Tainted
+nodetracker.type.hungry=Hungry
+nodetracker.type.pure=Pure
+nodetracker.mod.bright=Bright
+nodetracker.mod.pale=Pale
+nodetracker.mod.fading=Fading
+nodetracker.copied=Coordinates copied to clipboard!
+nodetracker.target_cleared=Compass target cleared
+nodetracker.btn.clear_target=Clear Target
+nodetracker.hud.wrong_dim=Node in another dimension
+nodetracker.hud.arrived=You arrived at the aura node!
+nodetracker.hud.tracking=Tracking node

@@ -1,5 +1,18 @@
 // Add any additional repositories for your dependencies here.
 
 repositories {
-
+    maven {
+        url = "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url = "https://maven.covers1624.net"
+    }
+    maven {
+        name = "GTNH Maven"
+        url = "https://nexus.gtnewhorizons.com/repository/public/"
+    }
 }
+

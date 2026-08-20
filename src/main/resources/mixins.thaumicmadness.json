@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.vasmark.thaumicmadness.mixins",
+  "refmap": "mixins.thaumicmadness.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinInventoryPlayer"
+  ],
+  "client": [
+    "MixinTileNodeRenderer",
+    "MixinRenderTileNodeBasic",
+    "MixinRenderEventHandler",
+    "MixinAutomagyRenderEventHandler",
+    "MixinTileInfusedBlockOreRenderer"
+  ]
+}

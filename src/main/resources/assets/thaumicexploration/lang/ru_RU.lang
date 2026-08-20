@@ -1,0 +1,360 @@
+----Item Names----
+item.thaumicexploration:tentacleRing.name=Кольцо щупальца
+item.thaumicexploration:stabilizerBelt.name=Таумостатический стабилизатор
+item.thaumicexploration:pureZombieBrain.name=Исцелённый мозг зомби
+item.thaumicexploration:transmutationCore.name=Стержень трансмутации
+item.thaumicexploration:transmutationStaffCore.name=Стержень посоха трансмутации
+item.thaumicexploration:amberCore.name=Янтарный стержень
+item.thaumicexploration:amberStaffCore.name=Янтарный стержень посоха
+item.thaumicexploration:breadCore.name=Багетный стержень
+item.thaumicexploration:necroStaffCore.name=Некромантический стержень
+item.thaumicexploration:capSojourner.name=Наконечник странника
+item.thaumicexploration:capSojournerInert.name=Инертный наконечник странника
+item.thaumicexploration:capMechanist.name=Наконечник механика
+item.thaumicexploration:capMechanistInert.name=Инертный наконечник механика
+item.thaumicexploration:maskEvil.name=Маска жестокости
+item.thaumicexploration:bootsMeteor.name=Метеорные сапоги
+item.thaumicexploration:bootsComet.name=Кометные сапоги
+item.thaumicexploration:runicBootsMeteor.name=Рунические метеорные сапоги
+item.thaumicexploration:runicBootsComet.name=Рунические кометные сапоги
+item.thaumicexploration:theCandle.name=Плавающая свеча
+
+item.thaumicexploration:enhancedHelmetRunic.name=Улучшенный рунический шлем
+item.thaumicexploration:enhancedChestplateRunic.name=Улучшенный рунический нагрудник
+item.thaumicexploration:enhancedLeggingsRunic.name=Улучшенные рунические поножи
+item.thaumicexploration:enhancedBootsRunic.name=Улучшенные рунические сапоги
+
+item.thaumicexploration:dreamcatcher.name=Ловец снов
+item.thaumicexploration:ringTaint.name=Порченое кольцо
+item.thaumicexploration:talismanFood.name=Талисман сытости
+item.thaumicexploration:taintBerry.name=Порченая ягода
+item.thaumicexploration:necroAltar.name=Некромантический пьедестал
+thaumicexploration.bread0=Будешь со мной дружить?
+thaumicexploration.bread1=Пожалуйста, съешь меня.
+thaumicexploration.bread2=Ты проголодался?
+thaumicexploration.bread3=Бонжур, мсье.
+thaumicexploration.bread4=Съешь меня, пожалуйста.
+
+
+item.thaumicexploration:discountRing:0.name=Кольцо Воздуха
+item.thaumicexploration:discountRing:1.name=Кольцо Земли
+item.thaumicexploration:discountRing:2.name=Кольцо Огня
+item.thaumicexploration:discountRing:3.name=Кольцо Воды
+item.thaumicexploration:discountRing:4.name=Кольцо Порядка
+item.thaumicexploration:discountRing:5.name=Кольцо Хаоса
+
+tc.aspect.Necromantic Energy=Энергия нежити
+
+----Creative Tab----
+itemGroup.thaumicExploration=Эзотерика
+
+----Death Messages----
+death.attack.witherMask=%1$s иссох от маски жестокости %2$s
+death.attack.noTaint=%1$s страдает от нехватки порчи
+potion.binding=Связывание
+potion.taintWithdrawl=Ломка от порчи
+
+----Misc---
+soulbrazier.invalidplayer=Жаровня ворчит и шипит, отказываясь служить неизвестной душе.
+soulbrazier.nopower=Жаровня угасает, её запасы энергии исчерпаны.
+soulbrazier.noWarp=У вас нет постоянного искажения, от которого можно избавиться.
+txitems.boundJar.networkInfo=Сеть ID: %s
+txitems.boundJar.noNetworkInfo=Нет сети
+
+txwaila.boundJar.network=Сеть: %s
+txwaila.boundJar.colour=Цвет: %s
+
+ttwaila.soulBrazier.essentia=Эссенция: %d
+ttwaila.soulBrazier.vis=Вис: %d
+ttwaila.soulBrazier.active=Активно
+ttwaila.soulBrazier.notActive=Неактивно
+ttwaila.soulBrazier.warp=Искажение: %d
+ttwaila.soulBrazier.owner=Владелец: %s
+ttwaila.everburnUrn.fluid=Лава: %d мб
+----Enchantment Names----
+enchantment.binding=Связывание
+enchantment.nightVision=Ночное зрение
+enchantment.disarm=Разоружение
+
+----Wand Names----
+item.Wand.AMBER.rod=Янтарный
+item.Wand.BREAD.rod=Багетный
+item.Wand.TRANSMUTATION.rod=Трансмутационный
+item.Wand.NECROMANCER.rod=Некромантический
+item.Wand.SOJOURNER.cap=Странника
+item.Wand.MECHANIST.cap=Механика
+
+----Blank Seals----
+item.thaumicexploration:blankSeal:Pale.name=Бледная чистая печать
+item.thaumicexploration:blankSeal:Orange.name=Оранжевая чистая печать
+item.thaumicexploration:blankSeal:Magenta.name=Пурпурная чистая печать
+item.thaumicexploration:blankSeal:Light Blue.name=Светло-синяя чистая печать
+item.thaumicexploration:blankSeal:Yellow.name=Жёлтая чистая печать
+item.thaumicexploration:blankSeal:Lime.name=Лаймовая чистая печать
+item.thaumicexploration:blankSeal:Pink.name=Розовая чистая печать
+item.thaumicexploration:blankSeal:Gray.name=Серая чистая печать
+item.thaumicexploration:blankSeal:Light Gray.name=Светло-серая чистая печать
+item.thaumicexploration:blankSeal:Cyan.name=Бирюзовая чистая печать
+item.thaumicexploration:blankSeal:Purple.name=Фиолетовая чистая печать
+item.thaumicexploration:blankSeal:Blue.name=Синяя чистая печать
+item.thaumicexploration:blankSeal:Brown.name=Коричневая чистая печать
+item.thaumicexploration:blankSeal:Green.name=Зелёная чистая печать
+item.thaumicexploration:blankSeal:Red.name=Красная чистая печать
+item.thaumicexploration:blankSeal:Dark.name=Тёмная чистая печать
+
+----Chest Seals----
+item.thaumicexploration:chestSeal:Pale.name=Бледная связывающая печать сундука
+item.thaumicexploration:chestSeal:Orange.name=Оранжевая связывающая печать сундука
+item.thaumicexploration:chestSeal:Magenta.name=Пурпурная связывающая печать сундука
+item.thaumicexploration:chestSeal:Light Blue.name=Светло-синяя связывающая печать сундука
+item.thaumicexploration:chestSeal:Yellow.name=Жёлтая связывающая печать сундука
+item.thaumicexploration:chestSeal:Lime.name=Лаймовая связывающая печать сундука
+item.thaumicexploration:chestSeal:Pink.name=Розовая связывающая печать сундука
+item.thaumicexploration:chestSeal:Gray.name=Серая связывающая печать сундука
+item.thaumicexploration:chestSeal:Light Gray.name=Светло-серая связывающая печать сундука
+item.thaumicexploration:chestSeal:Cyan.name=Бирюзовая связывающая печать сундука
+item.thaumicexploration:chestSeal:Purple.name=Фиолетовая связывающая печать сундука
+item.thaumicexploration:chestSeal:Blue.name=Синяя связывающая печать сундука
+item.thaumicexploration:chestSeal:Brown.name=Коричневая связывающая печать сундука
+item.thaumicexploration:chestSeal:Green.name=Зелёная связывающая печать сундука
+item.thaumicexploration:chestSeal:Red.name=Красная связывающая печать сундука
+item.thaumicexploration:chestSeal:Dark.name=Тёмная связывающая печать сундука
+
+----Jar Seals----
+item.thaumicexploration:jarSeal:Pale.name=Бледная связывающая печать банки
+item.thaumicexploration:jarSeal:Orange.name=Оранжевая связывающая печать банки
+item.thaumicexploration:jarSeal:Magenta.name=Пурпурная связывающая печать банки
+item.thaumicexploration:jarSeal:Light Blue.name=Светло-синяя связывающая печать банки
+item.thaumicexploration:jarSeal:Yellow.name=Жёлтая связывающая печать банки
+item.thaumicexploration:jarSeal:Lime.name=Лаймовая связывающая печать банки
+item.thaumicexploration:jarSeal:Pink.name=Розовая связывающая печать банки
+item.thaumicexploration:jarSeal:Gray.name=Серая связывающая печать банки
+item.thaumicexploration:jarSeal:Light Gray.name=Светло-серая связывающая печать банки
+item.thaumicexploration:jarSeal:Cyan.name=Бирюзовая связывающая печать банки
+item.thaumicexploration:jarSeal:Purple.name=Фиолетовая связывающая печать банки
+item.thaumicexploration:jarSeal:Blue.name=Синяя связывающая печать банки
+item.thaumicexploration:jarSeal:Brown.name=Коричневая связывающая печать банки
+item.thaumicexploration:jarSeal:Green.name=Зелёная связывающая печать банки
+item.thaumicexploration:jarSeal:Red.name=Красная связывающая печать банки
+item.thaumicexploration:jarSeal:Dark.name=Тёмная связывающая печать банки
+
+----Block Names----
+tile.thaumicexploration:thinkTankJar.name=Мыслящий резервуар
+tile.thaumicexploration:everfullUrn.name=Неиссякаемая урна
+tile.thaumicexploration:everburnUrn.name=Неугасимая урна
+tile.thaumicexploration:crucibleSouls.name=Тигель душ
+tile.thaumicexploration:replicator.name=Таумический репликатор
+tile.thaumicexploration:trashJar.name=Банка забвения
+tile.thaumicexploration:soulBrazier.name=Жаровня душ
+tile.boundJar.name=Связанная банка
+tile.thaumicexploration:floatCandle.0.name=Белая плавающая свеча
+tile.thaumicexploration:floatCandle.1.name=Оранжевая плавающая свеча
+tile.thaumicexploration:floatCandle.2.name=Пурпурная плавающая свеча
+tile.thaumicexploration:floatCandle.3.name=Светло-синяя плавающая свеча
+tile.thaumicexploration:floatCandle.4.name=Жёлтая плавающая свеча
+tile.thaumicexploration:floatCandle.5.name=Лаймовая плавающая свеча
+tile.thaumicexploration:floatCandle.6.name=Розовая плавающая свеча
+tile.thaumicexploration:floatCandle.7.name=Серая плавающая свеча
+tile.thaumicexploration:floatCandle.8.name=Светло-серая плавающая свеча
+tile.thaumicexploration:floatCandle.9.name=Бирюзовая плавающая свеча
+tile.thaumicexploration:floatCandle.10.name=Фиолетовая плавающая свеча
+tile.thaumicexploration:floatCandle.11.name=Синяя плавающая свеча
+tile.thaumicexploration:floatCandle.12.name=Коричневая плавающая свеча
+tile.thaumicexploration:floatCandle.13.name=Зелёная плавающая свеча
+tile.thaumicexploration:floatCandle.14.name=Красная плавающая свеча
+tile.thaumicexploration:floatCandle.15.name=Чёрная плавающая свеча
+
+----Thaumonomicon Entries----
+te.researchPrefix=[TX]
+tc.research_category.TAINT=Таинтология
+tc.research_category.NECROMANCY=Некромантия
+tc.research_category.TX=Эзотерика
+
+--Oblivion Jar
+te.name.TRASHJAR=Банка забвения
+te.tag.TRASHJAR=Утилизация эссенции
+te.text.TRASHJAR.1=Банка забвения позволяет бесследно уничтожать излишки любых видов эссенции. В отличие от пустотных банок, одной банки забвения достаточно для утилизации всех невостребованных аспектов в сети.
+te.text.TRASHJAR.2=Банка забвения обладает самым низким приоритетом втягивания, принимая только ту эссенцию, которую некуда девать.
+
+--Soul Brazier
+te.name.SOULBRAZIER=Жаровня душ
+te.tag.SOULBRAZIER=Очищение рассудка
+te.text.SOULBRAZIER.1=Жаровня душ способна безопасно извлекать и удерживать постоянное искажение из разума тауматурга, расходуя эссенцию Mortus и вис из узла ауры.
+
+--Taintacle Ring
+te.name.TENTACLERING=Кольцо щупальца
+te.tag.TENTACLERING=Порождение порчи
+te.text.TENTACLERING.1=При получении урона на твердой земле кольцо призывает маленькое щупальце порчи, атакующее ближайших врагов.
+
+--Discount Rings
+te.name.DISCOUNTRINGS=Кольца бережливости
+te.tag.DISCOUNTRINGS=Экономия вис
+te.text.DISCOUNTRINGS.1=Магические кольца, снижающие затраты вис при использовании жезлов.
+
+--Thaumostatic Stabilizer
+te.name.STABILIZERBELT=Таумостатический стабилизатор
+te.tag.STABILIZERBELT=Подавление отдачи
+te.text.STABILIZERBELT.1=Пояс, полностью сводящий на нет отбрасывание при получении урона. Идеален для полетов на ранце и боя.
+
+--Floating Candles
+te.name.FLOATCANDLE=Плавающие свечи
+te.tag.FLOATCANDLE=Левитирующий свет
+te.text.FLOATCANDLE.1=Магические свечи, парящие в воздухе без опоры и создающие чарующую атмосферу волшебства.
+
+--Flesh Curing
+te.name.FLESHCURE=Очищение плоти
+te.tag.FLESHCURE=Алхимическое очищение
+te.text.FLESHCURE.1=Удаление следов гниения из гнилой плоти с помощью эссенций для получения полезных материалов.
+
+--Brain Curing
+te.name.BRAINCURE=Исцеление мозга
+te.tag.BRAINCURE=Просветление разума
+te.text.BRAINCURE.1=Обращение вспять процесса зомбификации мозга зомби при помощи зелья слабости и эссенций. Исцеленный мозг обретает высокий интеллектуальный потенциал.
+
+--Think Tank
+te.name.THINKTANK=Мыслящий резервуар
+te.tag.THINKTANK=Автономные исследования
+te.text.THINKTANK.1=Мыслящий резервуар использует исцеленный мозг зомби и поглощает книги, непрерывно генерируя фрагменты знаний для тауматурга.
+te.text.THINKTANK.2=Устанавливается на книжную полку с пустым пространством 3x3x3 вокруг.
+
+--Chest Sealing
+te.name.CHESTSEAL=Связывающая печать сундука
+te.tag.CHESTSEAL=Единое хранилище
+te.text.CHESTSEAL.1=Связывает сундуки одного цвета печати в единую общую сеть инвентаря.
+
+--Jar Sealing
+te.name.JARSEAL=Связывающая печать банки
+te.tag.JARSEAL=Общая эссенция
+te.text.JARSEAL.1=Связывает банки с эссенцией в единую дистанционную сеть для удобного наполнения и перекачки.
+
+--Everfull Urn
+te.name.URN=Неиссякаемая урна
+te.tag.URN=Бесконечный источник воды
+te.text.URN.1=Создает бесконечный поток чистейшей воды, наполняет тигли и тушит горящих игроков.
+te.text.URN.1B=Создает бесконечный поток чистейшей воды, наполняет тигли, аптекари лепестков и тушит горящих игроков.
+
+--Everburn Urn
+te.name.BURN=Неугасимая урна
+te.tag.BURN=Вечное пламя
+te.text.BURN.1=Генерирует лаву при снабжении CentiVis, наполняя ведра и внешние резервуары.
+
+--Crucible of Souls
+te.name.CRUCSOULS=Тигель душ
+te.tag.CRUCSOULS=Жатва жизней
+te.text.CRUCSOULS.1=Устройство, вытягивающее жизненную силу из ближайших существ и преобразующее её в чистую эссенцию.
+te.text.CRUCSOULS.2=Тигель нестабилен и может порождать порчу. Не атакует людей и големов.
+
+--Replicator
+te.name.REPLICATOR=Таумический репликатор
+te.tag.REPLICATOR=Эквивалентный обмен
+te.text.REPLICATOR.1=Создает копии строительных блоков, потребляя соответствующую эссенцию.
+te.text.REPLICATOR.2=Установите образец на ПКМ и запустите процесс жезлом или редстоун-сигналом.
+
+--Amber Wand Core
+te.name.ROD_AMBER=Янтарный стержень
+te.tag.ROD_AMBER=Быстрая регенерация
+te.text.ROD_AMBER.1=Стержень из янтаря вмещает 10 вис каждого типа и с повышенной скоростью пассивно восполняет все аспекты вис.
+
+--Amber Staff Core
+te.name.ROD_AMBER_staff=Янтарный стержень посоха
+te.tag.ROD_AMBER_staff=Энергия янтаря
+te.text.ROD_AMBER_staff.1=Посох из янтаря вмещает 25 вис каждого типа и пассивно восстанавливает запасы вис.
+
+--Transmutation Staff Core
+te.name.ROD_TRANSMUTATION_staff=Стержень посоха трансмутации
+te.tag.ROD_TRANSMUTATION_staff=Превращение вис
+te.text.ROD_TRANSMUTATION_staff.1=Вмещает 175 вис каждого типа и преобразует излишки одних аспектов в недостающие при заполнении свыше 90%.
+
+--Necromancer's Staff Core
+te.name.ROD_NECROMANCER_staff=Некромантический стержень посоха
+te.tag.ROD_NECROMANCER_staff=Власть над смертью
+te.text.ROD_NECROMANCER_staff.1=Вмещает 200 вис и получает в 4 раза больше вис от убитых монстров, иссушая врагов при ударе в ближнем бою.
+
+--Bread Wand Core
+te.name.ROD_BREAD=Багетный стержень
+te.tag.ROD_BREAD=Свежая выпечка
+te.text.ROD_BREAD.1=Хрустящий французский багет, наделенный магической силой жезла. Приятного аппетита!
+
+--Sojourner's Wand Cap
+te.name.CAP_SOJOURNER=Наконечники странника
+te.tag.CAP_SOJOURNER=Автономная зарядка
+te.text.CAP_SOJOURNER.1=Пассивно вытягивают вис из ближайших узлов ауры, пока жезл находится в руке.
+
+--Mechanist's Wand Cap
+te.name.CAP_MECHANIST=Наконечники механика
+te.tag.CAP_MECHANIST=Быстрое поглощение
+te.text.CAP_MECHANIST.1=Ускоряют осушение узлов ауры с помощью механических приспособлений.
+
+--Wispy Dreamcatcher
+te.name.DREAMCATCHER=Ловец снов
+te.tag.DREAMCATCHER=Защита от порчи
+te.text.DREAMCATCHER.1=Находясь на панели быстрого доступа, с высокой вероятностью блокирует урон от порчи и зараженных тварей.
+
+--Talisman of Nourishment
+te.name.TALISMANFOOD=Талисман сытости
+te.tag.TALISMANFOOD=Вечный запас
+te.text.TALISMANFOOD.1=Поглощает питательную ценность еды из инвентаря и автоматически насыщает владельца при голоде.
+
+--Disarming Enchantment
+te.name.ENCHDISARM=Зачарование: Разоружение
+te.tag.ENCHDISARM=Обезоруживание
+te.text.ENCHDISARM.1=При ударе мечом заставляет противников выронить удерживаемое оружие.
+
+--Binding Enchantment
+te.name.ENCHBINDING=Зачарование: Связывание
+te.tag.ENCHBINDING=Удержание на месте
+te.text.ENCHBINDING.1=Замедляет врагов, не дает эндерменам телепортироваться, а криперам — взрываться.
+
+--Night Vision Enchantment
+te.name.ENCHNIGHTVISION=Зачарование: Ночное зрение
+te.tag.ENCHNIGHTVISION=Взгляд во тьму
+te.text.ENCHNIGHTVISION.1=Наносится на шлемы и обеспечивает постоянное ночное зрение во тьме.
+
+--Boots of the Meteor
+te.name.METEORBOOTS=Метеорные сапоги
+te.tag.METEORBOOTS=Метеоритный рывок
+te.text.METEORBOOTS.1=Совершают стремительный рывок вперед и мощное сокрушительное падение с нанесением урона по площади.
+
+--Boots of the Comet
+te.name.COMETBOOTS=Кометные сапоги
+te.tag.COMETBOOTS=Ледяная скорость
+te.text.COMETBOOTS.1=Даруют невероятную скорость бега и мгновенно замораживают воду под ногами.
+
+--Runic Boots
+te.name.RUNICBOOTS=Рунические стихийные сапоги
+te.tag.RUNICBOOTS=Защита и скорость
+te.text.RUNICBOOTS.1=Объединяют подвижность метеорных или кометных сапог с защитой рунической брони.
+
+--Enhanced Runic Armor
+te.name.ENHANCEDRUNICARMOR=Улучшенная руническая броня
+te.tag.ENHANCEDRUNICARMOR=Максимальная защита
+te.text.ENHANCEDRUNICARMOR.1=Позволяет устанавливать два рунических улучшения на каждую часть доспехов и дает скидку на вис.
+te.text.ENHANCEDRUNICARMOR.2=Переключение улучшений на ПКМ.
+
+--Transmutative Wand Core
+te.name.ROD_TRANSMUTATION=Трансмутационный стержень
+te.tag.ROD_TRANSMUTATION=Баланс стихий
+te.text.ROD_TRANSMUTATION.1=Вмещает 75 вис каждого типа и преобразует избыточные аспекты в недостающие.
+
+--Necro Wand
+te.name.ROD_NECROMANCER=Некромантический стержень
+te.tag.ROD_NECROMANCER=Сила смерти
+te.text.ROD_NECROMANCER.1=Удваивает количество вис, получаемое от убитых монстров.
+
+--Necromantic Energy
+te.name.NECROENERGY=Некромантическая энергия
+te.tag.NECROENERGY=Энергия смерти
+te.text.NECROENERGY.1=Энергия для некромантического алтаря, получаемая при жертвоприношении предметов нежити.
+
+--Necro Infusion
+te.name.NECROINFUSION=Некромантическое наполнение
+te.tag.NECROINFUSION=Тёмные ритуалы
+te.text.NECROINFUSION.1=Особый алтарь, окруженный черепами и свечами, для насыщения предметов некромантической энергией.
+te.text.NECROINFUSION.2=Зажгите огонь на алтаре и приносите жертвы для завершения ритуала.
+te.text.NECROINFUSION.3=Пример конструкции некромантического алтаря показан на рисунке.<IMG>thaumicexploration:textures/tabs/altarSetup.png:0:0:255:255:0.5</IMG> Можно использовать черепа зомби, скелетов или визер-скелетов.
+
+--Taint Basics
+te.name.TAINTBASICS=Порча
+te.tag.TAINTBASICS=Скверна магии
+te.text.TAINTBASICS.1=Порча — опаснейшее проявление магического загрязнения, поражающее живую природу и уродующее ландшафт.
+te.text.TAINTBASICS.2=Зараженные земли распространяются через фиолетовые нити и волокна, обращая землю в порченую почву и растворяя материю в слизь.

@@ -1,0 +1,26 @@
+# Russian localization
+itemGroup.knowledge=Тауматургические знания
+knowledge_research_page.dupe.1=Ваши опыты с дублированием простых предметов привели к куда более грандиозным открытиям. Теперь многие невозобновляемые ресурсы можно синтезировать силой мысли.
+knowledge_research_page.ent.1=Perditio — без сомнения, один из самых увлекательных аспектов. Теперь вы можете раскрыть его потенциал сполна.
+knowledge_research_page.man.1=Тауматургия — это искусство придавать новые формы и свойства материи. Синтез полезных предметов стал ещё эффективнее.
+knowledge_research_page.shardore.1=При добыче руды вы научились кристаллизовать насыщенные осколки из рудных жил.
+knowledge_research_page.shardore.2=Заряженный камень можно трансмутировать в любую элементальную руду, напитав его первородной эссенцией и щепоткой Praecantatio.
+knowledge_research_page.thaumicgen.1=Опыты с Тауматоторием увенчались успехом. Этот генератор способен генерировать булыжник и другие блоки при подаче вис Perditio и эссенции.
+knowledge_research_page.thaumicgen.2=Генератор реплицирует блок под ним при подаче соответствующей эссенции и вис:<BR><BR>1) Булыжник: Perditio CV.<BR>2) Земля: Aqua CV, Terra эссенция.<BR>3) Обсидиан: Ordo CV, Aqua эссенция, 1 ведро лавы.
+tc.research_category.KNOWLEDGE=Тауматургические знания
+tc.research_name.DUPE=Дополнительное дублирование
+tc.research_name.ENT=Энтропийная переработка
+tc.research_name.MAN=Дополнительное производство
+tc.research_name.SHARDORE=Кристаллизация осколков
+tc.research_name.THAUMICGEN=Таумический генератор
+tc.research_text.DUPE=Алхимия в высшем проявлении
+tc.research_text.ENT=Порядок из разрушения
+tc.research_text.MAN=Создавайте всё необходимое!
+tc.research_text.SHARDORE=Основа элементов
+tc.research_text.THAUMICGEN=Ответ на все ресурсные вопросы
+tile.benway_knowledge_dummytg.0.name=Таумический генератор
+tile.benway_knowledge_dummytg.4.name=Таумический генератор
+tile.benway_knowledge_dummytg.9.name=Таумический генератор
+tile.benway_knowledge_misc.0.name=Напитанный камень
+tile.benway_knowledge_thaumtank.name=Резервуар тауматурга
+tile.benway_knowledge_wooden.0.name=Полка тауматурга

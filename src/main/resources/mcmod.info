@@ -3,19 +3,32 @@
 	"modList": [{
 		"modid": "${modId}",
 		"name": "${modName}",
-		"description": "An example mod for Minecraft 1.7.10 with Forge focused on a stable setup.",
+		"description": "Thaumic Madness — An advanced Thaumcraft 4 addon featuring the All-Seeing Thaumonomicon, Aura Node Tracker, Blood Magic integration, HD typography, and sanity HUD.",
 		"version": "${modVersion}",
 		"mcversion": "${minecraftVersion}",
-		"url": "https://github.com/SinTh0r4s/MyMod",
+		"url": "https://github.com/vasmark1/ThaumicMadness",
 		"updateUrl": "",
-		"authorList": ["SinTho0r4s"],
-		"credits": "",
+		"authorList": ["AVM / vasmark1"],
+		"credits": "Azanor, WayofTime, and the Thaumcraft Community",
 		"logoFile": "",
 		"screenshots": [],
 		"parent": "",
-		"requiredMods": [],
-		"dependencies": [],
+		"requiredMods": ["Thaumcraft"],
+		"dependencies": [
+			"Thaumcraft",
+			"AWWayofTime",
+			"BloodArsenal",
+			"gadomancy",
+			"Automagy",
+			"ThaumicExploration",
+			"ThaumicBases",
+			"WitchingGadgets",
+			"WarpTheory",
+			"NotEnoughItems",
+			"Baubles",
+			"TravellersGear"
+		],
 		"dependants": [],
-		"useDependencyInformation": false
+		"useDependencyInformation": true
 	}]
 }

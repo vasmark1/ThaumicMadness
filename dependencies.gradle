@@ -34,5 +34,55 @@
  * For more details, see https://docs.gradle.org/8.0.1/userguide/java_library_plugin.html#sec:java_library_configurations_graph
  */
 dependencies {
-    //runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.7.69-GTNH:dev")
+    // Thaumcraft 1.7.10-4.2.3.5
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumcraft-223628:2227552"))
+
+    // Baubles 1.7.10-1.0.1.10 (Required by Thaumcraft 4)
+    devOnlyNonPublishable(rfg.deobf("curse.maven:baubles-227083:2224857"))
+
+    // Core Libraries required by addons
+    devOnlyNonPublishable(rfg.deobf("curse.maven:dummycore-230103:2256966")) // Required by Thaumic Bases (1.7.10)
+    devOnlyNonPublishable(rfg.deobf("curse.maven:travellers-gear-224440:2262112")) // Required by Witching Gadgets
+    devOnlyNonPublishable(rfg.deobf("curse.maven:botania-225643:2283837")) // Required by Forgotten Relics
+    devOnlyNonPublishable(rfg.deobf("curse.maven:particlelib-233149:2248888")) // Required by Thaumic Additions
+    devOnlyNonPublishable(rfg.deobf("curse.maven:mjutils-280824:2707995")) // Required by ThaumOres
+
+    // Optional GTNH & Utility development dependencies
+    devOnlyNonPublishable("com.github.GTNewHorizons:GTNHLib:0.10.6:dev")
+    devOnlyNonPublishable("com.github.GTNewHorizons:CodeChickenCore:1.3.11:dev")
+    devOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.8.85-GTNH:dev")
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumcraft-nei-plugin-225095:2241913"))
+    devOnlyNonPublishable(rfg.deobf("curse.maven:waila-73488:2230518"))
+
+    // Content Addons
+    devOnlyNonPublishable(rfg.deobf("curse.maven:advanced-thaumaturgy-253600:2416815")) // Advanced Thaumaturgy 2
+    devOnlyNonPublishable(rfg.deobf("curse.maven:automagy-222153:2285272")) // Automagy
+    devOnlyNonPublishable(rfg.deobf("curse.maven:forbidden-magic-224237:2303822")) // Forbidden Magic
+    devOnlyNonPublishable(rfg.deobf("curse.maven:forgotten-relics-313427:2786664")) // Forgotten Relics
+    devOnlyNonPublishable(rfg.deobf("curse.maven:gadomancy-237271:2338768")) // Gadomancy
+    devOnlyNonPublishable(rfg.deobf("curse.maven:nodal-mechanics-223704:2213742")) // Nodal Mechanics
+    devOnlyNonPublishable(rfg.deobf("curse.maven:tainted-magic-231061:3634109")) // Tainted Magic
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumaturgical-knowledge-233226:2286652")) // Thaumaturgical Knowledge
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-additions-232564:2417787")) // Thaumic Additions
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-bases-232192:2250677")) // Thaumic Bases
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-dyes-251561:2623451")) // Thaumic Dyes
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-exploration-230969:2263414")) // Thaumic Exploration
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-horizons-227914:8413552")) // Thaumic Horizons
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-insurgence-662225:4657373")) // Thaumic Insurgence
+    devOnlyNonPublishable("com.github.GTNewHorizons:ThaumicTinkerer:2.11.12:dev") { transitive = false } // Thaumic Tinkerer (GTNH Dev)
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-sanity-238392:2268718")) // Thaumic Sanity
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumores-237899:2707992")) // Thaumores
+    devOnlyNonPublishable(rfg.deobf("curse.maven:warp-theory-224935:2217324")) // Warp Theory
+    devOnlyNonPublishable(rfg.deobf("curse.maven:witching-gadgets-228268:2262119")) // Witching Gadgets
+
+    // Blood Magic & Blood Arsenal (GTNH Nexus)
+    devOnlyNonPublishable("com.github.GTNewHorizons:BloodMagic:1.9.10:dev") { transitive = false }
+    devOnlyNonPublishable("com.github.GTNewHorizons:BloodArsenal:1.5.12:dev") { transitive = false }
+
+    // Utilities and Tweaks
+    devOnlyNonPublishable(rfg.deobf("curse.maven:alchemical-grate-397344:3011853")) // Alchemical Grate
+    devOnlyNonPublishable(rfg.deobf("curse.maven:tc-inventory-scanning-238003:2286894")) // TC Inventory Scanning
+    devOnlyNonPublishable(rfg.deobf("curse.maven:tc-nei-additions-1579928:8274339")) // TC NEI Additions
+    devOnlyNonPublishable(rfg.deobf("curse.maven:thaumcraft-mob-aspects-221389:2204696")) // Thaumcraft Mob Aspects
+    devOnlyNonPublishable(rfg.deobf("curse.maven:tc4tweaks-431297:8668688")) // Thaumcraft 4 Tweaks
 }
