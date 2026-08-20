@@ -4,7 +4,7 @@
 
 ---
 
-**Thaumic Madness** is an advanced Thaumcraft 4 addon for Minecraft 1.7.10 designed to modernize, expand, and streamline thaumaturgical gameplay while bridging Thaumcraft with Blood Magic and other popular magic addons.
+**Thaumic Madness WIP** is an advanced Thaumcraft 4 addon for Minecraft 1.7.10 designed to modernize, expand, and streamline thaumaturgical gameplay while bridging Thaumcraft with Blood Magic and other popular magic addons.
 
 ---
 
