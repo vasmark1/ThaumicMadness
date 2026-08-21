@@ -85,7 +85,7 @@ dependencies {
     devOnlyNonPublishable(rfg.deobf("curse.maven:tc-nei-additions-1579928:8274339")) // TC NEI Additions
     devOnlyNonPublishable(rfg.deobf("curse.maven:thaumcraft-mob-aspects-221389:2204696")) // Thaumcraft Mob Aspects
     devOnlyNonPublishable(rfg.deobf("curse.maven:tc4tweaks-431297:8668688")) // Thaumcraft 4 Tweaks
-    compileOnly("maven.modrinth:journeymap:5.2.20") { transitive = false } // JourneyMap 5.2.20 API
+    devOnlyNonPublishable(rfg.deobf("maven.modrinth:journeymap:5.2.20")) { transitive = false } // JourneyMap 5.2.20 Client Runtime (Deobfuscated)
 
     // FalsePattern Ecosystem & Performance
     devOnlyNonPublishable("com.falsepattern:falsepatternlib-mc1.7.10:1.12.2") { transitive = false }

@@ -7,7 +7,8 @@
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "MixinInventoryPlayer"
+    "MixinInventoryPlayer",
+    "MixinPacketSyncResearch"
   ],
   "client": [
     "MixinTileNodeRenderer",
