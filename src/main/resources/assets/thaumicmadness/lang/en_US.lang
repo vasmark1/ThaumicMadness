@@ -101,4 +101,15 @@ nodetracker.jm.removed=JourneyMap waypoint removed!
 nodetracker.jm.synced_count=Synchronized %d nodes to JourneyMap!
 nodetracker.jm.add_tip=Click to create JourneyMap waypoint
 nodetracker.jm.remove_tip=Click to remove JourneyMap waypoint
+nodetracker.jm.click_to_open=Click to view info & open in Atlas
+
+nodetracker.node_suffix=Node
+nodetracker.distance=Distance
+nodetracker.total_vis=Total Vis
+nodetracker.popup.track_gps=Track GPS
+nodetracker.popup.tracking=Tracking
+nodetracker.popup.open_atlas=Open in Atlas
+nodetracker.popup.copy_coords=Copy Coords
+nodetracker.popup.delete=Delete Node
+nodetracker.popup.back_to_map=Back to Map
 

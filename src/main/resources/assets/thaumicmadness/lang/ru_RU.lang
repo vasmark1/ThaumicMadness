@@ -2095,5 +2095,17 @@ nodetracker.jm.removed=Метка JourneyMap удалена!
 nodetracker.jm.synced_count=Синхронизировано узлов в JourneyMap: %d!
 nodetracker.jm.add_tip=Создать метку в JourneyMap
 nodetracker.jm.remove_tip=Удалить метку из JourneyMap
+nodetracker.jm.click_to_open=Нажмите для информации и открытия в Атласе
+
+nodetracker.node_suffix=Узел
+nodetracker.distance=Дистанция
+nodetracker.total_vis=Всего Вис
+nodetracker.popup.track_gps=Следить (GPS)
+nodetracker.popup.tracking=Отслеживается
+nodetracker.popup.open_atlas=Открыть в Атласе
+nodetracker.popup.copy_coords=Копировать
+nodetracker.popup.delete=Удалить узел
+nodetracker.popup.back_to_map=Назад к карте
+
 
 

@@ -38,6 +38,15 @@ public class ClientProxy extends CommonProxy {
             MinecraftForge.EVENT_BUS.register(new com.vasmark.thaumicmadness.nodetracker.gui.NodeTrackerHUD());
         }
 
+        if (Config.enableJourneyMapIntegration
+            && com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded()) {
+            com.vasmark.thaumicmadness.compat.journeymap.JourneyMapNodeOverlay jmOverlay = new com.vasmark.thaumicmadness.compat.journeymap.JourneyMapNodeOverlay();
+            MinecraftForge.EVENT_BUS.register(jmOverlay);
+            cpw.mods.fml.common.FMLCommonHandler.instance()
+                .bus()
+                .register(jmOverlay);
+        }
+
         if (Config.enableNEIWarp && cpw.mods.fml.common.Loader.isModLoaded("NotEnoughItems")) {
             com.vasmark.thaumicmadness.nei.NEIWarpHandler.init();
         }
