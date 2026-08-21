@@ -82,22 +82,38 @@ public class GuiNodeTracker extends GuiScreen {
         this.buttonList.add(btnSort);
 
         // Bottom action buttons
+        boolean jmLoaded = com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded();
+        int btnW = jmLoaded ? 88 : 100;
+
         btnClearTarget = new GuiButton(
             4,
             panelLeft + 8,
             this.height - 24,
-            100,
+            btnW,
             18,
             StatCollector.translateToLocal("nodetracker.btn.clear_target"));
+
         btnClose = new GuiButton(
             5,
-            panelLeft + PANEL_WIDTH - 78,
+            panelLeft + PANEL_WIDTH - 68,
             this.height - 24,
-            70,
+            60,
             18,
             StatCollector.translateToLocal("gui.done"));
 
         this.buttonList.add(btnClearTarget);
+
+        if (jmLoaded) {
+            GuiButton btnSyncJM = new GuiButton(
+                6,
+                panelLeft + 100,
+                this.height - 24,
+                88,
+                18,
+                StatCollector.translateToLocal("nodetracker.btn.sync_jm"));
+            this.buttonList.add(btnSyncJM);
+        }
+
         this.buttonList.add(btnClose);
 
         // Node Slot List
@@ -197,6 +213,13 @@ public class GuiNodeTracker extends GuiScreen {
             setNotification("§e" + StatCollector.translateToLocal("nodetracker.target_cleared"));
         } else if (button.id == 5) { // Close
             this.mc.displayGuiScreen(null);
+        } else if (button.id == 6) { // Sync all to JourneyMap
+            if (this.slotList != null
+                && com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded()) {
+                int count = com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat
+                    .syncAllWaypoints(this.slotList.getCurrentList());
+                setNotification("§a" + StatCollector.translateToLocalFormatted("nodetracker.jm.synced_count", count));
+            }
         }
     }
 

@@ -109,6 +109,11 @@ public class NodeTrackerManager {
 
         saveToJson();
         LOGGER.info("Tracked node at [dim:{}, x:{}, y:{}, z:{}] with {} aspects", dim, x, y, z, aspects.size());
+
+        try {
+            com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.onNodeScanned(targetNode);
+        } catch (Throwable ignored) {}
+
         return true;
     }
 
@@ -118,6 +123,9 @@ public class NodeTrackerManager {
         if (activeTarget != null && activeTarget.equals(node)) {
             activeTarget = null;
         }
+        try {
+            com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.removeWaypoint(node);
+        } catch (Throwable ignored) {}
         saveToJson();
     }
 

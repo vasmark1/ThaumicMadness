@@ -15,6 +15,8 @@ public class Config {
     public static boolean enableAtlasPassiveRevealing = true;
     public static boolean enableNodeTracker = true;
     public static boolean enableNodeHUD = true;
+    public static boolean enableJourneyMapIntegration = true;
+    public static boolean enableJourneyMapAutoWaypoint = false;
 
     // --- Category: Blood Magic Integration ---
     public static final String CATEGORY_BLOOD_MAGIC = "blood_magic";
@@ -61,6 +63,20 @@ public class Config {
         Property propNodeHUD = configuration
             .get(CATEGORY_ATLAS, "enableNodeHUD", true, "Enable the on-screen waypoint HUD for tracked aura nodes.");
         enableNodeHUD = propNodeHUD.getBoolean();
+
+        Property propJM = configuration.get(
+            CATEGORY_ATLAS,
+            "enableJourneyMapIntegration",
+            true,
+            "Enable JourneyMap waypoint buttons and integration in the Thaumaturgical Atlas.");
+        enableJourneyMapIntegration = propJM.getBoolean();
+
+        Property propJMAuto = configuration.get(
+            CATEGORY_ATLAS,
+            "enableJourneyMapAutoWaypoint",
+            false,
+            "Automatically create JourneyMap waypoints whenever a new aura node is scanned.");
+        enableJourneyMapAutoWaypoint = propJMAuto.getBoolean();
 
         // Blood Magic
         Property propBM = configuration.get(

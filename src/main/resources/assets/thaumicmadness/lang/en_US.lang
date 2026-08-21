@@ -94,3 +94,11 @@ item.sanity_charm.name=Talisman of Clarity
 item.sanity_charm.desc=Shields your subconscious from eldritch insanity and madness.
 item.sanity_charm.effect=Accelerates cleansing of Warp debuffs and stabilizes mental focus.
 
+# JourneyMap Integration
+nodetracker.btn.sync_jm=Sync JM
+nodetracker.jm.created=JourneyMap waypoint created!
+nodetracker.jm.removed=JourneyMap waypoint removed!
+nodetracker.jm.synced_count=Synchronized %d nodes to JourneyMap!
+nodetracker.jm.add_tip=Click to create JourneyMap waypoint
+nodetracker.jm.remove_tip=Click to remove JourneyMap waypoint
+

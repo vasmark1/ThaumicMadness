@@ -107,14 +107,15 @@ public class GuiNodeSlotList {
             NodeData node = currentList.get(index);
             int cardY = top + index * (CARD_HEIGHT + CARD_SPACING) - (int) scrollY;
 
-            int btnTrackX = cardRight - 66;
-            int btnCopyX = cardRight - 36;
-            int btnDelX = cardRight - 16;
+            int btnDelX = cardRight - 15;
+            int btnCopyX = cardRight - 32;
+            int btnJmX = cardRight - 55;
+            int btnTrackX = cardRight - 86;
             int btnY = cardY + 3;
             int btnH = 14;
 
             // 1. Track Button (GPS)
-            if (mouseX >= btnTrackX && mouseX <= btnTrackX + 28 && mouseY >= btnY && mouseY <= btnY + btnH) {
+            if (mouseX >= btnTrackX && mouseX <= btnTrackX + 29 && mouseY >= btnY && mouseY <= btnY + btnH) {
                 NodeTrackerManager.getInstance()
                     .setActiveTarget(node);
                 parent.setNotification(
@@ -123,8 +124,22 @@ public class GuiNodeSlotList {
                 return;
             }
 
-            // 2. Copy Button (CPY)
-            if (mouseX >= btnCopyX && mouseX <= btnCopyX + 18 && mouseY >= btnY && mouseY <= btnY + btnH) {
+            // 2. JourneyMap Waypoint Button (JM)
+            if (com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded() && mouseX >= btnJmX
+                && mouseX <= btnJmX + 21
+                && mouseY >= btnY
+                && mouseY <= btnY + btnH) {
+                boolean created = com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.toggleWaypoint(node);
+                if (created) {
+                    parent.setNotification("§a" + StatCollector.translateToLocal("nodetracker.jm.created"));
+                } else {
+                    parent.setNotification("§c" + StatCollector.translateToLocal("nodetracker.jm.removed"));
+                }
+                return;
+            }
+
+            // 3. Copy Button (CPY)
+            if (mouseX >= btnCopyX && mouseX <= btnCopyX + 15 && mouseY >= btnY && mouseY <= btnY + btnH) {
                 try {
                     String text = node.x + " "
                         + node.y
@@ -143,8 +158,8 @@ public class GuiNodeSlotList {
                 return;
             }
 
-            // 3. Delete Button (✕)
-            if (mouseX >= btnDelX && mouseX <= btnDelX + 14 && mouseY >= btnY && mouseY <= btnY + btnH) {
+            // 4. Delete Button (✕)
+            if (mouseX >= btnDelX && mouseX <= btnDelX + 13 && mouseY >= btnY && mouseY <= btnY + btnH) {
                 NodeTrackerManager.getInstance()
                     .deleteNode(node);
                 parent.refreshNodeList();
@@ -240,37 +255,57 @@ public class GuiNodeSlotList {
             font.drawStringWithShadow(subInfo, cardX + 5, cardY + 13, 0xCCCCCC);
 
             // Action buttons
-            int btnTrackX = cardRight - 66;
-            int btnCopyX = cardRight - 36;
-            int btnDelX = cardRight - 16;
+            int btnDelX = cardRight - 15;
+            int btnCopyX = cardRight - 32;
+            int btnJmX = cardRight - 55;
+            int btnTrackX = cardRight - 86;
             int btnY = cardY + 3;
             int btnH = 14;
 
             // 1. Track Button (GPS)
-            boolean hoverTrack = mouseX >= btnTrackX && mouseX <= btnTrackX + 28
+            boolean hoverTrack = mouseX >= btnTrackX && mouseX <= btnTrackX + 29
                 && mouseY >= btnY
                 && mouseY <= btnY + btnH;
             Gui.drawRect(
                 btnTrackX,
                 btnY,
-                btnTrackX + 28,
+                btnTrackX + 29,
                 btnY + btnH,
                 hoverTrack ? 0xFFE5C16C : (isTarget ? 0xFF8A6536 : 0xFF3D2C15));
-            Gui.drawRect(btnTrackX + 1, btnY + 1, btnTrackX + 27, btnY + btnH - 1, isTarget ? 0xF03B3015 : 0xE01A150E);
+            Gui.drawRect(btnTrackX + 1, btnY + 1, btnTrackX + 28, btnY + btnH - 1, isTarget ? 0xF03B3015 : 0xE01A150E);
             font.drawStringWithShadow(isTarget ? "§a★GPS" : "§eGPS", btnTrackX + 3, btnY + 3, 0xFFFFFF);
 
-            // 2. Copy Button (CPY)
-            boolean hoverCopy = mouseX >= btnCopyX && mouseX <= btnCopyX + 18
+            // 2. JourneyMap Waypoint Button (JM)
+            if (com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded()) {
+                boolean hasJmWp = com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.hasWaypoint(node);
+                boolean hoverJm = mouseX >= btnJmX && mouseX <= btnJmX + 21 && mouseY >= btnY && mouseY <= btnY + btnH;
+                Gui.drawRect(
+                    btnJmX,
+                    btnY,
+                    btnJmX + 21,
+                    btnY + btnH,
+                    hoverJm ? 0xFF55FFFF : (hasJmWp ? 0xFF00AAAA : 0xFF3D2C15));
+                Gui.drawRect(btnJmX + 1, btnY + 1, btnJmX + 20, btnY + btnH - 1, hasJmWp ? 0xF00A2E33 : 0xE01A150E);
+                font.drawStringWithShadow(hasJmWp ? "§b●JM" : "§7JM", btnJmX + 2, btnY + 3, 0xFFFFFF);
+
+                if (isHovered && hoverJm) {
+                    parent.hoveredTooltip = StatCollector
+                        .translateToLocal(hasJmWp ? "nodetracker.jm.remove_tip" : "nodetracker.jm.add_tip");
+                }
+            }
+
+            // 3. Copy Button (CPY)
+            boolean hoverCopy = mouseX >= btnCopyX && mouseX <= btnCopyX + 15
                 && mouseY >= btnY
                 && mouseY <= btnY + btnH;
-            Gui.drawRect(btnCopyX, btnY, btnCopyX + 18, btnY + btnH, hoverCopy ? 0xFFE5C16C : 0xFF3D2C15);
-            Gui.drawRect(btnCopyX + 1, btnY + 1, btnCopyX + 17, btnY + btnH - 1, 0xE01A150E);
+            Gui.drawRect(btnCopyX, btnY, btnCopyX + 15, btnY + btnH, hoverCopy ? 0xFFE5C16C : 0xFF3D2C15);
+            Gui.drawRect(btnCopyX + 1, btnY + 1, btnCopyX + 14, btnY + btnH - 1, 0xE01A150E);
             font.drawStringWithShadow("§b⎘", btnCopyX + 4, btnY + 3, 0xFFFFFF);
 
-            // 3. Delete Button (✕)
-            boolean hoverDel = mouseX >= btnDelX && mouseX <= btnDelX + 14 && mouseY >= btnY && mouseY <= btnY + btnH;
-            Gui.drawRect(btnDelX, btnY, btnDelX + 14, btnY + btnH, hoverDel ? 0xFFFF4444 : 0xFF3D2C15);
-            Gui.drawRect(btnDelX + 1, btnY + 1, btnDelX + 13, btnY + btnH - 1, 0xE01A150E);
+            // 4. Delete Button (✕)
+            boolean hoverDel = mouseX >= btnDelX && mouseX <= btnDelX + 13 && mouseY >= btnY && mouseY <= btnY + btnH;
+            Gui.drawRect(btnDelX, btnY, btnDelX + 13, btnY + btnH, hoverDel ? 0xFFFF4444 : 0xFF3D2C15);
+            Gui.drawRect(btnDelX + 1, btnY + 1, btnDelX + 12, btnY + btnH - 1, 0xE01A150E);
             font.drawStringWithShadow("§c✕", btnDelX + 3, btnY + 3, 0xFFFFFF);
 
             // Aspects row

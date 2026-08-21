@@ -2066,3 +2066,34 @@ item.sanity_charm.name=Талисман ясности разума
 item.sanity_charm.desc=Защищает разум от приступов безумия и шёпота Древних.
 item.sanity_charm.effect=Ускоряет рассеивание временного искажения и снимает негативные эффекты.
 
+# Node Tracker & JourneyMap
+nodetracker.gui.title=Трекер узлов ауры
+nodetracker.filter.all=ВСЕ
+nodetracker.sort.distance_asc=Дистанция ▲
+nodetracker.sort.distance_desc=Дистанция ▼
+nodetracker.sort.vis_desc=Вис ▼
+nodetracker.sort.vis_asc=Вис ▲
+nodetracker.btn.clear_target=Сброс цели
+nodetracker.copied=Координаты скопированы в буфер!
+nodetracker.target_cleared=Цель сброшена.
+nodetracker.type.normal=Обычный
+nodetracker.type.bright=Яркий
+nodetracker.type.pale=Блеклый
+nodetracker.type.fading=Угасающий
+nodetracker.type.pure=Чистый
+nodetracker.type.dark=Тёмный
+nodetracker.type.hungry=Голодный
+nodetracker.type.tainted=Заражённый
+nodetracker.type.unstable=Нестабильный
+nodetracker.hud.tracking=Отслеживание узла
+nodetracker.hud.arrived=Вы прибыли к узлу ауры!
+
+# JourneyMap Интеграция
+nodetracker.btn.sync_jm=Синхр. JM
+nodetracker.jm.created=Метка JourneyMap создана!
+nodetracker.jm.removed=Метка JourneyMap удалена!
+nodetracker.jm.synced_count=Синхронизировано узлов в JourneyMap: %d!
+nodetracker.jm.add_tip=Создать метку в JourneyMap
+nodetracker.jm.remove_tip=Удалить метку из JourneyMap
+
+

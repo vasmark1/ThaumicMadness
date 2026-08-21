@@ -79,12 +79,13 @@ dependencies {
     devOnlyNonPublishable("com.github.GTNewHorizons:BloodMagic:1.9.10:dev") { transitive = false }
     devOnlyNonPublishable("com.github.GTNewHorizons:BloodArsenal:1.5.12:dev") { transitive = false }
 
-    // Utilities and Tweaks
+    // Utilities, Maps and Tweaks
     devOnlyNonPublishable(rfg.deobf("curse.maven:alchemical-grate-397344:3011853")) // Alchemical Grate
     devOnlyNonPublishable(rfg.deobf("curse.maven:tc-inventory-scanning-238003:2286894")) // TC Inventory Scanning
     devOnlyNonPublishable(rfg.deobf("curse.maven:tc-nei-additions-1579928:8274339")) // TC NEI Additions
     devOnlyNonPublishable(rfg.deobf("curse.maven:thaumcraft-mob-aspects-221389:2204696")) // Thaumcraft Mob Aspects
     devOnlyNonPublishable(rfg.deobf("curse.maven:tc4tweaks-431297:8668688")) // Thaumcraft 4 Tweaks
+    compileOnly("maven.modrinth:journeymap:5.2.20") { transitive = false } // JourneyMap 5.2.20 API
 
     // FalsePattern Ecosystem & Performance
     devOnlyNonPublishable("com.falsepattern:falsepatternlib-mc1.7.10:1.12.2") { transitive = false }
