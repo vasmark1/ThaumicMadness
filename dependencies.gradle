@@ -89,5 +89,4 @@ dependencies {
     // FalsePattern Ecosystem & Performance
     devOnlyNonPublishable("com.falsepattern:falsepatternlib-mc1.7.10:1.12.2") { transitive = false }
     devOnlyNonPublishable("com.falsepattern:falsetweaks-mc1.7.10:4.4.5") { transitive = false }
-    devOnlyNonPublishable("com.github.LegacyModdingMC.UniMixins:unimixins-all-1.7.10:0.3.1:dev") { transitive = false }
 }
