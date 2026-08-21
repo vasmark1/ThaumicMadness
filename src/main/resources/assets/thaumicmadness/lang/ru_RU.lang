@@ -2041,3 +2041,28 @@ tc.research_page.THAUMONOMICON_ATLAS.2=Встроенный Атлас позв�
 
 itemGroup.thaumicmadness=Таумическое Безумие
 tile.thaumicmadness.infused_dirt.name=Заряженная земля
+
+# Baubles & Accessories
+item.bauble.slots=Подходящие слоты
+baubles.slot.amulet=Амулет
+baubles.slot.ring=Кольцо
+baubles.slot.belt=Пояс
+baubles.slot.head=Голова
+baubles.slot.body=Тело
+baubles.slot.charm=Оберег
+baubles.slot.cape=Плащ
+baubles.slot.shield=Щит
+baubles.slot.quiver=Колчан
+baubles.slot.gauntlet=Перчатка
+baubles.slot.earring=Серьга
+baubles.slot.wings=Крылья
+baubles.slot.universal=Универсальный
+
+item.blood_ring.name=Кольцо кровавой жизненной силы
+item.blood_ring.desc=Постепенно восстанавливает здоровье владельца за счёт эссенции души (LP).
+item.blood_amulet.name=Кровавый оберег
+item.blood_amulet.desc=Снижает затраты вис на 8% и защищает от негативных эффектов горения.
+item.sanity_charm.name=Талисман ясности разума
+item.sanity_charm.desc=Защищает разум от приступов безумия и шёпота Древних.
+item.sanity_charm.effect=Ускоряет рассеивание временного искажения и снимает негативные эффекты.
+

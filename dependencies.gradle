@@ -37,8 +37,8 @@ dependencies {
     // Thaumcraft 1.7.10-4.2.3.5
     devOnlyNonPublishable(rfg.deobf("curse.maven:thaumcraft-223628:2227552"))
 
-    // Baubles 1.7.10-1.0.1.10 (Required by Thaumcraft 4)
-    devOnlyNonPublishable(rfg.deobf("curse.maven:baubles-227083:2224857"))
+    // Baubles-Expanded by GTNH Team (20 expanded slots & multi-slot API)
+    devOnlyNonPublishable("com.github.GTNewHorizons:Baubles-Expanded:2.2.22-GTNH:dev") { transitive = false }
 
     // Core Libraries required by addons
     devOnlyNonPublishable(rfg.deobf("curse.maven:dummycore-230103:2256966")) // Required by Thaumic Bases (1.7.10)

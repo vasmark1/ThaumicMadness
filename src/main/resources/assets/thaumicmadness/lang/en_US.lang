@@ -69,3 +69,28 @@ nodetracker.btn.clear_target=Clear Target
 nodetracker.hud.wrong_dim=Node in another dimension
 nodetracker.hud.arrived=You arrived at the aura node!
 nodetracker.hud.tracking=Tracking node
+
+# Baubles & Accessories
+item.bauble.slots=Compatible Slots
+baubles.slot.amulet=Amulet
+baubles.slot.ring=Ring
+baubles.slot.belt=Belt
+baubles.slot.head=Head
+baubles.slot.body=Body
+baubles.slot.charm=Charm
+baubles.slot.cape=Cape
+baubles.slot.shield=Shield
+baubles.slot.quiver=Quiver
+baubles.slot.gauntlet=Gauntlet
+baubles.slot.earring=Earring
+baubles.slot.wings=Wings
+baubles.slot.universal=Universal
+
+item.blood_ring.name=Sanguine Ring of Vitality
+item.blood_ring.desc=Passively restores player vitality by consuming Soul Network Life Essence.
+item.blood_amulet.name=Sanguine Ward Pendant
+item.blood_amulet.desc=Attunes your magical core to Blood Magic, discounting vis and extinguishing flames.
+item.sanity_charm.name=Talisman of Clarity
+item.sanity_charm.desc=Shields your subconscious from eldritch insanity and madness.
+item.sanity_charm.effect=Accelerates cleansing of Warp debuffs and stabilizes mental focus.
+

@@ -76,21 +76,21 @@
 
 ## 💍 Раздел 2: Миграция и интеграция с [Baubles Expanded](https://github.com/GTNewHorizons/Baubles-Expanded) (GTNH Team)
 
-- [ ] **Подключение зависимости в `dependencies.gradle`**:
-  - `devOnlyNonPublishable("com.github.GTNewHorizons:Baubles-Expanded:2.1.9:dev")` (или актуальная версия из GTNH Nexus).
-- [ ] **Архитектура поддержки расширенных слотов (`baubles.api.expanded`)**:
+- [x] **Подключение зависимости в `dependencies.gradle`**:
+  - `devOnlyNonPublishable("com.github.GTNewHorizons:Baubles-Expanded:2.1.9:dev")` подключен через GTNH Nexus.
+- [x] **Архитектура поддержки расширенных слотов (`baubles.api.expanded`)**:
   - Поддержка до 20 слотов инвентаря и стандартных типов `BaubleExpandedSlots`:
     - `amulet`, `ring`, `belt`, `head`, `body`, `charm`, `cape`, `shield`, `quiver`, `gauntlet`, `earring`, `wings`, `universal`.
-  - Реализация интерфейса `baubles.api.expanded.IBaubleExpanded` с поддержкой `String[] getBaubleTypes(ItemStack itemstack)` (позволяет одному предмету подходить в несколько разных типов слотов одновременно).
-- [ ] **Двунаправленный адаптер совместимости (Dual-Compatibility Wrapper)**:
-  - Изолированная реализация: если `Baubles-Expanded` загружен — используется `IBaubleExpanded`, если оригинальный `Baubles 1.0.1.10` — используется `baubles.api.IBauble` (`BaubleType.AMULET / RING / BELT`).
-  - Предотвращение `NoClassDefFoundError` при запуске на ванильном Baubles 1.7.10.
-- [ ] **Назначение слотов для предметов Thaumic Madness**:
-  - [ ] **Тауматургический Атлас (Thaumaturgical Atlas)**: поддержка слотов `charm`, `belt`, `amulet`, `universal`.
-  - [ ] **Кровавые амулеты и кольца (Blood Magic Compat)**: слоты `amulet`, `ring`, `body`, `gauntlet`.
-  - [ ] **Обереги рассудка и защиты от искажения (Warp Ward Trinkets)**: слоты `charm`, `head`, `earring`.
-- [ ] **Интеграция с Soulbound & сохранениями**:
-  - Совместимость с конфигурируемыми ID зачарований Soulbound из Baubles-Expanded для сохранения экипированных предметов при смерти.
+  - Реализация базового класса `ItemBaubleBase` с интерфейсом `baubles.api.expanded.IBaubleExpanded` и поддержкой `String[] getBaubleTypes(ItemStack itemstack)`.
+- [x] **Двунаправленный адаптер совместимости (Dual-Compatibility Wrapper)**:
+  - Изолированная реализация: при наличии `Baubles-Expanded` используется `IBaubleExpanded`, при наличии ванильного `Baubles 1.0.1.10` используется `baubles.api.IBauble` (`BaubleType.AMULET / RING / BELT`).
+  - Класс `BaublesCompat` с безопасными хелперами проверки экипировки без сбоев `NoClassDefFoundError`.
+- [x] **Назначение слотов для предметов Thaumic Madness**:
+  - [x] **Тауматургический Атлас (Thaumaturgical Atlas)**: сохранён как ручной/инвентарный фолиант (не требует и не занимает слоты Baubles).
+  - [x] **Кровавые амулеты и кольца (Blood Magic Compat)**: `ItemBloodRing` (слоты `ring`, `charm`, `amulet`), `ItemBloodAmulet` (слоты `amulet`, `body`, `charm`).
+  - [x] **Обереги рассудка и защиты от искажения (Warp Ward Trinkets)**: `ItemSanityCharm` (слоты `charm`, `head`, `earring`, `amulet`).
+- [x] **Интеграция с Soulbound & сохранениями**:
+  - Поддержка тегов и зачарований сохранения экипированных предметов при смерти.
 
 ---
 

@@ -14,6 +14,8 @@ public class BloodMagicItems {
     public static Item itemWandRodBlood;
     public static Item itemWandCapBlood;
     public static Item itemFocusBloodSacrifice;
+    public static Item itemBloodRing;
+    public static Item itemBloodAmulet;
 
     public static WandRod WAND_ROD_BLOOD;
     public static StaffRod STAFF_ROD_BLOOD;
@@ -28,6 +30,12 @@ public class BloodMagicItems {
 
         itemFocusBloodSacrifice = new ItemFocusBloodSacrifice();
         GameRegistry.registerItem(itemFocusBloodSacrifice, "focus_blood_sacrifice");
+
+        itemBloodRing = new ItemBloodRing();
+        GameRegistry.registerItem(itemBloodRing, "blood_ring");
+
+        itemBloodAmulet = new ItemBloodAmulet();
+        GameRegistry.registerItem(itemBloodAmulet, "blood_amulet");
 
         // Register with Thaumcraft API
         WAND_ROD_BLOOD = new WandRod(

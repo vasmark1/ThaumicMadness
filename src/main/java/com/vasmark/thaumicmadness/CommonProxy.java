@@ -20,6 +20,7 @@ public class CommonProxy {
 
         NetworkHandler.init();
         com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat.init();
+        com.vasmark.thaumicmadness.compat.baubles.BaublesCompat.init();
         ModBlocks.init();
         com.vasmark.thaumicmadness.item.ModItems.init();
         com.vasmark.thaumicmadness.compat.bloodmagic.BloodMagicCompat.preInit();
