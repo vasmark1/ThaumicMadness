@@ -20,6 +20,8 @@ public class FalsePatternCompat {
     private static final Logger LOG = LogManager.getLogger("ThaumicMadness/FalsePatternCompat");
 
     private static boolean fplibLoaded = false;
+    private static boolean falsetweaksLoaded = false;
+    private static boolean unimixinsLoaded = false;
     private static boolean angelicaLoaded = false;
     private static boolean tc4tweaksLoaded = false;
     private static boolean hodgepodgeLoaded = false;
@@ -30,15 +32,23 @@ public class FalsePatternCompat {
 
     public static void init() {
         fplibLoaded = Loader.isModLoaded("falsepatternlib");
+        falsetweaksLoaded = Loader.isModLoaded("falsetweaks");
+        unimixinsLoaded = Loader.isModLoaded("unimixins");
         angelicaLoaded = Loader.isModLoaded("angelica");
         tc4tweaksLoaded = Loader.isModLoaded("tc4tweaks");
         hodgepodgeLoaded = Loader.isModLoaded("hodgepodge");
         lwjgl3ifyLoaded = Loader.isModLoaded("lwjgl3ify");
 
-        LOG.info("FalsePattern Ecosystem Detection:");
+        LOG.info("FalsePattern / LegacyModdingMC Ecosystem Detection:");
         LOG.info(
             " - FalsePatternLib: {}",
             fplibLoaded ? "DETECTED (Accelerated FastMath & Reflection active)" : "Not present");
+        LOG.info(
+            " - FalseTweaks: {}",
+            falsetweaksLoaded ? "DETECTED (Smooth GUI & rendering optimizations)" : "Not present");
+        LOG.info(
+            " - UniMixins (LegacyModdingMC): {}",
+            unimixinsLoaded ? "DETECTED (Universal Mixin 0.8+ backend)" : "Not present");
         LOG.info(
             " - Angelica (Sodium/Iris): {}",
             angelicaLoaded ? "DETECTED (Strict OpenGL pipeline active)" : "Not present");
@@ -49,6 +59,14 @@ public class FalsePatternCompat {
 
     public static boolean isFPLibLoaded() {
         return fplibLoaded;
+    }
+
+    public static boolean isFalseTweaksLoaded() {
+        return falsetweaksLoaded;
+    }
+
+    public static boolean isUniMixinsLoaded() {
+        return unimixinsLoaded;
     }
 
     public static boolean isAngelicaLoaded() {

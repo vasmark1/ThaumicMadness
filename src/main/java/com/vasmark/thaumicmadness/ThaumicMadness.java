@@ -28,6 +28,8 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
         + "after:TravellersGear;"
         + "after:tcinventoryscan;"
         + "after:falsepatternlib;"
+        + "after:falsetweaks;"
+        + "after:unimixins;"
         + "after:angelica;"
         + "after:tc4tweaks;"
         + "after:hodgepodge;"

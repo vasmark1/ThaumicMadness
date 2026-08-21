@@ -18,5 +18,9 @@ repositories {
         name = "FalsePattern Maven"
         url = "https://mvn.falsepattern.com/releases"
     }
+    maven {
+        name = "JitPack"
+        url = "https://jitpack.io"
+    }
 }
 
