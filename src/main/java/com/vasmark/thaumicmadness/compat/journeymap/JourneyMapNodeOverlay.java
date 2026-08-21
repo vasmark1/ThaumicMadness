@@ -76,11 +76,16 @@ public class JourneyMapNodeOverlay {
             .getNodes();
         if (nodes == null || nodes.isEmpty()) return;
 
+        // Ensure nodes are drawn on the fullscreen map overlay
+        DRAW_STEP.draw(0, 0, gridRenderer, 1.0F, 1.0, 0.0);
+
         int mouseX = event.mouseX;
         int mouseY = event.mouseY;
 
+        double halfBlock = Math.pow(2.0, gridRenderer.getZoom()) / 2.0;
+
         NodeData hoveredNode = null;
-        double bestDistSq = 144.0; // 12 pixel radius
+        double bestDistSq = 225.0; // 15 pixel hover detection radius
 
         for (NodeData node : nodes) {
             if (node.dim != currentDim) continue;
@@ -89,8 +94,11 @@ public class JourneyMapNodeOverlay {
             Point2D.Double p = gridRenderer.getBlockPixelInGrid(node.x, node.z);
             if (p == null) continue;
 
-            double dx = mouseX - p.x;
-            double dy = mouseY - p.y;
+            double nodeScreenX = p.x + halfBlock;
+            double nodeScreenY = p.y + halfBlock;
+
+            double dx = mouseX - nodeScreenX;
+            double dy = mouseY - nodeScreenY;
             double distSq = dx * dx + dy * dy;
 
             if (distSq < bestDistSq) {
@@ -139,87 +147,76 @@ public class JourneyMapNodeOverlay {
         if (gridRendererField != null) {
             try {
                 return (GridRenderer) gridRendererField.get(fullscreen);
-            } catch (Throwable ignored) {}
+            } catch (Throwable t) {
+                LOGGER.error("Failed to access gridRenderer on Fullscreen map", t);
+            }
         }
         return null;
     }
 
     private static void drawNodeHoverCard(GuiScreen gui, FontRenderer font, NodeData node, int mouseX, int mouseY) {
-        List<String> textLines = new ArrayList<String>();
+        List<String> lines = new ArrayList<String>();
 
-        String title = node.getTypeColorCode() + node.getFormattedType()
-            + " "
-            + StatCollector.translateToLocal("nodetracker.node_suffix");
-        textLines.add(title);
+        String typeName = node.type != null && !node.type.isEmpty() ? node.type : "Normal";
+        String modifierName = node.modifier != null && !node.modifier.isEmpty() ? node.modifier + " " : "";
+        lines.add("§6✦ " + modifierName + typeName + " " + StatCollector.translateToLocal("nodetracker.node_suffix"));
+        lines.add("§7(" + node.x + ", " + node.y + ", " + node.z + ") §8| §d" + node.getTotalVis() + " Vis");
 
-        textLines.add("§7(" + node.x + ", " + node.y + ", " + node.z + ") §8| §d" + node.getTotalVis() + " Vis");
-
-        StringBuilder aspectPreview = new StringBuilder("§e");
-        int count = 0;
-        for (Map.Entry<String, Integer> entry : node.aspects.entrySet()) {
-            if (count > 0) aspectPreview.append(" ");
-            aspectPreview.append(entry.getKey())
-                .append(":")
-                .append(entry.getValue());
-            count++;
-            if (count >= 4) {
-                if (node.aspects.size() > 4) aspectPreview.append(" ...");
-                break;
+        if (node.aspects != null && !node.aspects.isEmpty()) {
+            StringBuilder sb = new StringBuilder("§f");
+            int count = 0;
+            for (Map.Entry<String, Integer> e : node.aspects.entrySet()) {
+                if (count > 0) sb.append("§7, §f");
+                sb.append(e.getKey())
+                    .append(": ")
+                    .append(e.getValue());
+                count++;
+                if (count >= 4) {
+                    if (node.aspects.size() > 4) sb.append(" §8+");
+                    break;
+                }
             }
+            lines.add(sb.toString());
         }
-        textLines.add(aspectPreview.toString());
-        textLines.add("§b▶ " + StatCollector.translateToLocal("nodetracker.jm.click_to_open"));
 
-        // Render standard tooltip using GuiScreen.drawHoveringText via reflection or custom render
+        lines.add("§b▶ " + StatCollector.translateToLocal("nodetracker.jm.click_to_open"));
+
+        int maxW = 0;
+        for (String line : lines) {
+            int w = font.getStringWidth(line);
+            if (w > maxW) maxW = w;
+        }
+
         int tooltipX = mouseX + 12;
         int tooltipY = mouseY - 12;
+        int tooltipW = maxW + 12;
+        int tooltipH = lines.size() * 11 + 8;
 
-        int tooltipTextWidth = 0;
-        for (String line : textLines) {
-            int lineW = font.getStringWidth(line);
-            if (lineW > tooltipTextWidth) tooltipTextWidth = lineW;
+        if (tooltipX + tooltipW > gui.width) {
+            tooltipX = mouseX - tooltipW - 8;
         }
-
-        int tooltipHeight = textLines.size() * 10 + 4;
-        if (tooltipX + tooltipTextWidth > gui.width) tooltipX = mouseX - 16 - tooltipTextWidth;
-        if (tooltipY + tooltipHeight + 6 > gui.height) tooltipY = gui.height - tooltipHeight - 6;
+        if (tooltipY + tooltipH > gui.height) {
+            tooltipY = gui.height - tooltipH - 4;
+        }
 
         GL11.glPushMatrix();
         GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
         GL11.glTranslatef(0, 0, 300.0F);
 
-        // Dark background
-        Gui.drawRect(
-            tooltipX - 3,
-            tooltipY - 4,
-            tooltipX + tooltipTextWidth + 3,
-            tooltipY + tooltipHeight + 4,
-            0xF0100C08);
-        Gui.drawRect(
-            tooltipX - 4,
-            tooltipY - 3,
-            tooltipX + tooltipTextWidth + 4,
-            tooltipY + tooltipHeight + 3,
-            0xF0100C08);
+        // Arcane brass card background
+        Gui.drawRect(tooltipX, tooltipY, tooltipX + tooltipW, tooltipY + tooltipH, 0xF018120B);
+        Gui.drawRect(tooltipX + 1, tooltipY + 1, tooltipX + tooltipW - 1, tooltipY + tooltipH - 1, 0xF0241C13);
 
         // Gold border
-        Gui.drawRect(tooltipX - 3, tooltipY - 3, tooltipX + tooltipTextWidth + 3, tooltipY - 2, 0xFF8A6536);
-        Gui.drawRect(
-            tooltipX - 3,
-            tooltipY + tooltipHeight + 2,
-            tooltipX + tooltipTextWidth + 3,
-            tooltipY + tooltipHeight + 3,
-            0xFF8A6536);
-        Gui.drawRect(tooltipX - 3, tooltipY - 2, tooltipX - 2, tooltipY + tooltipHeight + 2, 0xFF8A6536);
-        Gui.drawRect(
-            tooltipX + tooltipTextWidth + 2,
-            tooltipY - 2,
-            tooltipX + tooltipTextWidth + 3,
-            tooltipY + tooltipHeight + 2,
-            0xFF8A6536);
+        Gui.drawRect(tooltipX, tooltipY, tooltipX + tooltipW, tooltipY + 1, 0xFFE5C16C);
+        Gui.drawRect(tooltipX, tooltipY + tooltipH - 1, tooltipX + tooltipW, tooltipY + tooltipH, 0xFFE5C16C);
+        Gui.drawRect(tooltipX, tooltipY, tooltipX + 1, tooltipY + tooltipH, 0xFFE5C16C);
+        Gui.drawRect(tooltipX + tooltipW - 1, tooltipY, tooltipX + tooltipW, tooltipY + tooltipH, 0xFFE5C16C);
 
-        for (int i = 0; i < textLines.size(); i++) {
-            font.drawStringWithShadow(textLines.get(i), tooltipX, tooltipY + i * 10, 0xFFFFFF);
+        int textY = tooltipY + 4;
+        for (String line : lines) {
+            font.drawStringWithShadow(line, tooltipX + 6, textY, 0xFFFFFF);
+            textY += 11;
         }
 
         GL11.glPopAttrib();

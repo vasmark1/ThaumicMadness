@@ -59,6 +59,15 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
             return loaded;
         }
 
+        // JourneyMap mixins
+        if (mixinClassName.contains("MixinMapState") || targetClassName.contains("journeymap")) {
+            boolean loaded = isModLoaded("journeymap") || isModLoaded("JourneyMap");
+            if (!loaded) {
+                LOG.debug("Skipping {} as JourneyMap is not installed.", mixinClassName);
+            }
+            return loaded;
+        }
+
         return true;
     }
 

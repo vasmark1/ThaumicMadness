@@ -15,6 +15,7 @@
     "MixinRenderTileNodeBasic",
     "MixinRenderEventHandler",
     "MixinAutomagyRenderEventHandler",
-    "MixinTileInfusedBlockOreRenderer"
+    "MixinTileInfusedBlockOreRenderer",
+    "MixinMapState"
   ]
 }

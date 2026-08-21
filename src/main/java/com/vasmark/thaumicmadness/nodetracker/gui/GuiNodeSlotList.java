@@ -109,8 +109,7 @@ public class GuiNodeSlotList {
 
             int btnDelX = cardRight - 15;
             int btnCopyX = cardRight - 32;
-            int btnJmX = cardRight - 55;
-            int btnTrackX = cardRight - 86;
+            int btnTrackX = cardRight - 63;
             int btnY = cardY + 3;
             int btnH = 14;
 
@@ -124,21 +123,7 @@ public class GuiNodeSlotList {
                 return;
             }
 
-            // 2. JourneyMap Waypoint Button (JM)
-            if (com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded() && mouseX >= btnJmX
-                && mouseX <= btnJmX + 21
-                && mouseY >= btnY
-                && mouseY <= btnY + btnH) {
-                boolean created = com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.toggleWaypoint(node);
-                if (created) {
-                    parent.setNotification("§a" + StatCollector.translateToLocal("nodetracker.jm.created"));
-                } else {
-                    parent.setNotification("§c" + StatCollector.translateToLocal("nodetracker.jm.removed"));
-                }
-                return;
-            }
-
-            // 3. Copy Button (CPY)
+            // 2. Copy Button (CPY)
             if (mouseX >= btnCopyX && mouseX <= btnCopyX + 15 && mouseY >= btnY && mouseY <= btnY + btnH) {
                 try {
                     String text = node.x + " "
@@ -257,8 +242,7 @@ public class GuiNodeSlotList {
             // Action buttons
             int btnDelX = cardRight - 15;
             int btnCopyX = cardRight - 32;
-            int btnJmX = cardRight - 55;
-            int btnTrackX = cardRight - 86;
+            int btnTrackX = cardRight - 63;
             int btnY = cardY + 3;
             int btnH = 14;
 
@@ -275,26 +259,7 @@ public class GuiNodeSlotList {
             Gui.drawRect(btnTrackX + 1, btnY + 1, btnTrackX + 28, btnY + btnH - 1, isTarget ? 0xF03B3015 : 0xE01A150E);
             font.drawStringWithShadow(isTarget ? "§a★GPS" : "§eGPS", btnTrackX + 3, btnY + 3, 0xFFFFFF);
 
-            // 2. JourneyMap Waypoint Button (JM)
-            if (com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.isJourneyMapLoaded()) {
-                boolean hasJmWp = com.vasmark.thaumicmadness.compat.journeymap.JourneyMapCompat.hasWaypoint(node);
-                boolean hoverJm = mouseX >= btnJmX && mouseX <= btnJmX + 21 && mouseY >= btnY && mouseY <= btnY + btnH;
-                Gui.drawRect(
-                    btnJmX,
-                    btnY,
-                    btnJmX + 21,
-                    btnY + btnH,
-                    hoverJm ? 0xFF55FFFF : (hasJmWp ? 0xFF00AAAA : 0xFF3D2C15));
-                Gui.drawRect(btnJmX + 1, btnY + 1, btnJmX + 20, btnY + btnH - 1, hasJmWp ? 0xF00A2E33 : 0xE01A150E);
-                font.drawStringWithShadow(hasJmWp ? "§b●JM" : "§7JM", btnJmX + 2, btnY + 3, 0xFFFFFF);
-
-                if (isHovered && hoverJm) {
-                    parent.hoveredTooltip = StatCollector
-                        .translateToLocal(hasJmWp ? "nodetracker.jm.remove_tip" : "nodetracker.jm.add_tip");
-                }
-            }
-
-            // 3. Copy Button (CPY)
+            // 2. Copy Button (CPY)
             boolean hoverCopy = mouseX >= btnCopyX && mouseX <= btnCopyX + 15
                 && mouseY >= btnY
                 && mouseY <= btnY + btnH;
@@ -302,7 +267,7 @@ public class GuiNodeSlotList {
             Gui.drawRect(btnCopyX + 1, btnY + 1, btnCopyX + 14, btnY + btnH - 1, 0xE01A150E);
             font.drawStringWithShadow("§b⎘", btnCopyX + 4, btnY + 3, 0xFFFFFF);
 
-            // 4. Delete Button (✕)
+            // 3. Delete Button (✕)
             boolean hoverDel = mouseX >= btnDelX && mouseX <= btnDelX + 13 && mouseY >= btnY && mouseY <= btnY + btnH;
             Gui.drawRect(btnDelX, btnY, btnDelX + 13, btnY + btnH, hoverDel ? 0xFFFF4444 : 0xFF3D2C15);
             Gui.drawRect(btnDelX + 1, btnY + 1, btnDelX + 12, btnY + btnH - 1, 0xE01A150E);
