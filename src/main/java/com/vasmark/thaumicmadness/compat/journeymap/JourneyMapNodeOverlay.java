@@ -10,6 +10,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.util.StatCollector;
 import net.minecraftforge.client.event.GuiScreenEvent;
 
@@ -23,11 +24,8 @@ import com.vasmark.thaumicmadness.nodetracker.NodeTrackerManager;
 import com.vasmark.thaumicmadness.nodetracker.gui.GuiNodeDetailPopup;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import journeymap.client.model.MapState;
-import journeymap.client.render.draw.DrawStep;
 import journeymap.client.render.map.GridRenderer;
 import journeymap.client.ui.fullscreen.Fullscreen;
 
@@ -35,29 +33,12 @@ import journeymap.client.ui.fullscreen.Fullscreen;
 public class JourneyMapNodeOverlay {
 
     private static final Logger LOGGER = LogManager.getLogger("ThaumicMadness-JMOverlay");
-    private static final AuraNodeDrawStep DRAW_STEP = new AuraNodeDrawStep();
 
     private static Field gridRendererField = null;
     private static boolean fieldLookupDone = false;
 
     private static long lastClickTime = 0;
     private static boolean wasMouseDown = false;
-
-    @SubscribeEvent
-    public void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.Phase.END) return;
-        if (!JourneyMapCompat.isJourneyMapLoaded()) return;
-
-        try {
-            MapState state = Fullscreen.state();
-            if (state != null) {
-                List<DrawStep> drawSteps = state.getDrawSteps();
-                if (drawSteps != null && !drawSteps.contains(DRAW_STEP)) {
-                    drawSteps.add(DRAW_STEP);
-                }
-            }
-        } catch (Throwable ignored) {}
-    }
 
     @SubscribeEvent
     public void onGuiDrawPost(GuiScreenEvent.DrawScreenEvent.Post event) {
@@ -72,12 +53,12 @@ public class JourneyMapNodeOverlay {
         if (mc.thePlayer == null) return;
         int currentDim = mc.thePlayer.dimension;
 
+        ScaledResolution sr = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
+        double scaleFactor = sr.getScaleFactor();
+
         List<NodeData> nodes = NodeTrackerManager.getInstance()
             .getNodes();
         if (nodes == null || nodes.isEmpty()) return;
-
-        // Ensure nodes are drawn on the fullscreen map overlay
-        DRAW_STEP.draw(0, 0, gridRenderer, 1.0F, 1.0, 0.0);
 
         int mouseX = event.mouseX;
         int mouseY = event.mouseY;
@@ -85,20 +66,21 @@ public class JourneyMapNodeOverlay {
         double halfBlock = Math.pow(2.0, gridRenderer.getZoom()) / 2.0;
 
         NodeData hoveredNode = null;
-        double bestDistSq = 225.0; // 15 pixel hover detection radius
+        double bestDistSq = 256.0; // 16 pixel radius in GUI space
 
         for (NodeData node : nodes) {
             if (node.dim != currentDim) continue;
-            if (!gridRenderer.isOnScreen(node.x, node.z)) continue;
 
             Point2D.Double p = gridRenderer.getBlockPixelInGrid(node.x, node.z);
             if (p == null) continue;
+            if (!gridRenderer.isOnScreen(p)) continue;
 
-            double nodeScreenX = p.x + halfBlock;
-            double nodeScreenY = p.y + halfBlock;
+            // Convert physical display pixel coordinates to Minecraft GUI ScaledResolution coordinates
+            double nodeGuiX = (p.x + halfBlock) / scaleFactor;
+            double nodeGuiY = (p.y + halfBlock) / scaleFactor;
 
-            double dx = mouseX - nodeScreenX;
-            double dy = mouseY - nodeScreenY;
+            double dx = mouseX - nodeGuiX;
+            double dy = mouseY - nodeGuiY;
             double distSq = dx * dx + dy * dy;
 
             if (distSq < bestDistSq) {
@@ -116,8 +98,8 @@ public class JourneyMapNodeOverlay {
                 long now = System.currentTimeMillis();
                 if (now - lastClickTime > 250) {
                     lastClickTime = now;
-                    mc.displayGuiScreen(new GuiNodeDetailPopup(hoveredNode, fullscreen));
                     wasMouseDown = true;
+                    mc.displayGuiScreen(new GuiNodeDetailPopup(hoveredNode, fullscreen));
                     return;
                 }
             }
@@ -133,7 +115,6 @@ public class JourneyMapNodeOverlay {
                 gridRendererField = Fullscreen.class.getDeclaredField("gridRenderer");
                 gridRendererField.setAccessible(true);
             } catch (Throwable t) {
-                // Fallback: search all fields of type GridRenderer
                 for (Field f : Fullscreen.class.getDeclaredFields()) {
                     if (GridRenderer.class.isAssignableFrom(f.getType())) {
                         f.setAccessible(true);
@@ -189,7 +170,7 @@ public class JourneyMapNodeOverlay {
 
         int tooltipX = mouseX + 12;
         int tooltipY = mouseY - 12;
-        int tooltipW = maxW + 12;
+        int tooltipW = maxW + 14;
         int tooltipH = lines.size() * 11 + 8;
 
         if (tooltipX + tooltipW > gui.width) {
@@ -201,7 +182,9 @@ public class JourneyMapNodeOverlay {
 
         GL11.glPushMatrix();
         GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
-        GL11.glTranslatef(0, 0, 300.0F);
+        GL11.glDisable(GL11.GL_DEPTH_TEST);
+        GL11.glDepthMask(false);
+        GL11.glTranslatef(0, 0, 500.0F);
 
         // Arcane brass card background
         Gui.drawRect(tooltipX, tooltipY, tooltipX + tooltipW, tooltipY + tooltipH, 0xF018120B);

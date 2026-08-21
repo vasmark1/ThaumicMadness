@@ -236,8 +236,8 @@ public class GuiNodeDetailPopup extends GuiScreen {
         for (Map.Entry<String, Integer> entry : node.aspects.entrySet()) {
             Aspect aspect = Aspect.getAspect(entry.getKey());
             if (aspect != null) {
-                int ax = aspectStartX + (rowCount % 11) * 21;
-                int ay = aspectY + (rowCount / 11) * 26;
+                int ax = aspectStartX + (rowCount % 8) * 28;
+                int ay = aspectY + (rowCount / 8) * 26;
 
                 GL11.glPushMatrix();
                 GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
@@ -245,13 +245,8 @@ public class GuiNodeDetailPopup extends GuiScreen {
                 GL11.glPopAttrib();
                 GL11.glPopMatrix();
 
-                // Aspect Amount Text
-                String amt = String.valueOf(entry.getValue());
-                int amtW = this.fontRendererObj.getStringWidth(amt);
-                this.fontRendererObj.drawStringWithShadow(amt, ax + 8 - amtW / 2, ay + 17, 0xFFFF88);
-
                 // Hover check
-                if (mouseX >= ax && mouseX <= ax + 16 && mouseY >= ay && mouseY <= ay + 24) {
+                if (mouseX >= ax && mouseX <= ax + 26 && mouseY >= ay && mouseY <= ay + 20) {
                     hoveredAspectTooltip = aspect.getName() + " §7(" + entry.getValue() + " Vis)";
                 }
 

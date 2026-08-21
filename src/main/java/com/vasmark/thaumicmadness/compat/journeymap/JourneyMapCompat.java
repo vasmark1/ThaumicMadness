@@ -172,53 +172,44 @@ public class JourneyMapCompat {
     }
 
     public static Color getNodeColor(NodeData node) {
-        if (node == null) return Color.WHITE;
+        if (node == null) return new Color(171, 71, 188); // Thaumic Purple
 
-        String type = node.type != null ? node.type.toUpperCase() : "NORMAL";
-        switch (type) {
-            case "PURE":
-                return new Color(0, 230, 255); // Vibrant Cyan
-            case "HUNGRY":
-                return new Color(255, 45, 45); // Danger Red
-            case "TAINTED":
-                return new Color(210, 50, 230); // Taint Magenta
-            case "DARK":
-                return new Color(130, 40, 180); // Dark Nether Purple
-            case "UNSTABLE":
-                return new Color(255, 215, 0); // Electric Gold
-            default:
-                break;
+        if (node.type != null) {
+            String type = node.type.trim()
+                .toUpperCase();
+            if (type.contains("PURE")) {
+                return new Color(0, 229, 255); // Vibrant Cyan
+            } else if (type.contains("HUNGRY")) {
+                return new Color(255, 23, 68); // Neon Red
+            } else if (type.contains("TAINT")) {
+                return new Color(213, 0, 249); // Taint Flux Magenta
+            } else if (type.contains("DARK") || type.contains("OMINOUS") || type.contains("SINISTER")) {
+                return new Color(74, 20, 140); // Deep Dark Indigo Purple
+            } else if (type.contains("UNSTABLE")) {
+                return new Color(255, 214, 0); // Electric Gold
+            }
         }
 
-        String mod = node.modifier != null ? node.modifier.toUpperCase() : "";
-        if ("BRIGHT".equals(mod)) {
-            return new Color(80, 255, 120); // Bright Emerald Green
-        } else if ("PALE".equals(mod)) {
-            return new Color(170, 170, 170); // Pale Slate
-        } else if ("FADING".equals(mod)) {
-            return new Color(120, 120, 120); // Fading Charcoal
-        }
-
-        // Default: find highest aspect
+        // For NORMAL nodes, color by dominant primal aspect
         String topAspect = getDominantAspect(node.aspects);
         if (topAspect != null) {
             switch (topAspect.toLowerCase()) {
                 case "aer":
-                    return new Color(255, 255, 120);
+                    return new Color(255, 234, 0); // Bright Yellow
                 case "ignis":
-                    return new Color(255, 90, 30);
+                    return new Color(255, 61, 0); // Fiery Red-Orange
                 case "aqua":
-                    return new Color(50, 150, 255);
+                    return new Color(0, 176, 255); // Sky Blue
                 case "terra":
-                    return new Color(80, 200, 60);
+                    return new Color(0, 230, 118); // Spring Green
                 case "ordo":
-                    return new Color(240, 240, 255);
+                    return new Color(236, 239, 241); // Pure White/Silver
                 case "perditio":
-                    return new Color(70, 70, 80);
+                    return new Color(66, 66, 66); // Dark Charcoal
             }
         }
 
-        return new Color(180, 140, 255); // Default Thaumic Violet
+        return new Color(171, 71, 188); // Classic Thaumcraft Arcane Purple
     }
 
     private static String getDominantAspect(Map<String, Integer> aspects) {

@@ -17,10 +17,15 @@
   * **Shift + Right-Click**: Opens the mystical **Aura Node Atlas**.
 * **Passive Revealer Vision**: Grants full Goggles of Revealing vision and aura node aspect inspection passively from anywhere in the player's main inventory (using native SpongePowered Mixins — no dummy armor manipulation).
 
-### 🧭 Aura Node Tracker & Waypoint HUD
+### 🧭 Aura Node Tracker & JourneyMap Interactive Map Objects
 * **Aura Node Database**: Scans and saves nodes surveyed with a Thaumometer across all dimensions.
 * **Live Sorting & Search**: Filter by aspect composition, node type (Pure, Sinister, Hungry, Tainted, Unstable), or brightness.
 * **In-Game Waypoint HUD**: On-screen distance, directional compass arrow, and aspect list pointing directly towards the selected node.
+* **Dynamic JourneyMap Integration**: 
+  * Displays tracked aura nodes directly on JourneyMap fullscreen and minimaps as glowing, color-coded magical spheres.
+  * Node colors accurately reflect node types (Pure, Hungry, Tainted, Sinister, Unstable) and primal aspects.
+  * Interactive hover tooltips displaying aspect breakdown, coordinates, and total Vis.
+  * Click-to-open detail popup with direct GPS tracking and "Open in Atlas" navigation.
 
 ### 🩸 Blood Magic & Blood Arsenal Integration
 * **Dedicated Research Tab**: Fully integrated research branch inside the Thaumonomicon.
@@ -47,6 +52,7 @@
 | Dependency | Type | Description |
 | :--- | :--- | :--- |
 | **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** (>= 4.2.3.5) | **Hard (Required)** | Core thaumaturgy API, aura nodes, research, and aspects. |
+| **[JourneyMap](https://www.curseforge.com/minecraft/mc-mods/journeymap)** | *Soft (Optional)* | Dynamic interactive map objects, color-coded node spheres, and popup inspect. |
 | **[Blood Magic](https://www.curseforge.com/minecraft/mc-mods/blood-magic)** | *Soft (Optional)* | Blood wand crafting, LP recharge, and Focus of Blood Sacrifice. |
 | **[Blood Arsenal](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal)** | *Soft (Optional)* | Bound wood and blood infuser recipes. |
 | **[Gadomancy](https://www.curseforge.com/minecraft/mc-mods/gadomancy)** | *Soft (Optional)* | Node rendering hooks and custom aura mechanics. |

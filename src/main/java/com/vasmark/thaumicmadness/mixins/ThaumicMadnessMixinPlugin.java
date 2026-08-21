@@ -9,8 +9,6 @@ import org.spongepowered.asm.lib.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
 
-import cpw.mods.fml.common.Loader;
-
 /**
  * UniMixins & SpongeMixin configuration plugin for Thaumic Madness.
  * Dynamically applies mixins only when target optional mod classes are present on the classpath.
@@ -33,7 +31,7 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         // Gadomancy mixins
         if (mixinClassName.contains("MixinRenderTileNodeBasic") || targetClassName.contains("makeo.gadomancy")) {
-            boolean loaded = isModLoaded("gadomancy");
+            boolean loaded = isClassPresent("makeo.gadomancy.client.renderers.tile.RenderTileNodeBasic");
             if (!loaded) {
                 LOG.debug("Skipping {} as Gadomancy is not installed.", mixinClassName);
             }
@@ -43,7 +41,7 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
         // Automagy mixins
         if (mixinClassName.contains("MixinAutomagyRenderEventHandler")
             || targetClassName.contains("tuhljin.automagy")) {
-            boolean loaded = isModLoaded("Automagy");
+            boolean loaded = isClassPresent("tuhljin.automagy.client.gui.AutomagyRenderEventHandler");
             if (!loaded) {
                 LOG.debug("Skipping {} as Automagy is not installed.", mixinClassName);
             }
@@ -52,7 +50,7 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
 
         // Thaumores mixins
         if (mixinClassName.contains("MixinTileInfusedBlockOreRenderer") || targetClassName.contains("thaumores")) {
-            boolean loaded = isModLoaded("Thaumores");
+            boolean loaded = isClassPresent("mjaroslav.mcmods.thaumores.client.render.TileInfusedBlockOreRenderer");
             if (!loaded) {
                 LOG.debug("Skipping {} as Thaumores is not installed.", mixinClassName);
             }
@@ -61,7 +59,7 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
 
         // JourneyMap mixins
         if (mixinClassName.contains("MixinMapState") || targetClassName.contains("journeymap")) {
-            boolean loaded = isModLoaded("journeymap") || isModLoaded("JourneyMap");
+            boolean loaded = isClassPresent("journeymap.client.model.MapState");
             if (!loaded) {
                 LOG.debug("Skipping {} as JourneyMap is not installed.", mixinClassName);
             }
@@ -85,9 +83,10 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
     @Override
     public void postApply(String targetClassName, ClassNode targetClass, String mixinClassName, IMixinInfo mixinInfo) {}
 
-    private static boolean isModLoaded(String modId) {
+    private static boolean isClassPresent(String className) {
         try {
-            return Loader.isModLoaded(modId);
+            return net.minecraft.launchwrapper.Launch.classLoader.getResource(className.replace('.', '/') + ".class")
+                != null;
         } catch (Throwable ignored) {
             return false;
         }
