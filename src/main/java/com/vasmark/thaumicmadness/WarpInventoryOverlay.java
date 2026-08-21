@@ -8,6 +8,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -18,7 +19,6 @@ import net.minecraftforge.client.event.GuiScreenEvent;
 import org.lwjgl.opengl.GL11;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import thaumcraft.api.ThaumcraftApiHelper;
@@ -30,11 +30,20 @@ public class WarpInventoryOverlay {
 
     private static final ResourceLocation HUD_TEXTURE = new ResourceLocation("thaumcraft", "textures/gui/hud.png");
 
-    private static final Field GUI_LEFT_FIELD = ReflectionHelper
-        .findField(GuiContainer.class, "field_147003_i", "guiLeft");
-    private static final Field GUI_TOP_FIELD = ReflectionHelper
-        .findField(GuiContainer.class, "field_147009_r", "guiTop");
-    private static final Field Y_SIZE_FIELD = ReflectionHelper.findField(GuiContainer.class, "field_147000_e", "ySize");
+    private static Field getGuiLeftField() {
+        return com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+            .findCachedField(GuiContainer.class, "guiLeft", "field_147003_i");
+    }
+
+    private static Field getGuiTopField() {
+        return com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+            .findCachedField(GuiContainer.class, "guiTop", "field_147009_r");
+    }
+
+    private static Field getYSizeField() {
+        return com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+            .findCachedField(GuiContainer.class, "ySize", "field_147000_e");
+    }
 
     // Check if player has Sanity Checker in main inventory or Baubles
     private static boolean hasSanityChecker(EntityPlayer player) {
@@ -89,9 +98,12 @@ public class WarpInventoryOverlay {
         GuiContainer container = (GuiContainer) event.gui;
         int guiLeft, guiTop, ySize;
         try {
-            guiLeft = GUI_LEFT_FIELD.getInt(container);
-            guiTop = GUI_TOP_FIELD.getInt(container);
-            ySize = Y_SIZE_FIELD.getInt(container);
+            Field fLeft = getGuiLeftField();
+            Field fTop = getGuiTopField();
+            Field fYSize = getYSizeField();
+            guiLeft = fLeft != null ? fLeft.getInt(container) : (container.width - 176) / 2;
+            guiTop = fTop != null ? fTop.getInt(container) : (container.height - 166) / 2;
+            ySize = fYSize != null ? fYSize.getInt(container) : 166;
         } catch (Exception e) {
             guiLeft = (container.width - 176) / 2;
             ySize = 166;
@@ -135,6 +147,7 @@ public class WarpInventoryOverlay {
         int tubeY = barY + 20;
 
         GL11.glPushMatrix();
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
         GL11.glEnable(GL11.GL_BLEND);
         GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
         mc.renderEngine.bindTexture(HUD_TEXTURE);
@@ -172,7 +185,7 @@ public class WarpInventoryOverlay {
             container.drawTexturedModalRect(barX, barY, 216, 0, 20, 16);
         }
 
-        GL11.glDisable(GL11.GL_BLEND);
+        GL11.glPopAttrib();
         GL11.glPopMatrix();
 
         // 6. Tooltip display on mouse hover
@@ -206,8 +219,11 @@ public class WarpInventoryOverlay {
         if (textLines.isEmpty()) return;
 
         GL11.glPushMatrix();
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
         GL11.glDisable(GL11.GL_LIGHTING);
         GL11.glDisable(GL11.GL_DEPTH_TEST);
+        GL11.glEnable(GL11.GL_BLEND);
+        OpenGlHelper.glBlendFunc(770, 771, 1, 0);
         int tooltipWidth = 0;
 
         for (String s : textLines) {
@@ -282,7 +298,7 @@ public class WarpInventoryOverlay {
             tooltipY += 10;
         }
 
-        GL11.glEnable(GL11.GL_DEPTH_TEST);
+        GL11.glPopAttrib();
         GL11.glPopMatrix();
     }
 }

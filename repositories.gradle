@@ -14,5 +14,9 @@ repositories {
         name = "GTNH Maven"
         url = "https://nexus.gtnewhorizons.com/repository/public/"
     }
+    maven {
+        name = "FalsePattern Maven"
+        url = "https://mvn.falsepattern.com/releases"
+    }
 }
 

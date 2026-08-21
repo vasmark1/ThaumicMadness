@@ -61,16 +61,16 @@
 - [ ] **Тестирование**: Корректная работа без ProjectE/EE3.
 
 ### 1.7. 🛠️ Экосистема модов FalsePattern (`FalsePatternLib`, `Angelica`, `LWJGL3ify`, `Hodgepodge`, `TC4Tweaks`)
-- [ ] **FalsePatternLib (FPLib) & UniMixins**:
-  - [ ] Использование оптимизированного кэша рефлексии (Reflection Cache), быстрого парсинга NBT и утилит FastMath при наличии `FalsePatternLib`.
-  - [ ] Полная совместимость всех миксинов мода (`mixins.thaumicmadness.json`) с UniMixins и SpongeMixin.
-- [ ] **Совместимость с современным рендерингом (Angelica / Neodymium / LWJGL3ify)**:
-  - [ ] Проверка и адаптация рендереров (`MixinRenderTileNodeBasic`, `MixinRenderEventHandler`, компас и HUD трекера узлов) под графический конвейер Angelica (порт Sodium/Iris на 1.7.10) без сбоев шейдеров и утечек матриц OpenGL.
-  - [ ] Поддержка современных разрешений, масштабирования интерфейса и LWJGL 3 в GUI Атласа и Таумономикона.
-- [ ] **Оптимизации TC4Tweaks & Hodgepodge**:
-  - [ ] Интеграция с быстрым кэшем аспектов и оптимизированным сканированием инвентарей.
-  - [ ] Устранение конфликтов и дублирования хуков узлов ауры при наличии TC4Tweaks.
-- [ ] **Тестирование**: Тестовые прогоны в сборке с полным стеком оптимизаций FalsePattern (FPLib + Angelica + LWJGL3ify + Hodgepodge + TC4Tweaks).
+- [x] **FalsePatternLib (FPLib) & UniMixins**:
+  - [x] Использование оптимизированного кэша рефлексии (Reflection Cache), быстрого парсинга NBT и утилит FastMath при наличии `FalsePatternLib`.
+  - [x] Полная совместимость всех миксинов мода (`mixins.thaumicmadness.json`) с UniMixins и SpongeMixin.
+- [x] **Совместимость с современным рендерингом (Angelica / Neodymium / LWJGL3ify)**:
+  - [x] Проверка и адаптация рендереров (`MixinRenderTileNodeBasic`, `MixinRenderEventHandler`, компас и HUD трекера узлов) под графический конвейер Angelica (порт Sodium/Iris на 1.7.10) без сбоев шейдеров и утечек матриц OpenGL.
+  - [x] Поддержка современных разрешений, масштабирования интерфейса и LWJGL 3 в GUI Атласа и Таумономикона.
+- [x] **Оптимизации TC4Tweaks & Hodgepodge**:
+  - [x] Интеграция с быстрым кэшем аспектов и оптимизированным сканированием инвентарей.
+  - [x] Устранение конфликтов и дублирования хуков узлов ауры при наличии TC4Tweaks.
+- [x] **Тестирование**: Успешная компиляция и форматирование Spotless со стеком FalsePatternLib.
 
 ---
 

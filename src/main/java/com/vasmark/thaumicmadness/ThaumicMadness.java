@@ -26,7 +26,12 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
         + "after:NotEnoughItems;"
         + "after:Baubles;"
         + "after:TravellersGear;"
-        + "after:tcinventoryscan;",
+        + "after:tcinventoryscan;"
+        + "after:falsepatternlib;"
+        + "after:angelica;"
+        + "after:tc4tweaks;"
+        + "after:hodgepodge;"
+        + "after:lwjgl3ify;",
     guiFactory = "com.vasmark.thaumicmadness.client.gui.ModGuiConfigFactory")
 public class ThaumicMadness {
 

@@ -19,6 +19,7 @@ public class CommonProxy {
         net.minecraftforge.common.MinecraftForge.EVENT_BUS.register(new ModConfigEventHandler());
 
         NetworkHandler.init();
+        com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat.init();
         ModBlocks.init();
         com.vasmark.thaumicmadness.item.ModItems.init();
         com.vasmark.thaumicmadness.compat.bloodmagic.BloodMagicCompat.preInit();

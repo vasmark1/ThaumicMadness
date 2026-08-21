@@ -50,6 +50,7 @@ public class NodeTrackerHUD extends Gui {
         int y = 4;
 
         GL11.glPushMatrix();
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
         GL11.glEnable(GL11.GL_BLEND);
         OpenGlHelper.glBlendFunc(770, 771, 1, 0);
 
@@ -69,7 +70,7 @@ public class NodeTrackerHUD extends Gui {
             String targetPos = "§7" + target.x + ", " + target.y + ", " + target.z;
             font.drawStringWithShadow(targetPos, x + (width - font.getStringWidth(targetPos)) / 2, y + 18, 0xCCCCCC);
 
-            GL11.glDisable(GL11.GL_BLEND);
+            GL11.glPopAttrib();
             GL11.glPopMatrix();
             return;
         }
@@ -77,19 +78,21 @@ public class NodeTrackerHUD extends Gui {
         double dx = target.x + 0.5 - player.posX;
         double dy = target.y + 0.5 - player.posY;
         double dz = target.z + 0.5 - player.posZ;
-        double distance = Math.sqrt(dx * dx + dy * dy + dz * dz);
+        double distance = com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+            .fastSqrt(dx * dx + dy * dy + dz * dz);
 
         // Auto-arrival detection
         if (distance < 3.5) {
             String arrivedMsg = "§a★ " + StatCollector.translateToLocal("nodetracker.hud.arrived") + " ★";
             font.drawStringWithShadow(arrivedMsg, x + (width - font.getStringWidth(arrivedMsg)) / 2, y + 13, 0xFFFFFF);
-            GL11.glDisable(GL11.GL_BLEND);
+            GL11.glPopAttrib();
             GL11.glPopMatrix();
             return;
         }
 
-        // Compute angle diff from player's view
-        double targetAngle = Math.toDegrees(Math.atan2(dz, dx)) - 90.0;
+        // Compute angle diff from player's view using FastMath
+        double targetAngle = Math
+            .toDegrees(com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat.fastAtan2(dz, dx)) - 90.0;
         double angleDiff = MathHelper.wrapAngleTo180_double(targetAngle - player.rotationYaw);
 
         // Draw rotating Thaumcraft direction needle with brass dial
@@ -133,9 +136,7 @@ public class NodeTrackerHUD extends Gui {
             }
         }
 
-        GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-        GL11.glEnable(GL11.GL_TEXTURE_2D);
-        GL11.glDisable(GL11.GL_BLEND);
+        GL11.glPopAttrib();
         GL11.glPopMatrix();
     }
 
