@@ -18,6 +18,18 @@ public class AtlasRevealerHandler {
             }
         }
 
+        try {
+            net.minecraft.inventory.IInventory baublesInv = baubles.api.BaublesApi.getBaubles(player);
+            if (baublesInv != null) {
+                for (int i = 0; i < baublesInv.getSizeInventory(); i++) {
+                    ItemStack stack = baublesInv.getStackInSlot(i);
+                    if (stack != null && stack.getItem() instanceof ItemThaumonomiconAtlas) {
+                        return true;
+                    }
+                }
+            }
+        } catch (Throwable ignored) {}
+
         return false;
     }
 }

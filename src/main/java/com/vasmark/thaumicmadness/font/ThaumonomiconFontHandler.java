@@ -23,7 +23,6 @@ import org.lwjgl.opengl.GL12;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.relauncher.ReflectionHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import thaumcraft.api.ThaumcraftApi;
@@ -95,9 +94,9 @@ public class ThaumonomiconFontHandler {
             GuiResearchBrowser browser = (GuiResearchBrowser) event.gui;
             try {
                 // Restore currentHighlight so click events work
-                Field f = ReflectionHelper.findField(GuiResearchBrowser.class, "currentHighlight");
+                Field f = com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+                    .findCachedField(GuiResearchBrowser.class, "currentHighlight", "currentHighlight");
                 if (f != null) {
-                    f.setAccessible(true);
                     f.set(browser, savedBrowserHighlight);
                 }
 
@@ -132,9 +131,9 @@ public class ThaumonomiconFontHandler {
     private void applyReadableFont(GuiScreen gui) {
         if (gui instanceof GuiResearchRecipe) {
             try {
-                Field frField = ReflectionHelper.findField(GuiResearchRecipe.class, "fr");
+                Field frField = com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+                    .findCachedField(GuiResearchRecipe.class, "fr", "fr");
                 if (frField != null) {
-                    frField.setAccessible(true);
                     TCFontRenderer tcfr = (TCFontRenderer) frField.get(gui);
                     if (tcfr != null && !tcfr.getUnicodeFlag()) {
                         tcfr.setUnicodeFlag(true);
@@ -241,6 +240,8 @@ public class ThaumonomiconFontHandler {
     public static void drawScaledHoveringText(GuiScreen gui, List<String> textLines, int x, int y, FontRenderer font) {
         if (textLines.isEmpty()) return;
 
+        GL11.glPushMatrix();
+        GL11.glPushAttrib(GL11.GL_ALL_ATTRIB_BITS);
         GL11.glDisable(GL12.GL_RESCALE_NORMAL);
         RenderHelper.disableStandardItemLighting();
         GL11.glDisable(GL11.GL_LIGHTING);
@@ -362,10 +363,8 @@ public class ThaumonomiconFontHandler {
             tooltipY += 10;
         }
 
-        GL11.glEnable(GL11.GL_LIGHTING);
-        GL11.glEnable(GL11.GL_DEPTH_TEST);
-        RenderHelper.enableStandardItemLighting();
-        GL11.glEnable(GL12.GL_RESCALE_NORMAL);
+        GL11.glPopAttrib();
+        GL11.glPopMatrix();
     }
 
     private static void drawGradientRect(int zLevel, int left, int top, int right, int bottom, int startColor,
@@ -412,9 +411,9 @@ public class ThaumonomiconFontHandler {
         public void drawButton(Minecraft mc, int mouseX, int mouseY) {
             if (parentGui instanceof GuiResearchBrowser) {
                 try {
-                    Field f = ReflectionHelper.findField(GuiResearchBrowser.class, "currentHighlight");
+                    Field f = com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+                        .findCachedField(GuiResearchBrowser.class, "currentHighlight", "currentHighlight");
                     if (f != null) {
-                        f.setAccessible(true);
                         ResearchItem highlight = (ResearchItem) f.get(parentGui);
                         if (highlight != null) {
                             savedBrowserHighlight = highlight;
@@ -425,9 +424,9 @@ public class ThaumonomiconFontHandler {
                 } catch (Throwable ignored) {}
             } else if (parentGui instanceof GuiResearchRecipe) {
                 try {
-                    Field f = ReflectionHelper.findField(GuiResearchRecipe.class, "tooltip");
+                    Field f = com.vasmark.thaumicmadness.compat.falsepattern.FalsePatternCompat
+                        .findCachedField(GuiResearchRecipe.class, "tooltip", "tooltip");
                     if (f != null) {
-                        f.setAccessible(true);
                         @SuppressWarnings("unchecked")
                         List<String> list = (List<String>) f.get(parentGui);
                         if (list != null && !list.isEmpty()) {
