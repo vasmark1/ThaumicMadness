@@ -31,8 +31,6 @@ public class CommonProxy {
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)
     public void init(FMLInitializationEvent event) {
         com.vasmark.thaumicmadness.compat.bloodmagic.BloodMagicCompat.init();
-        com.vasmark.thaumicmadness.resources.LocalizationManager.getInstance()
-            .injectAll();
     }
 
     // postInit "Handle interaction with other mods, complete your setup based on this." (Remove if not needed)
@@ -40,13 +38,8 @@ public class CommonProxy {
         ThaumcraftCompat.init();
         com.vasmark.thaumicmadness.nodetracker.AtlasResearchAndRecipes.init();
         com.vasmark.thaumicmadness.compat.bloodmagic.BloodMagicCompat.postInit();
-        com.vasmark.thaumicmadness.resources.LocalizationManager.getInstance()
-            .injectAll();
     }
 
     // register server commands in this event handler (Remove if not needed)
-    public void serverStarting(FMLServerStartingEvent event) {
-        com.vasmark.thaumicmadness.resources.LocalizationManager.getInstance()
-            .injectAll();
-    }
+    public void serverStarting(FMLServerStartingEvent event) {}
 }

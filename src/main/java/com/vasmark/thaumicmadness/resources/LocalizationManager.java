@@ -21,7 +21,9 @@ import org.apache.logging.log4j.Logger;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
+@SideOnly(Side.CLIENT)
 public class LocalizationManager implements IResourceManagerReloadListener {
 
     private static final Logger LOGGER = LogManager.getLogger("ThaumicMadness-Localization");
