@@ -103,21 +103,40 @@
 
 ## 📦 Таблица совместимости и зависимостей
 
-| Модификация | Тип зависимости | Описание |
-| :--- | :--- | :--- |
-| **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** (>= 4.2.3.5) | **Обязательный** | Базовое API тауматургии, исследования, узлы ауры и аспекты. |
-| **[JourneyMap](https://www.curseforge.com/minecraft/mc-mods/journeymap)** | *Опциональный* | Интерактивные сферы узлов на карте, всплывающие окна и карточки. |
-| **[Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded)** / **[Baubles](https://www.curseforge.com/minecraft/mc-mods/baubles)** | *Опциональный* | Расширенная 20-слотовая система аксессуаров и артефакты мода. |
-| **[Blood Magic](https://www.curseforge.com/minecraft/mc-mods/blood-magic)** | *Опциональный* | Кровавые жезлы, зарядка от LP, набалдашник жертвоприношения. |
-| **[Blood Arsenal](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal)** | *Опциональный* | Связанное дерево и кровавый наполнитель. |
-| **[Gadomancy](https://www.curseforge.com/minecraft/mc-mods/gadomancy)** | *Опциональный* | Хуки рендеринга узлов и расширенные механики ауры. |
-| **[Automagy](https://www.curseforge.com/minecraft/mc-mods/automagy)** | *Опциональный* | Просмотр аспектов на устройствах красного камня. |
-| **[Thaumic Exploration](https://www.curseforge.com/minecraft/mc-mods/thaumic-exploration)** | *Опциональный* | Дополнительные исследования и локализация. |
-| **[Thaumic Bases](https://www.curseforge.com/minecraft/mc-mods/thaumic-bases)** | *Опциональный* | Баланс аспектов и локализация. |
-| **[Witching Gadgets](https://www.curseforge.com/minecraft/mc-mods/witching-gadgets)** | *Опциональный* | Поддержка зачарованных тканей и плащей. |
-| **[Warp Theory](https://www.curseforge.com/minecraft/mc-mods/warp-theory)** | *Опциональный* | Расширенные эффекты искажения. |
-| **[NotEnoughItems](https://www.curseforge.com/minecraft/mc-mods/notenoughitems)** | *Опциональный* | Кнопки управления искажением и рецепты. |
-| **[Traveller's Gear](https://www.curseforge.com/minecraft/mc-mods/travellers-gear)** | *Опциональный* | Совместимость с экипировкой. |
+Все зависимости проекта разрешаются через репозитории CurseForge Maven, Modrinth и GTNH Nexus.
+
+### 🌟 Базовые платформы и API
+| Мод / Платформа | Тип | Репозиторий / Источник | Maven Координата | Описание |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** | **Обязательный** | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumcraft) / [GTNH Fork](https://github.com/GTNewHorizons/Thaumcraft4) | `curse.maven:thaumcraft-223628:2227552` | Базовое API тауматургии, исследования, узлы ауры и аспекты (4.2.3.5). |
+| **[Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/Baubles-Expanded) | `com.github.GTNewHorizons:Baubles-Expanded:2.2.22-GTNH:dev` | Современная расширенная 20-слотовая система аксессуаров. |
+| **[JourneyMap](https://modrinth.com/mod/journeymap)** | *Опциональный* | [Modrinth](https://modrinth.com/mod/journeymap) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/journeymap) | `maven.modrinth:journeymap:5.2.20` | Интерактивные объекты на карте, цветные сферы узлов и всплывающие окна. |
+
+### 🩸 Магические аддоны и расширения
+| Мод | Тип | Репозиторий / Источник | Maven Координата | Описание |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Blood Magic](https://github.com/GTNewHorizons/BloodMagic)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/BloodMagic) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-magic) | `com.github.GTNewHorizons:BloodMagic:1.9.10:dev` | Кровавые жезлы, зарядка от LP, набалдашник жертвоприношения. |
+| **[Blood Arsenal](https://github.com/GTNewHorizons/BloodArsenal)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/BloodArsenal) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal) | `com.github.GTNewHorizons:BloodArsenal:1.5.12:dev` | Рецепты со связанным деревом и кровавым наполнителем. |
+| **[Thaumic Tinkerer](https://github.com/GTNewHorizons/ThaumicTinkerer)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/ThaumicTinkerer) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer) | `com.github.GTNewHorizons:ThaumicTinkerer:2.11.12:dev` | Интеграция исследований Ками и управление аспектами. |
+| **[Gadomancy](https://github.com/makeo/Gadomancy)** | *Опциональный* | [GitHub](https://github.com/makeo/Gadomancy) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/gadomancy) | `curse.maven:gadomancy-237271:2338768` | Хуки рендеринга узлов и расширенные механики ауры. |
+| **[Automagy](https://www.curseforge.com/minecraft/mc-mods/automagy)** | *Опциональный* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/automagy) | `curse.maven:automagy-222153:2285272` | Просмотр аспектов на устройствах красного камня и автокрафт. |
+| **[Forbidden Magic](https://github.com/Spiteful-Fox/ForbiddenMagic)** | *Опциональный* | [GitHub](https://github.com/Spiteful-Fox/ForbiddenMagic) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/forbidden-magic) | `curse.maven:forbidden-magic-224237:2303822` | Темная магия, клетки ярости и кросс-модовые компоненты жезлов. |
+| **[Witching Gadgets](https://github.com/BluSunrize/WitchingGadgets)** | *Опциональный* | [GitHub](https://github.com/BluSunrize/WitchingGadgets) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/witching-gadgets) | `curse.maven:witching-gadgets-228268:2262119` | Первородная экипировка, плащи и слоты аксессуаров. |
+| **[Thaumic Bases](https://github.com/Modded-Thaumcraft/ThaumicBases)** | *Опциональный* | [GitHub](https://github.com/Modded-Thaumcraft/ThaumicBases) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-bases) | `curse.maven:thaumic-bases-232192:2250677` | Алхимические растения, баланс аспектов и единая локализация. |
+| **[Thaumic Exploration](https://github.com/Kihira/ThaumicExploration)** | *Опциональный* | [GitHub](https://github.com/Kihira/ThaumicExploration) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-exploration) | `curse.maven:thaumic-exploration-230969:2263414` | Расширенные исследования аддонов и полная русская локализация. |
+| **[Thaumic Horizons](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons)** | *Опциональный* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons) | `curse.maven:thaumic-horizons-227914:8413552` | Наполнение существ, карманные вихри и манипуляции душами. |
+| **[Tainted Magic](https://www.curseforge.com/minecraft/mc-mods/tainted-magic)** | *Опциональный* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/tainted-magic) | `curse.maven:tainted-magic-231061:3634109` | Баланс Багряной и Теневой магии и локализация. |
+| **[Warp Theory](https://github.com/shukaro/WarpTheory)** | *Опциональный* | [GitHub](https://github.com/shukaro/WarpTheory) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/warp-theory) | `curse.maven:warp-theory-224935:2217324` | Расширенные эффекты искажения, очищение и визуальные эффекты. |
+
+### 🚀 Оптимизация, графический стек и утилиты
+| Мод | Тип | Репозиторий / Источник | Maven Координата | Описание |
+| :--- | :--- | :--- | :--- | :--- |
+| **[FalsePatternLib](https://github.com/FalsePattern/FalsePatternLib)** | *Опциональный* | [GitHub](https://github.com/FalsePattern/FalsePatternLib) | `com.falsepattern:falsepatternlib-mc1.7.10:1.12.2` | Базовая оптимизация производительности, Reflection Cache, UniMixins. |
+| **[FalseTweaks](https://github.com/FalsePattern/FalseTweaks)** | *Опциональный* | [GitHub](https://github.com/FalsePattern/FalseTweaks) | `com.falsepattern:falsetweaks-mc1.7.10:4.4.5` | Оптимизация рендеринга, исправление утечек матриц и текстур. |
+| **[TC4Tweaks](https://github.com/GTNewHorizons/TC4Tweaks)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/TC4Tweaks) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/tc4tweaks) | `curse.maven:tc4tweaks-431297:8668688` | Быстрое сопоставление аспектов и ускорение рендера узлов ауры. |
+| **[NotEnoughItems](https://github.com/GTNewHorizons/NotEnoughItems)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/NotEnoughItems) | `com.github.GTNewHorizons:NotEnoughItems:2.8.85-GTNH:dev` | Утилиты управления искажением и рецепты. |
+| **[GTNHLib](https://github.com/GTNewHorizons/GTNHLib)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/GTNHLib) | `com.github.GTNewHorizons:GTNHLib:0.10.6:dev` | Утилиты байткода ASM, рефлексии и сетевой синхронизации. |
+| **[Traveller's Gear](https://github.com/BluSunrize/TravellersGear)** | *Опциональный* | [GitHub](https://github.com/BluSunrize/TravellersGear) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/travellers-gear) | `curse.maven:travellers-gear-224440:2262112` | Совместимость с дополнительными слотами экипировки. |
 
 ---
 

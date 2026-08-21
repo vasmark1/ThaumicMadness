@@ -103,21 +103,40 @@
 
 ## 📦 Compatibility & Dependencies
 
-| Mod | Dependency Level | Description |
-| :--- | :--- | :--- |
-| **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** (>= 4.2.3.5) | **Hard (Required)** | Core thaumaturgy systems, research engine, nodes, and aspects. |
-| **[JourneyMap](https://www.curseforge.com/minecraft/mc-mods/journeymap)** | *Soft (Optional)* | Dynamic interactive map objects, color-coded node spheres, and popup inspect. |
-| **[Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded)** / **[Baubles](https://www.curseforge.com/minecraft/mc-mods/baubles)** | *Soft (Optional)* | Expanded 20-slot accessory system and standard bauble item integration. |
-| **[Blood Magic](https://www.curseforge.com/minecraft/mc-mods/blood-magic)** | *Soft (Optional)* | Blood wand crafting, LP recharge, and Focus of Blood Sacrifice. |
-| **[Blood Arsenal](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal)** | *Soft (Optional)* | Bound wood and blood infuser recipes. |
-| **[Gadomancy](https://www.curseforge.com/minecraft/mc-mods/gadomancy)** | *Soft (Optional)* | Node rendering hooks and custom aura mechanics. |
-| **[Automagy](https://www.curseforge.com/minecraft/mc-mods/automagy)** | *Soft (Optional)* | Aspect tag inspection on redstone devices. |
-| **[Thaumic Exploration](https://www.curseforge.com/minecraft/mc-mods/thaumic-exploration)** | *Soft (Optional)* | Extended addon research & unified localization. |
-| **[Thaumic Bases](https://www.curseforge.com/minecraft/mc-mods/thaumic-bases)** | *Soft (Optional)* | Unified localization and aspect balance. |
-| **[Witching Gadgets](https://www.curseforge.com/minecraft/mc-mods/witching-gadgets)** | *Soft (Optional)* | Baubles and cloth support. |
-| **[Warp Theory](https://www.curseforge.com/minecraft/mc-mods/warp-theory)** | *Soft (Optional)* | Extended warp effects. |
-| **[NotEnoughItems](https://www.curseforge.com/minecraft/mc-mods/notenoughitems)** | *Soft (Optional)* | Warp button handlers and recipe search. |
-| **[Traveller's Gear](https://www.curseforge.com/minecraft/mc-mods/travellers-gear)** | *Soft (Optional)* | Extended equipment slot safety. |
+All dependencies are cleanly resolved via CurseForge Maven, Modrinth, and GTNH Nexus.
+
+### 🌟 Core Platforms & API
+| Mod / Platform | Type | Repository / Source | Maven Coordinate | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** | **Hard (Required)** | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumcraft) / [GTNH Fork](https://github.com/GTNewHorizons/Thaumcraft4) | `curse.maven:thaumcraft-223628:2227552` | Core thaumaturgy API, nodes, research, and aspects (4.2.3.5). |
+| **[Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/Baubles-Expanded) | `com.github.GTNewHorizons:Baubles-Expanded:2.2.22-GTNH:dev` | Modernized 20-slot expanded accessory system. |
+| **[JourneyMap](https://modrinth.com/mod/journeymap)** | *Soft (Optional)* | [Modrinth](https://modrinth.com/mod/journeymap) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/journeymap) | `maven.modrinth:journeymap:5.2.20` | Dynamic interactive map objects, color-coded node spheres, and popup inspect. |
+
+### 🩸 Magic Addons & Expansions
+| Mod | Type | Repository / Source | Maven Coordinate | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Blood Magic](https://github.com/GTNewHorizons/BloodMagic)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/BloodMagic) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-magic) | `com.github.GTNewHorizons:BloodMagic:1.9.10:dev` | Sanguine wand rods, LP vis recharge, and Focus of Blood Sacrifice. |
+| **[Blood Arsenal](https://github.com/GTNewHorizons/BloodArsenal)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/BloodArsenal) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal) | `com.github.GTNewHorizons:BloodArsenal:1.5.12:dev` | Bound wood recipes and blood infuser integration. |
+| **[Thaumic Tinkerer](https://github.com/GTNewHorizons/ThaumicTinkerer)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/ThaumicTinkerer) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer) | `com.github.GTNewHorizons:ThaumicTinkerer:2.11.12:dev` | Kami research integration and Kami aspect management. |
+| **[Gadomancy](https://github.com/makeo/Gadomancy)** | *Soft (Optional)* | [GitHub](https://github.com/makeo/Gadomancy) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/gadomancy) | `curse.maven:gadomancy-237271:2338768` | Custom aura node mechanics and node manipulation hooks. |
+| **[Automagy](https://www.curseforge.com/minecraft/mc-mods/automagy)** | *Soft (Optional)* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/automagy) | `curse.maven:automagy-222153:2285272` | Aspect tag inspection on redstone devices and inventory automation. |
+| **[Forbidden Magic](https://github.com/Spiteful-Fox/ForbiddenMagic)** | *Soft (Optional)* | [GitHub](https://github.com/Spiteful-Fox/ForbiddenMagic) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/forbidden-magic) | `curse.maven:forbidden-magic-224237:2303822` | Dark magic, wrath cages, and cross-mod wand components. |
+| **[Witching Gadgets](https://github.com/BluSunrize/WitchingGadgets)** | *Soft (Optional)* | [GitHub](https://github.com/BluSunrize/WitchingGadgets) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/witching-gadgets) | `curse.maven:witching-gadgets-228268:2262119` | Primordial gear, cloaks, and bauble compatibility. |
+| **[Thaumic Bases](https://github.com/Modded-Thaumcraft/ThaumicBases)** | *Soft (Optional)* | [GitHub](https://github.com/Modded-Thaumcraft/ThaumicBases) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-bases) | `curse.maven:thaumic-bases-232192:2250677` | Alchemical plants, aspects balance, and unified localization. |
+| **[Thaumic Exploration](https://github.com/Kihira/ThaumicExploration)** | *Soft (Optional)* | [GitHub](https://github.com/Kihira/ThaumicExploration) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-exploration) | `curse.maven:thaumic-exploration-230969:2263414` | Extended addon research & unified Russian/English localization. |
+| **[Thaumic Horizons](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons)** | *Soft (Optional)* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons) | `curse.maven:thaumic-horizons-227914:8413552` | Creature infusion, planar vortexes, and soul manipulation. |
+| **[Tainted Magic](https://www.curseforge.com/minecraft/mc-mods/tainted-magic)** | *Soft (Optional)* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/tainted-magic) | `curse.maven:tainted-magic-231061:3634109` | Crimson & Shadow magic balance and localization. |
+| **[Warp Theory](https://github.com/shukaro/WarpTheory)** | *Soft (Optional)* | [GitHub](https://github.com/shukaro/WarpTheory) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/warp-theory) | `curse.maven:warp-theory-224935:2217324` | Extended Warp hazards, sanity cleansing, and visual effects. |
+
+### 🚀 Optimization, Utilities & Graphics Stack
+| Mod | Type | Repository / Source | Maven Coordinate | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| **[FalsePatternLib](https://github.com/FalsePattern/FalsePatternLib)** | *Soft (Optional)* | [GitHub](https://github.com/FalsePattern/FalsePatternLib) | `com.falsepattern:falsepatternlib-mc1.7.10:1.12.2` | Core performance optimization, reflection cache, and UniMixins support. |
+| **[FalseTweaks](https://github.com/FalsePattern/FalseTweaks)** | *Soft (Optional)* | [GitHub](https://github.com/FalsePattern/FalseTweaks) | `com.falsepattern:falsetweaks-mc1.7.10:4.4.5` | Rendering fixes, matrix cleanup, and mipmap optimization. |
+| **[TC4Tweaks](https://github.com/GTNewHorizons/TC4Tweaks)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/TC4Tweaks) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/tc4tweaks) | `curse.maven:tc4tweaks-431297:8668688` | Fast aspect mapping, node rendering boost, and memory fixes. |
+| **[NotEnoughItems](https://github.com/GTNewHorizons/NotEnoughItems)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/NotEnoughItems) | `com.github.GTNewHorizons:NotEnoughItems:2.8.85-GTNH:dev` | Warp GUI utilities and recipe handlers. |
+| **[GTNHLib](https://github.com/GTNewHorizons/GTNHLib)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/GTNHLib) | `com.github.GTNewHorizons:GTNHLib:0.10.6:dev` | Modernized ASM, reflection, and network synchronization utilities. |
+| **[Traveller's Gear](https://github.com/BluSunrize/TravellersGear)** | *Soft (Optional)* | [GitHub](https://github.com/BluSunrize/TravellersGear) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/travellers-gear) | `curse.maven:travellers-gear-224440:2262112` | Extended equipment slot safety and GUI hooks. |
 
 ---
 
