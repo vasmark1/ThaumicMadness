@@ -74,18 +74,18 @@
 
 ---
 
-## 💍 Раздел 2: Миграция с Baubles на Baubles Reforged
+## 💍 Раздел 2: Миграция с Baubles на Baubles Expanded by GTNH Team
 
-- [ ] **Анализ API Baubles Reforged**:
-  - Поддержка 7+ стандартных слотов: `AMULET`, `RING` (x2), `BELT`, `HEAD`, `BODY`, `CHARM`.
+- [ ] **Анализ API Baubles Expanded by GTNH Team**:
+  - Поддержка расширенных слотов: `AMULET`, `RING` (x2), `BELT`, `HEAD`, `BODY`, `CHARM`.
 - [ ] **Двунаправленный адаптер (Dual-Compatibility Wrapper)**:
-  - Реализация интерфейса `IBauble` с динамической проверкой наличия `Baubles Reforged` / `Expanded Baubles`.
-  - При наличии Baubles Reforged — регистрация предметов в слотах `CHARM`, `HEAD`, `BODY`.
+  - Реализация интерфейса `IBauble` с динамической проверкой наличия `Baubles Expanded by GTNH Team`.
+  - При наличии Baubles Expanded — регистрация предметов в слотах `CHARM`, `HEAD`, `BODY`.
   - При отсутствии — бесшовный fallback на классический Baubles 1.0.1.10.
 - [ ] **Интеграция предметов мода в слоты**:
   - [ ] **Тауматургический Атлас**: возможность экипировки в слот `CHARM` / `BELT` / `AMULET`.
   - [ ] **Кровавые амулеты и кольца защиты от искажения**: назначение в соответствующие расширенные слоты.
-- [ ] **Поддержка горячих клавиш открывания GUI Baubles Reforged**.
+- [ ] **Поддержка горячих клавиш открывания GUI Baubles Expanded by GTNH Team**.
 
 ---
 
@@ -146,7 +146,7 @@
 ---
 
 ## 📅 Порядок реализации (Sprint Plan)
-1. **Спринт 1**: Добавление зависимостей в `dependencies.gradle`, создание каркаса `compat` модулей и миграция на `Baubles Reforged`.
+1. **Спринт 1**: Добавление зависимостей в `dependencies.gradle`, создание каркаса `compat` модулей и миграция на `Baubles Expanded by GTNH Team`.
 2. **Спринт 2**: Реализация Компактной матрицы (1x1) и Компактной адской печи (1x1) с TileEntity, контейнерами и GUI.
 3. **Спринт 3**: Реализация Компактного алтаря крови (1x1) с поддержкой всех рун и сетевой синхронизацией LP.
 4. **Спринт 4**: Интеграции EMT, Magic Bees, TCBotania Exoflame, Technomancy, Thaumic Energistics, Thaumic Equivalence и оптимизаций экосистемы FalsePattern.
