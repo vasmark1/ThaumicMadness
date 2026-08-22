@@ -1,10 +1,23 @@
-# Thaumic Madness
+# 🔮 Thaumic Madness
 
-[ English ](README.md) | [ Русский ](README_RU.md)
+<div align="center">
+
+[![Minecraft 1.7.10](https://img.shields.io/badge/Minecraft-1.7.10-green.svg?style=for-the-badge&logo=minecraft)](https://www.minecraft.net/)
+[![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-orange.svg?style=for-the-badge)](https://files.minecraftforge.net/)
+[![Thaumcraft 4](https://img.shields.io/badge/Thaumcraft-4.2.3.5+-purple.svg?style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)
+[![Baubles-Expanded](https://img.shields.io/badge/Baubles--Expanded-2.2+-blue.svg?style=for-the-badge)](https://github.com/GTNewHorizons/Baubles-Expanded)
+[![JourneyMap](https://img.shields.io/badge/JourneyMap-5.2+-cyan.svg?style=for-the-badge)](https://modrinth.com/mod/journeymap)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+**Современная модернизация, расширение и оптимизация тауматургического геймплея Thaumcraft 4 для Minecraft 1.7.10.**
+
+[English Documentation](README.md) • [Русская документация](README_RU.md)
+
+</div>
 
 ---
 
-**Thaumic Madness** — это современный комплексный аддон для Thaumcraft 4 (Minecraft 1.7.10), созданный для глубокой модернизации, расширения и оптимизации тауматургического геймплея. Мод объединяет Thaumcraft с Blood Magic, новейшим графическим конвейером Angelica, расширенной системой слотов Baubles-Expanded и интерактивной картографией JourneyMap.
+**Thaumic Madness** — это современный комплексный аддон для Thaumcraft 4 (Minecraft 1.7.10), созданный для глубокой модернизации, расширения и оптимизации тауматургического геймплея. Мод включает нативно поглощённые Warp Theory и TC Node Tracker, полную поддержку графического конвейера Angelica, расширенную 20-слотовую систему Baubles-Expanded, интерактивную картографию JourneyMap и компактные механизмы 1х1.
 
 ---
 

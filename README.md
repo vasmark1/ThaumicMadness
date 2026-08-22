@@ -1,10 +1,23 @@
-# Thaumic Madness
+# 🔮 Thaumic Madness
 
-[ English ](README.md) | [ Русский ](README_RU.md)
+<div align="center">
+
+[![Minecraft 1.7.10](https://img.shields.io/badge/Minecraft-1.7.10-green.svg?style=for-the-badge&logo=minecraft)](https://www.minecraft.net/)
+[![Forge](https://img.shields.io/badge/Forge-10.13.4.1614-orange.svg?style=for-the-badge)](https://files.minecraftforge.net/)
+[![Thaumcraft 4](https://img.shields.io/badge/Thaumcraft-4.2.3.5+-purple.svg?style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)
+[![Baubles-Expanded](https://img.shields.io/badge/Baubles--Expanded-2.2+-blue.svg?style=for-the-badge)](https://github.com/GTNewHorizons/Baubles-Expanded)
+[![JourneyMap](https://img.shields.io/badge/JourneyMap-5.2+-cyan.svg?style=for-the-badge)](https://modrinth.com/mod/journeymap)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+
+**Next-generation Thaumcraft 4 expansion, modernization, and optimization for Minecraft 1.7.10.**
+
+[English Documentation](README.md) • [Русская документация](README_RU.md)
+
+</div>
 
 ---
 
-**Thaumic Madness** is a next-generation Thaumcraft 4 addon for Minecraft 1.7.10 designed to modernize, expand, and streamline thaumaturgical gameplay while bridging Thaumcraft with Blood Magic, modern rendering engines, expanded bauble architectures, and mapping systems.
+**Thaumic Madness** is a next-generation Thaumcraft 4 addon for Minecraft 1.7.10 designed to modernize, expand, and streamline thaumaturgical gameplay with natively absorbed Warp Theory & TC Node Tracker, modern rendering engines (Angelica), 20-slot Baubles-Expanded system, interactive JourneyMap objects, and compact 1x1 multi-block compressing machines.
 
 ---
 
