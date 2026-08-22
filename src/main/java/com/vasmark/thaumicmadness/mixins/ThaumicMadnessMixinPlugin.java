@@ -66,6 +66,25 @@ public class ThaumicMadnessMixinPlugin implements IMixinConfigPlugin {
             return loaded;
         }
 
+        // WarpTheory standalone neutralizer
+        if (mixinClassName.contains("MixinWarpTheoryNeutralizer") || targetClassName.contains("shukaro.warptheory")) {
+            boolean loaded = isClassPresent("shukaro.warptheory.WarpTheory");
+            if (!loaded) {
+                LOG.debug("Skipping {} as standalone WarpTheory is not present.", mixinClassName);
+            }
+            return loaded;
+        }
+
+        // TCNodeTracker standalone neutralizer
+        if (mixinClassName.contains("MixinTCNodeTrackerNeutralizer")
+            || targetClassName.contains("com.dyonovan.tcnodetracker")) {
+            boolean loaded = isClassPresent("com.dyonovan.tcnodetracker.TCNodeTracker");
+            if (!loaded) {
+                LOG.debug("Skipping {} as standalone TCNodeTracker is not present.", mixinClassName);
+            }
+            return loaded;
+        }
+
         return true;
     }
 

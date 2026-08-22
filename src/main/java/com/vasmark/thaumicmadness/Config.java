@@ -18,11 +18,6 @@ public class Config {
     public static boolean enableJourneyMapIntegration = true;
     public static boolean enableJourneyMapAutoWaypoint = false;
 
-    // --- Category: Blood Magic Integration ---
-    public static final String CATEGORY_BLOOD_MAGIC = "blood_magic";
-    public static boolean enableBloodMagicIntegration = true;
-    public static boolean disableDuplicateBMRecipes = true;
-
     // --- Category: Visuals & Font ---
     public static final String CATEGORY_VISUALS = "visuals";
     public static boolean enableThaumonomiconHDText = true;
@@ -77,23 +72,6 @@ public class Config {
             false,
             "Automatically create JourneyMap waypoints whenever a new aura node is scanned.");
         enableJourneyMapAutoWaypoint = propJMAuto.getBoolean();
-
-        // Blood Magic
-        Property propBM = configuration.get(
-            CATEGORY_BLOOD_MAGIC,
-            "enableBloodMagicIntegration",
-            true,
-            "Enable Blood Magic & Blood Arsenal Thaumonomicon guide tab, research, blood wand rods/caps, and focus.");
-        propBM.setRequiresMcRestart(true);
-        enableBloodMagicIntegration = propBM.getBoolean();
-
-        Property propDupBM = configuration.get(
-            CATEGORY_BLOOD_MAGIC,
-            "disableDuplicateBMRecipes",
-            true,
-            "Disable duplicate vanilla Blood Magic crafting table/altar recipes when Blood Magic integration is enabled.");
-        propDupBM.setRequiresMcRestart(true);
-        disableDuplicateBMRecipes = propDupBM.getBoolean();
 
         // Visuals & Typography
         Property propHDText = configuration.get(

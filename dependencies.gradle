@@ -72,7 +72,6 @@ dependencies {
     devOnlyNonPublishable("com.github.GTNewHorizons:ThaumicTinkerer:2.11.12:dev") { transitive = false } // Thaumic Tinkerer (GTNH Dev)
     devOnlyNonPublishable(rfg.deobf("curse.maven:thaumic-sanity-238392:2268718")) // Thaumic Sanity
     devOnlyNonPublishable(rfg.deobf("curse.maven:thaumores-237899:2707992")) // Thaumores
-    devOnlyNonPublishable(rfg.deobf("curse.maven:warp-theory-224935:2217324")) // Warp Theory
     devOnlyNonPublishable(rfg.deobf("curse.maven:witching-gadgets-228268:2262119")) // Witching Gadgets
 
     // Blood Magic & Blood Arsenal (GTNH Nexus)

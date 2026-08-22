@@ -8,7 +8,9 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinInventoryPlayer",
-    "MixinPacketSyncResearch"
+    "MixinPacketSyncResearch",
+    "MixinWarpTheoryNeutralizer",
+    "MixinTCNodeTrackerNeutralizer"
   ],
   "client": [
     "MixinTileNodeRenderer",

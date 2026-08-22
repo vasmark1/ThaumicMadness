@@ -112,7 +112,25 @@ public class WarpInventoryOverlay {
 
         // Dynamic anchoring to player inventory slots:
         // Thaumcraft meter is 20px wide by 76px tall (exact height of player 4-row inventory section)
-        int barX = guiLeft - 22;
+        int xOffset = 22;
+        if (event.gui.getClass()
+            .getName()
+            .contains("GuiPlayerExpanded")) {
+            int columns = 1;
+            try {
+                int used = baubles.api.expanded.BaubleExpandedSlots.slotsCurrentlyUsed();
+                int maxCols = 4;
+                try {
+                    maxCols = baubles.common.BaublesConfig.maxColumns;
+                } catch (Throwable ignored) {}
+                columns = Math.min(Math.max(1, (used + 7 - 1) / 7), maxCols);
+            } catch (Throwable t) {
+                columns = 2;
+            }
+            xOffset = 50 + (columns - 1) * 18;
+        }
+
+        int barX = guiLeft - xOffset;
         int barY = guiTop + ySize - 84;
         int barWidth = 20;
         int barHeight = 76;

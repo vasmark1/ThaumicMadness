@@ -50,6 +50,17 @@ public class ClientProxy extends CommonProxy {
         if (Config.enableNEIWarp && cpw.mods.fml.common.Loader.isModLoaded("NotEnoughItems")) {
             com.vasmark.thaumicmadness.nei.NEIWarpHandler.init();
         }
+
+        com.vasmark.thaumicmadness.compat.travellersgear.TravellersGearGuiFix.init();
+
+        // Register 3D special renderers for Compact Infusion Matrix
+        cpw.mods.fml.client.registry.ClientRegistry.bindTileEntitySpecialRenderer(
+            com.vasmark.thaumicmadness.compact.infusion.TileCompactInfusionMatrix.class,
+            new com.vasmark.thaumicmadness.compact.infusion.client.TileCompactInfusionMatrixRenderer());
+
+        net.minecraftforge.client.MinecraftForgeClient.registerItemRenderer(
+            net.minecraft.item.Item.getItemFromBlock(ModBlocks.compactInfusionMatrix),
+            new com.vasmark.thaumicmadness.compact.infusion.client.ItemCompactInfusionMatrixRenderer());
     }
 
     @Override

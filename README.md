@@ -43,29 +43,21 @@
 
 ---
 
-### 💍 Baubles-Expanded (GTNH Team) & Multi-Slot Accessories
+### 💍 Baubles-Expanded (GTNH Team) & Multi-Slot Accessory System
 * **Expanded Slot Architecture**:
-  * Fully integrates with [Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded) by the GT New Horizons team, supporting up to 20 expanded accessory slots:
+  * Full native support for [Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded) *(Recommended)* supporting up to 20 distinct equipment slots:
     * `amulet`, `ring`, `belt`, `head`, `body`, `charm`, `cape`, `shield`, `quiver`, `gauntlet`, `earring`, `wings`, `universal`.
 * **Dual-Compatibility Safety Wrapper**:
   * Gracefully detects runtime environment: utilizes `baubles.api.expanded.IBaubleExpanded` when Baubles-Expanded is present, with automatic fallback to standard Baubles 1.0.1.10 (`baubles.api.IBauble`) without `NoClassDefFoundError` crashes.
 * **Custom Artifacts**:
-  * **Blood Ring (`ItemBloodRing`)**: Equippable in `ring`, `charm`, or `amulet` slots. Grants passive vis discount and LP reserve buffer.
-  * **Blood Amulet (`ItemBloodAmulet`)**: Equippable in `amulet`, `body`, or `charm` slots. Channels Life Essence to recharge equipped wands and provides emergency damage absorption.
-  * **Sanity Charm (`ItemSanityCharm`)**: Equippable in `charm`, `amulet`, or `universal` slots. Mitigates passive Warp accumulation and softens sanity loss events.
+  * **Purification Talisman (`ItemPurificationAmulet`)**: Equippable in `amulet`, `body`, `charm`, or `universal` slots. Passively siphons and cleanses accumulated Warp.
+  * **Sanity Charm (`ItemSanityCharm`)**: Equippable in `charm`, `amulet`, `head`, or `universal` slots. Mitigates passive Warp accumulation and softens sanity loss events.
 
 ---
 
-### 🩸 Blood Magic & Blood Arsenal Integration
-* **Dedicated Research Branch**:
-  * Standalone "Blood Thaumaturgy" research tab integrated into the Thaumonomicon.
-* **Sanguine Wand Rods & Caps**:
-  * Sanguine-infused wood and bound materials crafted across Blood Altars and the Infusion Matrix.
-  * Offers passive vis discounts and automated wand vis restoration powered by Life Essence (LP).
-* **Wand Focus: Blood Sacrifice**:
-  * Casts high-velocity homing runic projectiles or converts personal health/LP into concentrated vis charges.
-* **Altar Vis Charging**:
-  * Safely siphon altar LP directly into recharging wands, staves, and scepters.
+### 🩸 Companion Standalone Addon: [Blood Thaumaturge](https://github.com/vasmark1/BloodThaumaturge)
+* All **Blood Magic** & **Blood Arsenal** integration (sanguine wand rods/caps, altar LP vis charging, focus of blood sacrifice, blood rings and amulets) has been extracted into an optimized standalone addon: **[Blood Thaumaturge](https://github.com/vasmark1/BloodThaumaturge)**.
+* Thaumic Madness retains full save-game compatibility and legacy item remapping.
 
 ---
 
@@ -75,6 +67,20 @@
   * Accurately breaks down permanent, sticky, and temporary Warp with color-coded gauge bars.
 * **NotEnoughItems (NEI) Integration**:
   * Direct Warp inspection panel and utility controls in NEI cheat/utility mode.
+
+---
+
+### 🌌 Warp Theory Absorption & Endgame Modernization
+* **Native Subsystem Integration**:
+  * The entirety of the **Warp Theory** mod has been fully absorbed, rewritten, and modernized directly into *Thaumic Madness*.
+  * **20+ Classic & Enhanced Warp Events**: Seamlessly simulates *WarpDecay, WarpSwamp, WarpBlood, WarpWind, WarpChests, WarpLightning, WarpBats, WarpBlink, WarpFriend, WarpLivestockRain, WarpAcceleration, WarpFall, WarpRain, WarpWither, WarpEars, WarpTongue, WarpFakeSound*, and more with zero memory leaks.
+  * **Modern Networking**: Powered by high-efficiency Forge `SimpleNetworkWrapper` packets for instantaneous client particle effects and player motion sync.
+* **Endgame Item & Infusion Overhaul**:
+  * **Pure Tear (`ItemPureTear`)**: High-tier infusion recipe utilizing a Nether Star, Void Metal Ingots, Void Seeds, Salis Mundus, and Ghast Tears. When consumed, violently purges accumulated Warp while triggering a cascading series of mental distortions.
+  * **Purification Talisman (`ItemPurificationAmulet`)**: Endgame matrix infusion combining Pure Tears, Void Metal, and Sanity Soap. Passively siphons Warp away from the wearer over time; fully equippable in **Amulet**, **Body**, **Charm**, or **Universal** slots across all 20 **Baubles-Expanded** slots.
+  * **Unstable Catalyst (`ItemUnstableCatalyst`) & Arcane Litmus Paper (`ItemCursedParchment`)**: Updated crucible transmutation and arcane crafting with detailed warp analysis tooltips.
+* **Thaumonomicon Integration**:
+  * Fully integrated into the **Eldritch** and **Alchemy** research categories unlocked after `ELDRITCHMAJOR` (Opening the Eye).
 
 ---
 
@@ -111,12 +117,13 @@ All dependencies are cleanly resolved via CurseForge Maven, Modrinth, and GTNH N
 | **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** | **Hard (Required)** | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumcraft) / [GTNH Fork](https://github.com/GTNewHorizons/Thaumcraft4) | `curse.maven:thaumcraft-223628:2227552` | Core thaumaturgy API, nodes, research, and aspects (4.2.3.5). |
 | **[Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/Baubles-Expanded) | `com.github.GTNewHorizons:Baubles-Expanded:2.2.22-GTNH:dev` | Modernized 20-slot expanded accessory system. |
 | **[JourneyMap](https://modrinth.com/mod/journeymap)** | *Soft (Optional)* | [Modrinth](https://modrinth.com/mod/journeymap) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/journeymap) | `maven.modrinth:journeymap:5.2.20` | Dynamic interactive map objects, color-coded node spheres, and popup inspect. |
+| **[Warp Theory](https://github.com/shukaro/WarpTheory)** | **Natively Absorbed** | Built-in (`com.vasmark.thaumicmadness.warptheory`) | *Natively Integrated* | Absorbed, modernized, and balanced with endgame recipes and Baubles-Expanded support. |
 
 ### 🩸 Magic Addons & Expansions
 | Mod | Type | Repository / Source | Maven Coordinate | Description |
 | :--- | :--- | :--- | :--- | :--- |
-| **[Blood Magic](https://github.com/GTNewHorizons/BloodMagic)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/BloodMagic) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-magic) | `com.github.GTNewHorizons:BloodMagic:1.9.10:dev` | Sanguine wand rods, LP vis recharge, and Focus of Blood Sacrifice. |
-| **[Blood Arsenal](https://github.com/GTNewHorizons/BloodArsenal)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/BloodArsenal) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal) | `com.github.GTNewHorizons:BloodArsenal:1.5.12:dev` | Bound wood recipes and blood infuser integration. |
+| **[Blood Thaumaturge](https://github.com/vasmark1/BloodThaumaturge)** | *Companion Mod* | [GitHub](https://github.com/vasmark1/BloodThaumaturge) | `com.vasmark.bloodthaumaturge:bloodthaumaturge:0.1.1-beta` | Sanguine wands, LP vis charging, focus of blood sacrifice, blood ring/amulet. |
+| **[TC Node Tracker](https://github.com/dyonovan/TCNodeTracker)** | **Natively Absorbed** | Built-in (`com.vasmark.thaumicmadness.nodetracker`) | *Natively Integrated* | Natively absorbed with HUD compass, GPS navigation, and JourneyMap node overlay. |
 | **[Thaumic Tinkerer](https://github.com/GTNewHorizons/ThaumicTinkerer)** | *Soft (Optional)* | [GitHub](https://github.com/GTNewHorizons/ThaumicTinkerer) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer) | `com.github.GTNewHorizons:ThaumicTinkerer:2.11.12:dev` | Kami research integration and Kami aspect management. |
 | **[Gadomancy](https://github.com/makeo/Gadomancy)** | *Soft (Optional)* | [GitHub](https://github.com/makeo/Gadomancy) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/gadomancy) | `curse.maven:gadomancy-237271:2338768` | Custom aura node mechanics and node manipulation hooks. |
 | **[Automagy](https://www.curseforge.com/minecraft/mc-mods/automagy)** | *Soft (Optional)* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/automagy) | `curse.maven:automagy-222153:2285272` | Aspect tag inspection on redstone devices and inventory automation. |
@@ -126,7 +133,6 @@ All dependencies are cleanly resolved via CurseForge Maven, Modrinth, and GTNH N
 | **[Thaumic Exploration](https://github.com/Kihira/ThaumicExploration)** | *Soft (Optional)* | [GitHub](https://github.com/Kihira/ThaumicExploration) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-exploration) | `curse.maven:thaumic-exploration-230969:2263414` | Extended addon research & unified Russian/English localization. |
 | **[Thaumic Horizons](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons)** | *Soft (Optional)* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons) | `curse.maven:thaumic-horizons-227914:8413552` | Creature infusion, planar vortexes, and soul manipulation. |
 | **[Tainted Magic](https://www.curseforge.com/minecraft/mc-mods/tainted-magic)** | *Soft (Optional)* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/tainted-magic) | `curse.maven:tainted-magic-231061:3634109` | Crimson & Shadow magic balance and localization. |
-| **[Warp Theory](https://github.com/shukaro/WarpTheory)** | *Soft (Optional)* | [GitHub](https://github.com/shukaro/WarpTheory) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/warp-theory) | `curse.maven:warp-theory-224935:2217324` | Extended Warp hazards, sanity cleansing, and visual effects. |
 
 ### 🚀 Optimization, Utilities & Graphics Stack
 | Mod | Type | Repository / Source | Maven Coordinate | Description |

@@ -15,8 +15,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
     version = Tags.VERSION,
     name = "Thaumic Madness",
     acceptedMinecraftVersions = "[1.7.10]",
-    dependencies = "required-after:Thaumcraft@[4.2.3.5,);" + "after:AWWayofTime;"
-        + "after:BloodArsenal;"
+    dependencies = "required-after:Thaumcraft@[4.2.3.5,);" + "after:bloodthaumaturge;"
         + "after:gadomancy;"
         + "after:Automagy;"
         + "after:ThaumicExploration;"
@@ -39,6 +38,9 @@ public class ThaumicMadness {
 
     public static final String MODID = "thaumicmadness";
     public static final Logger LOG = LogManager.getLogger(MODID);
+
+    @Mod.Instance(MODID)
+    public static ThaumicMadness instance;
 
     @SidedProxy(
         clientSide = "com.vasmark.thaumicmadness.ClientProxy",
@@ -63,5 +65,10 @@ public class ThaumicMadness {
     @Mod.EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
         proxy.serverStarting(event);
+    }
+
+    @Mod.EventHandler
+    public void missingMappings(cpw.mods.fml.common.event.FMLMissingMappingsEvent event) {
+        proxy.missingMappings(event);
     }
 }

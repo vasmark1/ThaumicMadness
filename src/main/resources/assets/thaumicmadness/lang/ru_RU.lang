@@ -1,4 +1,4 @@
-# Clean Combined UTF-8 Russian Localization for Thaumcraft Addons
+﻿# Clean Combined UTF-8 Russian Localization for Thaumcraft Addons
 at.microlith.0.name=Основание микролита
 at.microlith.1.name=Рассеиватель искажения
 at.microlith.2.name=Бдительное око [WIP]
@@ -1092,10 +1092,6 @@ tc.research_name.WAND_CAP_thaumium=Таумиевые наконечники
 tc.research_name.WAND_ROD_greatwood=Стержень из великого дерева
 tc.research_name.WAND_ROD_silverwood=Стержень из серебряного дерева
 tc.research_name.WARP=Искажение
-tc.research_name.WARPAMULET=Purification Talisman
-tc.research_name.WARPCLEANSER=Pure Tear
-tc.research_name.WARPPAPER=Магический Litmus Paper
-tc.research_name.WARPSOMETHING=Hunk of Something
 tc.research_page.ALCHGRATE.1=Объединив решётку с Голодным сундуком, вы создали ёмкость, содержимое которой одновременно находится и внутри сундука, и в окружающем мире.<BR><BR>Несмотря на уменьшенную вместимость и невозможность закрыть решётку, вы уверены, что это устройство поможет аккуратно автоматизировать Улучшенную алхимическую печь.
 tc.research_page.BM_ALCHEMY.1=Алхимическая лаборатория крови использует Алхимический стол (Alchemical Chemistry Set).<BR>Поместите Кровавый шар в центральный слот стола: подаваемый LP позволяет трансмутировать реагенты, создавать алхимические колбы и редкие катализаторы.
 tc.research_page.BM_ALCHEMY.2=Сложные зелья крови превосходят обычные зелья: они вмещают до 8 комбинаций эффектов, обладают повышенной длительностью (до 30 минут) и могут восстанавливать свои заряды прямо в инвентаре за счет LP.
@@ -1350,10 +1346,6 @@ tc.research_text.TI_InfusionIntercepter=О Древние, что я [НАДЕЛ
 tc.research_text.TI_SanitizingSoapAlpha=Смывая грехи прошлого
 tc.research_text.TI_SanitizingSoapBeta=В бездне скрывается великая сделка...
 tc.research_text.TI_ThaumicInterfacer=Взгляд сквозь трещины реальности
-tc.research_text.WARPAMULET=More than a simple good luck charm
-tc.research_text.WARPCLEANSER=Magical Medicine
-tc.research_text.WARPPAPER=Almost scientific
-tc.research_text.WARPSOMETHING=Definitely not something pleasant
 tc.research.clue=§eПодсказка§r
 tc.research.copy=Нажмите для создания копии:
 tc.research.getprim=Нажмите, чтобы получить записки этого исследования
@@ -1483,6 +1475,62 @@ te.text.THINKTANK.1=Мыслящий резервуар использует и�
 te.text.THINKTANK.2=Устанавливается на книжную полку с пустым пространством 3x3x3 вокруг.
 te.text.TRASHJAR.1=Банка забвения позволяет бесследно уничтожать излишки любых видов эссенции. В отличие от пустотных банок, одной банки забвения достаточно для утилизации всех невостребованных аспектов в сети.
 te.text.TRASHJAR.2=Банка забвения обладает самым низким приоритетом втягивания, принимая только ту эссенцию, которую некуда девать.
+nodetracker.popup.delete=Удалить узел
+nodetracker.popup.back_to_map=Назад к карте
+
+# Warp Theory Интеграция
+item.thaumicmadness.pure_tear.name=Очищающая слеза
+item.thaumicmadness.purification_amulet.name=Талисман очищения
+item.thaumicmadness.unstable_catalyst.name=Кусок Нечто
+item.thaumicmadness.cursed_parchment.name=Чародейская лакмусовая бумага
+tile.thaumicmadness.phantom_decay.name=Фантомный распад
+
+tooltip.warptheory.cleanser=Хрустящая. Мгновенно вычищает всё искажение разума через каскад непредсказуемых видений.
+tooltip.warptheory.amulet=Непрерывно вытягивает и рассеивает искажение при ношении.
+tooltip.warptheory.something=Возможно, съедобно... Провоцирует мощные древние галлюцинации.
+tooltip.warptheory.paper=Реагирует на уровень искажения разума.
+
+chat.warptheory.purge=У вас нехорошее предчувствие по этому поводу...
+chat.warptheory.purgefail=Ничего особенного не произошло
+chat.warptheory.addwarp=Кажется, будто нечто чуждое проникло в ваше сознание...
+chat.warptheory.minorwarp=Никакой реакции
+chat.warptheory.averagewarp=Бумага приобретает болезненный оттенок
+chat.warptheory.majorwarp=Бумага рассыпается в прах
+chat.warptheory.deadlywarp=Бумага самовоспламеняется
+chat.warptheory.permanentwarp=Постоянное искажение
+chat.warptheory.normalwarp=Обычное искажение
+chat.warptheory.tempwarp=Временное искажение
+
+chat.warptheory.bats=Шелест сотен крыльев наполняет воздух вокруг...
+chat.warptheory.blink=Вы внезапно дезориентированы в пространстве...
+chat.warptheory.poison=Ваши вены пылают ядом...
+chat.warptheory.nausea=К горлу подступает сильная тошнота...
+chat.warptheory.jump=Вы чувствуете необычайную легкость...
+chat.warptheory.blind=Всё вокруг погружается в непроглядную тьму...
+chat.warptheory.decay=Вы чувствуете себя немощным и постаревшим...
+chat.warptheory.ears=В ушах звенит пронзительный навязчивый гул...
+chat.warptheory.swamp=Вы ощущаете странный прилив природной силы...
+chat.warptheory.tongue=Ваш язык немеет и путает слова...
+chat.warptheory.friend=Вам становится немного одиноко...
+chat.warptheory.livestock=Вы ощущаете внезапный голод...
+chat.warptheory.wind=Поднимается странный потусторонний ветер...
+chat.warptheory.chests=По спине пробегает леденящий холодок...
+chat.warptheory.blood=Вы чувствуете запах свежей крови...
+chat.warptheory.acceleration=Время вокруг неестественно ускорилось...
+chat.warptheory.lightning=Волосы на теле встают дыбом...
+chat.warptheory.fall=У вас резко кружится голова от чувства падения...
+chat.warptheory.rain=Вдали слышатся раскаты грома...
+chat.warptheory.wither=Вас сковывает леденящий потусторонний ужас...
+
+# Thaumic Madness (MYMOD) Категория и базовые исследования
+tc.research_category.MYMOD=Таумическое Безумие
+
+
+
+
+
+
+
 te.text.URN.1=Создает бесконечный поток чистейшей воды, наполняет тигли и тушит горящих игроков.
 te.text.URN.1B=Создает бесконечный поток чистейшей воды, наполняет тигли, аптекари лепестков и тушит горящих игроков.
 thaumicexploration.bread0=Будешь со мной дружить?
@@ -1500,6 +1548,21 @@ thaumicinsurgence.versioning.clickDownload=Нажмите, чтобы откры
 thaumicinsurgence.versioning.critical=Критическое обновление: %s — пожалуйста, обновитесь!
 thaumicinsurgence.versioning.newVersion=Доступна новая версия Thaumic Insurgence: %s
 ThaumicInterfacer.1=Линза показывает искажения между планами реальности, помогая в тонкой настройке алтаря инфузии.
+
+# Компактная матрица наполнения
+tile.thaumicmadness.compact_infusion_matrix.name=Компактная матрица наполнения
+container.compact_infusion_matrix=Компактная матрица наполнения
+gui.compact_infusion.start=Старт
+gui.compact_infusion.cancel=Отмена
+gui.compact_infusion.auto_on=Авто: ВКЛ
+gui.compact_infusion.auto_off=Авто: ВЫКЛ
+
+
+# Компактная адская печь
+tile.thaumicmadness.compact_infernal_furnace.name=Компактная адская печь
+container.compact_infernal_furnace=Компактная адская печь
+
+
 tile.advAlchFurnace.name=Улучшенная алхимическая печь
 tile.alchgrate.name=Алхимическая решётка
 tile.ashroom.name=Первородный гриб
@@ -2034,10 +2097,6 @@ item.thaumonomicon_atlas.name=Всевидящий Таумономикон
 item.thaumonomicon_atlas.desc1=[ПКМ] — Открыть Таумономикон
 item.thaumonomicon_atlas.desc2=[Shift + ПКМ] — Открыть Атлас узлов ауры
 item.thaumonomicon_atlas.desc3=Всевидящее око: раскрывает узлы ауры и потоки вис
-tc.research_name.THAUMONOMICON_ATLAS=Всевидящий Таумономикон
-tc.research_text.THAUMONOMICON_ATLAS=Слияние книги знаний, видения и картографии узлов
-tc.research_page.THAUMONOMICON_ATLAS.1=Тщательно изучив свойства Очков откровения, Таумометра и чувствительного к вис амулета, вы нашли способ объединить их суть с вашим Таумономиконом на матрице наполнения.<BR>Полученный фолиант непрерывно резонирует с энергетическими потоками мира. Он позволяет владельцу видеть скрытые узлы ауры и потоки вис без необходимости надевать отдельные очки.<BR>При обычном открытии (ПКМ) книга раскрывает страницы Таумономикона, а при использовании с зажатой клавишей Shift (Shift+ПКМ) открывается живой магический Атлас, позволяющий находить, фильтровать и отслеживать все когда-либо обнаруженные узлы ауры.
-tc.research_page.THAUMONOMICON_ATLAS.2=Встроенный Атлас позволяет наводить путеводный компас на любой узел, прокладывая путь к необходимым источникам вис прямо на вашем интерфейсе.
 
 itemGroup.thaumicmadness=Таумическое Безумие
 tile.thaumicmadness.infused_dirt.name=Заряженная земля
@@ -2107,5 +2166,141 @@ nodetracker.popup.copy_coords=Копировать
 nodetracker.popup.delete=Удалить узел
 nodetracker.popup.back_to_map=Назад к карте
 
+# Warp Theory Integration
+item.thaumicmadness.pure_tear.name=Очищающая слеза
+item.thaumicmadness.purification_amulet.name=Талисман очищения
+item.thaumicmadness.unstable_catalyst.name=Кусок Нечто
+item.thaumicmadness.cursed_parchment.name=Чародейская лакмусовая бумага
+tile.thaumicmadness.phantom_decay.name=Фантомный распад
+
+tooltip.warptheory.cleanser=Хрустящая. Очищает от всего накопленного искажения через взрывной ментальный каскад.
+tooltip.warptheory.amulet=Непрерывно поглощает и развеивает искажение при ношении в слоте аксессуаров.
+tooltip.warptheory.something=Возможно, съедобно... Вызывает сильнейшие потусторонние галлюцинации.
+tooltip.warptheory.paper=Реагирует на уровень накопленного искажения в разуме.
+
+chat.warptheory.purge=У вас нехорошее предчувствие...
+chat.warptheory.purgefail=Ничего особенного не происходит
+chat.warptheory.addwarp=Вам кажется, будто что-то чужое проникло в ваше сознание...
+chat.warptheory.minorwarp=Никакой реакции
+chat.warptheory.averagewarp=Бумага окрашивается в болезненный цвет
+chat.warptheory.majorwarp=Бумага рассыпается в серый пепел
+chat.warptheory.deadlywarp=Бумага вспыхивает багровым пламенем
+chat.warptheory.permanentwarp=Постоянное искажение
+chat.warptheory.normalwarp=Обычное искажение
+chat.warptheory.tempwarp=Временное искажение
+
+chat.warptheory.bats=Шелест крыльев наполняет тишину вокруг...
+chat.warptheory.blink=Вы внезапно теряете ориентацию в пространстве...
+chat.warptheory.poison=Ваши вены охватывает ледяной огонь...
+chat.warptheory.nausea=К горлу подступает тошнота...
+chat.warptheory.jump=Ваше тело становится неестественно лёгким...
+chat.warptheory.blind=Тьма застилает взор...
+chat.warptheory.decay=Вы чувствуете бремя сотен прожитых лет...
+chat.warptheory.ears=В ушах нарастает пронзительный звон...
+chat.warptheory.swamp=Воздух вокруг наполняется сыростью...
+chat.warptheory.tongue=Язык немеет и перестаёт слушаться...
+chat.warptheory.friend=Вас охватывает гнетущее чувство одиночества...
+chat.warptheory.livestock=Вас терзает странный, неестественный голод...
+chat.warptheory.wind=Поднимается зловещий потусторонний ветер...
+chat.warptheory.chests=Ледяной холод пробегает по спине...
+chat.warptheory.blood=Вы чувствуете запах свежей крови...
+chat.warptheory.acceleration=Окружающий мир стремительно ускоряется...
+chat.warptheory.lightning=Волосы встают дыбом от статического напряжения...
+chat.warptheory.fall=Внезапный приступ головокружения тянет вас вниз...
+chat.warptheory.rain=Вдали слышатся глухие раскаты грома...
+chat.warptheory.wither=Вас сковывает первобытный ужас...
 
 
+
+
+
+
+# Компактная матрица наполнения
+tile.thaumicmadness.compact_infusion_matrix.name=Компактная матрица наполнения
+container.compact_infusion_matrix=Компактная матрица наполнения
+gui.compact_infusion.start=Старт
+gui.compact_infusion.cancel=Отмена
+gui.compact_infusion.auto_on=Авто: ВКЛ
+gui.compact_infusion.auto_off=Авто: ВЫКЛ
+
+
+# Компактная адская печь
+tile.thaumicmadness.compact_infernal_furnace.name=Компактная Адская Печь
+container.compact_infernal_furnace=Компактная Адская Печь
+item.thaumicmadness.silverwood_filter.name=Фильтр из серебряного дерева
+item.thaumicmadness.silverwood_filter.desc1=Фильтр тонкой очистки
+item.thaumicmadness.silverwood_filter.desc2=Поглощает до 64 ед. порчи в Компактной Адской Печи.
+item.thaumicmadness.tainted_filter.name=Отработанный заражённый фильтр
+item.thaumicmadness.tainted_filter.desc1=Насыщен эссенцией заражения
+item.thaumicmadness.tainted_filter.desc2=Содержит 20 ед. Vitium. Пригоден для переработки в алхимии.
+
+
+
+# ==============================================================================
+# Thaumic Madness - Authentic Thaumcraft Researches (Russian)
+# ==============================================================================
+tc.research_name.INFUSED_DIRT=Заряженная земля
+tc.research_text.INFUSED_DIRT=Плодородие стихий
+tc.research_page.INFUSED_DIRT.1=Наполнив обычную землю эссенцией Terra и связующей глиной на алтаре наполнения, вы создали субстрат, насыщенный витальной энергией земли.<BR>Эта почва стимулирует рост любых магических и обычных растений, ускоряя созревание урожая и предотвращая высыхание грядок.
+tc.research_page.INFUSED_DIRT.2=Магическая почва может служить идеальным основанием для ферм серебряных деревьев, редких трав и вис-растений.
+
+tc.research_name.CONSTANT_VIGILANCE=Постоянная бдительность
+tc.research_text.CONSTANT_VIGILANCE=Защита разума от зова бездны
+tc.research_page.CONSTANT_VIGILANCE.1=Вглядываясь в бездну запретных тайн, тауматург рискует навсегда потерять связь с реальностью. Понимание структуры искажения — первый шаг к защите рассудка.<BR>Вы научились распознавать тонкие колебания ментального поля, открывая путь к созданию защитных амулетов, талисманов ясности и способов полного очищения от скверны Древних.
+
+tc.research_name.COMPACT_INFUSION_MATRIX=Компактная матрица наполнения
+tc.research_text.COMPACT_INFUSION_MATRIX=Сингулярность тайных искусств
+tc.research_page.COMPACT_INFUSION_MATRIX.1=Традиционный ритуал Наполнения всегда был вершиной тауматургического мастерства, но его громоздкость и пространственная уязвимость доставляли немало хлопот. Десятки каменных пьедесталов, сложная геометрия размещения стабилизаторов и длинные ряды банок с эссенцией делали лабораторию уязвимой перед малейшим возмущением магического поля.<BR>Размышляя над природой сингулярностей и гиперпространственного сжатия, вы совершили фундаментальный прорыв. Связав воедино древние механизмы, первородную жемчужину и мощь алхимических конструктов, вы сумели свернуть всё поле ритуала в единый монолитный блок размером один кубический метр.
+tc.research_page.COMPACT_INFUSION_MATRIX.2=Внутри моноблока искусственно поддерживается стабильный пространственный карман. Он вмещает центральный слот для основы, слот готового артефакта, 16 внутренних пьедесталов для ингредиентов и 4 слота для стабилизирующих реагентов.<BR>Матрица самостоятельно тянет вис из банок и резервуаров в радиусе 12 блоков, полностью подавляя выбросы порчи в мир при ритуале.<BR>Присутствие стабилизаторов (свечей, черепов, талисманов рассудка) позволяет достичь абсолютной 100% стабильности, сводя шанс ритуальной катастрофы к нулю.<BR>Интерфейс моноблока идеально синхронизируется с воронками, трубами и МЭ-системами.
+
+tc.research_name.COMPACT_INFERNAL_FURNACE=Компактная Адская Печь
+tc.research_text.COMPACT_INFERNAL_FURNACE=Обузданное инфернальное пламя
+tc.research_page.COMPACT_INFERNAL_FURNACE.1=Оригинальная Адская Печь, возводимая из обсидиана и адского кирпича 3х3х3, использует первородный огонь Нижнего Мира для мгновенного плавления металлов. Однако управление ею всегда было грубым, а сопутствующие выбросы газообразной порчи загрязняли ауру вокруг.<BR>Объединив огнеупорный обсидиановый куб с Мозгом в банке и Первородной Жемчужиной, вы создали компактный инфернальный моноблок 1х1.<BR>Жемчужина сжимает раскалённый магматический очаг в точку сингулярности, а законсервированный разум анализирует процесс плавки, разделяя потоки материи и улавливая крупицы ментального опыта.
+tc.research_page.COMPACT_INFERNAL_FURNACE.2=Компактная печь обладает 4 независимыми тиглями параллельной плавки. Каждый слот плавит руды независимо от других.<BR>Установка Магических мехов в слоты улучшений нагнетает кислород и элементальный огонь, ускоряя плавку до немыслимых 0.65 секунды и увеличивая шанс получения самородков до 70%.<BR>Мозг в банке бережно накапливает до 30,000 очков опыта (эквивалентно десяткам уровней), который можно в любой момент извлечь кнопками в интерфейсе.<BR>Внимание: плавка неизбежно порождает 0.25 единиц порчи за предмет. Без установленных фильтров печь быстро заразит окружающую местность!
+
+tc.research_name.SILVERWOOD_FILTER=Фильтры из серебряного дерева
+tc.research_text.SILVERWOOD_FILTER=Очищающая мембрана и рециркуляция скверны
+tc.research_page.SILVERWOOD_FILTER.1=Древесина Серебряного дерева издревле славится своей способностью очищать ауру от искажения. Переплетая тончайшие волокна серебряного дерева с шёлком и закрепляя структуру каплями ртути на Магическом верстаке, вы создали пористую мембрану, способную удерживать миазмы порчи.<BR>Один фильтр способен поглотить до 64 единиц порчи (что соответствует переплавке 256 предметов в Компактной Адской Печи), защищая лабораторию от биомного заражения.
+tc.research_page.SILVERWOOD_FILTER.2=По мере насыщения серебряная мембрана темнеет и преобразуется в Отработанный заражённый фильтр.<BR>Хотя такой фильтр больше не способен сдерживать порчу, он становится ценнейшим источником редких аспектов: внутри него сконденсировано 20 единиц Vitium (Заражение), 8 Entropy и эссенция Tenebrae.<BR>Поместив отработанный фильтр в Алхимическую печь или тигель, вы сможете легко извлечь накопленную эссенцию для создания мощных алхимических реагентов.
+
+tc.research_name.THAUMONOMICON_ATLAS=Атлас Таумономикона
+tc.research_text.THAUMONOMICON_ATLAS=Астральная картография узлов ауры
+tc.research_page.THAUMONOMICON_ATLAS.1=Исследование узлов ауры всегда требовало неустанного блуждания по миру с таумометром в руках. Соединив Очки Откровения, Таумометр и Амулет Вис на матрице наполнения, вы наделили страницы Таумономикона способностью резонировать с узлами на расстоянии.<BR>Атлас фиксирует координаты, типы, яркость и текущий запас аспектов каждого обнаруженного узла, проецируя их на интерактивную карту с поддержкой путевых точек JourneyMap.
+tc.research_page.THAUMONOMICON_ATLAS.2=При открытии Атлас позволяет мгновенно фильтровать узлы по содержащимся в них аспектам (Aer, Ignis, Terra, Aqua, Ordo, Perditio и сложным аспектам), устанавливать метки навигации и отслеживать истощение узлов в режиме реального времени.
+
+tc.research_name.SANITY_CHARM=Талисман ясности
+tc.research_text.SANITY_CHARM=Успокоение мятущегося рассудка
+tc.research_page.SANITY_CHARM.1=Соединив очищающее мыло, чародейские кристаллы порядка и лечебные эссенции, вы изготовили амулет, источающий волны гармонии.<BR>Ношение талисмана защищает разум от внезапных ментальных ударов искажения и значительно ускоряет естественное рассеивание поверхностного искажения.
+
+tc.research_name.WARPCLEANSER=Очищающая слеза
+tc.research_text.WARPCLEANSER=Очищение души через катарсис
+tc.research_page.WARPCLEANSER.1=Наполнив Звезду Нижнего мира металлом пустоты, семенами пустоты, Salis Mundus и слезами гаста на матрице наполнения, вы открыли способ полностью и насильственно изгнать всё накопившееся искажение из своего разума.<BR>Процесс сопряжен с огромным риском: резкое очищение большого объёма искажения вызывает хаотический ментальный каскад потусторонних видений и возмущений реальности.
+
+tc.research_name.WARPAMULET=Талисман очищения
+tc.research_text.WARPAMULET=Непрерывное поглощение скверны
+tc.research_page.WARPAMULET.1=Связав очищающие слёзы, металл пустоты и очищающее мыло в заколдованный амулет, вы создали артефакт, непрерывно вытягивающий скверну из вашего разума и души.<BR>Экипируется в слоты амулета, тела, подвески или универсальные слоты (Baubles-Expanded).
+
+tc.research_name.WARPPAPER=Чародейская лакмусовая бумага
+tc.research_text.WARPPAPER=Диагностика состояния рассудка
+tc.research_page.WARPPAPER.1=Соединив бумагу с Salis Mundus, семенами пустоты и эссенцией воды на магическом верстаке, вы создали чувствительный индикаторный свиток.<BR>Использование бумаги мгновенно определяет уровень искажения вашего сознания, с детальным разделением на постоянное, обычное и поверхностное.
+
+tc.research_name.WARPSOMETHING=Нестабильный катализатор
+tc.research_text.WARPSOMETHING=Концентрированная первородная энтропия
+tc.research_page.WARPSOMETHING.1=Смешав плоть зомби, редстоун и эссенцию энтропии в алхимическом тигле, вы получили пульсирующий комок сырой хаотической материи.<BR>Его применение вызывает непредсказуемые трансмутации и всплески искажения.
+tc.research_name.REF_INFUSION=Матрица наполнения
+tc.research_text.REF_INFUSION=Базовые принципы наполнения
+tc.research_page.REF_INFUSION.1=Оригинальная матрица наполнения (вкладка «Изобретения») служит фундаментом для создания компактных структур наполнения.
+
+tc.research_name.REF_INFERNALFURNACE=Адская печь
+tc.research_text.REF_INFERNALFURNACE=Базовые принципы инфернальной плавки
+tc.research_page.REF_INFERNALFURNACE.1=Оригинальная Адская Печь (вкладка «Изобретения») служит основой для сжатых инфернальных конструкций.
+
+tc.research_name.REF_JARBRAIN=Мозг в банке
+tc.research_text.REF_JARBRAIN=Концентрация опыта
+tc.research_page.REF_JARBRAIN.1=Мозг в банке (вкладка «Изобретения») используется для концентрации и хранения ментального опыта.
+tc.research_name.TM.INFUSION=Матрица наполнения
+tc.research_text.TM.INFUSION=Базовые принципы наполнения
+tc.research_name.TM.INFERNALFURNACE=Адская печь
+tc.research_text.TM.INFERNALFURNACE=Базовые принципы инфернальной плавки
+tc.research_name.TM.JARBRAIN=Мозг в банке
+tc.research_text.TM.JARBRAIN=Концентрация опыта

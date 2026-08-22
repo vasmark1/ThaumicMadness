@@ -45,27 +45,19 @@
 
 ### 💍 Интеграция с Baubles-Expanded (GTNH Team) и слоты аксессуаров
 * **Архитектура расширенных слотов**:
-  * Полная поддержка мода [Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded) от команды GT New Horizons с поддержкой до 20 слотов экипировки:
+  * Полная поддержка мода [Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded) *(Предпочитаемо)* от команды GT New Horizons с поддержкой до 20 слотов экипировки:
     * `amulet`, `ring`, `belt`, `head`, `body`, `charm`, `cape`, `shield`, `quiver`, `gauntlet`, `earring`, `wings`, `universal`.
 * **Двунаправленный адаптер совместимости (Dual-Compatibility)**:
   * Безопасное определение окружения: при наличии `Baubles-Expanded` используется интерфейс `baubles.api.expanded.IBaubleExpanded`, а при стандартном `Baubles 1.0.1.10` автоматически включается поддержка `baubles.api.IBauble` без риска ошибок `NoClassDefFoundError`.
 * **Уникальные артефакты**:
-  * **Кровавое кольцо (`ItemBloodRing`)**: Экипируется в слоты `ring`, `charm` или `amulet`. Дает пассивную скидку на вис и внутренний буфер LP.
-  * **Кровавый амулет (`ItemBloodAmulet`)**: Экипируется в слоты `amulet`, `body` или `charm`. Проводит энергию Life Essence для автоматической зарядки жезлов и активирует защитный барьер при критическом уроне.
-  * **Амулет здравомыслия (`ItemSanityCharm`)**: Экипируется в слоты `charm`, `amulet` или `universal`. Подавляет искажение и смягчает эффекты безумия.
+  * **Талисман очищения (`ItemPurificationAmulet`)**: Экипируется в слоты `amulet`, `body`, `charm` или `universal`. Пассивно вытягивает и рассеивает накопленное искажение.
+  * **Амулет здравомыслия (`ItemSanityCharm`)**: Экипируется в слоты `charm`, `amulet`, `head` или `universal`. Подавляет искажение и смягчает эффекты безумия.
 
 ---
 
-### 🩸 Интеграция с Blood Magic и Blood Arsenal
-* **Специальная ветка исследований**:
-  * Полноценный раздел «Кровавая тауматургия» в Таумономиконе.
-* **Кровавые стержни и наконечники для жезлов**:
-  * Изготавливаются на Алтаре крови и в Матрице наполнения.
-  * Обеспечивают постоянную скидку на вис и автоматическую регенерацию заряда жезлов за счёт жизненной эссенции (LP).
-* **Набалдашник: Кровавое жертвоприношение (Blood Sacrifice)**:
-  * Выпускает скоростные самонаводящиеся рунические снаряды либо конвертирует здоровье/LP в концентрированный вис.
-* **Зарядка жезлов на Алтаре крови**:
-  * Прямая передача эссенции из сети души для безопасного наполнения жезлов, посохов и скипетров.
+### 🩸 Официальный аддон-компаньон: [Кровавый тауматург](https://github.com/vasmark1/BloodThaumaturge)
+* Вся интеграция с **Blood Magic** и **Blood Arsenal** (кровавые жезлы/посохи, подзарядка на алтаре из LP, набалдашник жертвоприношения, кровавые кольца и амулеты) вынесена в отдельный оптимизированный аддон **[«Кровавый тауматург» (Blood Thaumaturge)](https://github.com/vasmark1/BloodThaumaturge)**.
+* Thaumic Madness сохраняет обратную совместимость для старых сохранений мира.
 
 ---
 
@@ -75,6 +67,20 @@
   * Наглядно разделяет постоянное, призрачное и временное искажение.
 * **Интеграция с NotEnoughItems (NEI)**:
   * Просмотр искажения и сервисные инструменты в утилитарном режиме NEI.
+
+---
+
+### 🌌 Поглощение Warp Theory и эндгейм-модернизация
+* **Нативная интеграция подсистемы**:
+  * Функционал мода **Warp Theory** полностью поглощён, переписан и нативно встроен в *Thaumic Madness*.
+  * **Более 20 классических и расширенных событий искажения**: Точная симуляция *WarpDecay, WarpSwamp, WarpBlood, WarpWind, WarpChests, WarpLightning, WarpBats, WarpBlink, WarpFriend, WarpLivestockRain, WarpAcceleration, WarpFall, WarpRain, WarpWither, WarpEars, WarpTongue, WarpFakeSound* и др. без утечек памяти и лагов.
+  * **Современный сетевой код**: Высокоэффективная передача пакетов Forge `SimpleNetworkWrapper` для мгновенных эффектов частиц крови, телепортации и импульсов ветра на клиенте.
+* **Эндгейм-баланс и новые рецепты**:
+  * **Очищающая слеза (`ItemPureTear`)**: Рецепт наполнения на матрице со Звездой Ада, слитками металла пустоты, семенами пустоты, салис мундусом и слезами гаста. Мгновенно вычищает всё накопленное искажение, вызывая каскад древних ментальных аномалий.
+  * **Талисман очищения (`ItemPurificationAmulet`)**: Эндгейм-наполнение, связывающее очищающие слезы, металл пустоты и мыло. Пассивно рассеивает искажение; надевается в слоты **Амулета**, **Тела**, **Шарма** или **Универсальный** (все 20 слотов **Baubles-Expanded**).
+  * **Кусок Нечто (`ItemUnstableCatalyst`) и Чародейская лакмусовая бумага (`ItemCursedParchment`)**: Рецепты трансмутации в тигле и мистического крафта с детальной информацией об уровне искажения.
+* **Исследования в Таумономиконе**:
+  * Интегрированы в ветку **Древних (Eldritch)** с открытием после `ELDRITCHMAJOR` (Открытие Глаза) и высоким порогом искажения.
 
 ---
 
@@ -111,12 +117,13 @@
 | **[Thaumcraft 4](https://www.curseforge.com/minecraft/mc-mods/thaumcraft)** | **Обязательный** | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumcraft) / [GTNH Fork](https://github.com/GTNewHorizons/Thaumcraft4) | `curse.maven:thaumcraft-223628:2227552` | Базовое API тауматургии, исследования, узлы ауры и аспекты (4.2.3.5). |
 | **[Baubles-Expanded](https://github.com/GTNewHorizons/Baubles-Expanded)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/Baubles-Expanded) | `com.github.GTNewHorizons:Baubles-Expanded:2.2.22-GTNH:dev` | Современная расширенная 20-слотовая система аксессуаров. |
 | **[JourneyMap](https://modrinth.com/mod/journeymap)** | *Опциональный* | [Modrinth](https://modrinth.com/mod/journeymap) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/journeymap) | `maven.modrinth:journeymap:5.2.20` | Интерактивные объекты на карте, цветные сферы узлов и всплывающие окна. |
+| **[Warp Theory](https://github.com/shukaro/WarpTheory)** | **Нативно поглощен** | Встроен (`com.vasmark.thaumicmadness.warptheory`) | *Нативная интеграция* | Полностью поглощен, переписан, добавлены эндгейм-крафты и поддержка Baubles-Expanded. |
 
 ### 🩸 Магические аддоны и расширения
 | Мод | Тип | Репозиторий / Источник | Maven Координата | Описание |
 | :--- | :--- | :--- | :--- | :--- |
-| **[Blood Magic](https://github.com/GTNewHorizons/BloodMagic)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/BloodMagic) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-magic) | `com.github.GTNewHorizons:BloodMagic:1.9.10:dev` | Кровавые жезлы, зарядка от LP, набалдашник жертвоприношения. |
-| **[Blood Arsenal](https://github.com/GTNewHorizons/BloodArsenal)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/BloodArsenal) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/blood-arsenal) | `com.github.GTNewHorizons:BloodArsenal:1.5.12:dev` | Рецепты со связанным деревом и кровавым наполнителем. |
+| **[Кровавый тауматург](https://github.com/vasmark1/BloodThaumaturge)** | *Аддон-компаньон* | [GitHub](https://github.com/vasmark1/BloodThaumaturge) | `com.vasmark.bloodthaumaturge:bloodthaumaturge:0.1.1-beta` | Полная интеграция с Blood Magic: кровавые жезлы, зарядка от LP, набалдашник, кольца. |
+| **[TC Node Tracker](https://github.com/dyonovan/TCNodeTracker)** | **Нативно поглощен** | Встроен (`com.vasmark.thaumicmadness.nodetracker`) | *Нативная интеграция* | Полностью поглощен, добавлен HUD-компас, GPS и рендеринг JourneyMap. |
 | **[Thaumic Tinkerer](https://github.com/GTNewHorizons/ThaumicTinkerer)** | *Опциональный* | [GitHub](https://github.com/GTNewHorizons/ThaumicTinkerer) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-tinkerer) | `com.github.GTNewHorizons:ThaumicTinkerer:2.11.12:dev` | Интеграция исследований Ками и управление аспектами. |
 | **[Gadomancy](https://github.com/makeo/Gadomancy)** | *Опциональный* | [GitHub](https://github.com/makeo/Gadomancy) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/gadomancy) | `curse.maven:gadomancy-237271:2338768` | Хуки рендеринга узлов и расширенные механики ауры. |
 | **[Automagy](https://www.curseforge.com/minecraft/mc-mods/automagy)** | *Опциональный* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/automagy) | `curse.maven:automagy-222153:2285272` | Просмотр аспектов на устройствах красного камня и автокрафт. |
@@ -126,7 +133,6 @@
 | **[Thaumic Exploration](https://github.com/Kihira/ThaumicExploration)** | *Опциональный* | [GitHub](https://github.com/Kihira/ThaumicExploration) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-exploration) | `curse.maven:thaumic-exploration-230969:2263414` | Расширенные исследования аддонов и полная русская локализация. |
 | **[Thaumic Horizons](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons)** | *Опциональный* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/thaumic-horizons) | `curse.maven:thaumic-horizons-227914:8413552` | Наполнение существ, карманные вихри и манипуляции душами. |
 | **[Tainted Magic](https://www.curseforge.com/minecraft/mc-mods/tainted-magic)** | *Опциональный* | [CurseForge](https://www.curseforge.com/minecraft/mc-mods/tainted-magic) | `curse.maven:tainted-magic-231061:3634109` | Баланс Багряной и Теневой магии и локализация. |
-| **[Warp Theory](https://github.com/shukaro/WarpTheory)** | *Опциональный* | [GitHub](https://github.com/shukaro/WarpTheory) / [CurseForge](https://www.curseforge.com/minecraft/mc-mods/warp-theory) | `curse.maven:warp-theory-224935:2217324` | Расширенные эффекты искажения, очищение и визуальные эффекты. |
 
 ### 🚀 Оптимизация, графический стек и утилиты
 | Мод | Тип | Репозиторий / Источник | Maven Координата | Описание |

@@ -1,4 +1,4 @@
-# Creative Tab
+﻿# Creative Tab
 itemGroup.thaumicmadness=Thaumic Madness
 
 # Blocks
@@ -112,4 +112,179 @@ nodetracker.popup.open_atlas=Open in Atlas
 nodetracker.popup.copy_coords=Copy Coords
 nodetracker.popup.delete=Delete Node
 nodetracker.popup.back_to_map=Back to Map
+# Warp Theory Integration
+item.thaumicmadness.pure_tear.name=Pure Tear
+item.thaumicmadness.purification_amulet.name=Purification Talisman
+item.thaumicmadness.unstable_catalyst.name=Hunk of Something
+item.thaumicmadness.cursed_parchment.name=Arcane Litmus Paper
+tile.thaumicmadness.phantom_decay.name=Phantom Decay
 
+tooltip.warptheory.cleanser=Crunchy. Purges all accumulated Warp in a violent cascading release.
+tooltip.warptheory.amulet=Purges and siphons Warp continuously when worn.
+tooltip.warptheory.something=Probably edible... Causes severe eldritch hallucinations.
+tooltip.warptheory.paper=Reacts to mental Warp buildup.
+
+chat.warptheory.purge=You've got a bad feeling about this...
+chat.warptheory.purgefail=Nothing in particular happens
+chat.warptheory.addwarp=It feels as if something strange has slithered into you...
+chat.warptheory.minorwarp=There's no reaction
+chat.warptheory.averagewarp=The paper turns a sickly color
+chat.warptheory.majorwarp=The paper crumbles to dust
+chat.warptheory.deadlywarp=The paper catches fire
+chat.warptheory.permanentwarp=Ingrained Warp
+chat.warptheory.normalwarp=Normal Warp
+chat.warptheory.tempwarp=Superficial Warp
+
+chat.warptheory.bats=The sounds of wingbeats fill the air...
+chat.warptheory.blink=You suddenly feel disoriented...
+chat.warptheory.poison=Your veins catch fire...
+chat.warptheory.nausea=You feel sick to your stomach...
+chat.warptheory.jump=You feel a lot lighter...
+chat.warptheory.blind=Everything goes dark...
+chat.warptheory.decay=You feel much older...
+chat.warptheory.ears=Your ears start to ring...
+chat.warptheory.swamp=You feel revitalized...
+chat.warptheory.tongue=Your tongue goes numb...
+chat.warptheory.friend=You feel a bit lonely...
+chat.warptheory.livestock=You feel a bit hungry...
+chat.warptheory.wind=A strange wind picks up...
+chat.warptheory.chests=A chill runs down your spine...
+chat.warptheory.blood=You smell something visceral...
+chat.warptheory.acceleration=Something seems faster...
+chat.warptheory.lightning=Your hair stands on end...
+chat.warptheory.fall=You get a sudden feeling of vertigo...
+chat.warptheory.rain=You hear a rumble in the distance...
+chat.warptheory.wither=You feel overwhelmed with dread...
+
+tc.research_name.SANITY_CHARM=Talisman of Clarity
+tc.research_text.SANITY_CHARM=Shield against eldritch madness
+tc.research_page.SANITY_CHARM.1=By binding the purifying properties of soap, amber, and focused mental vis into an amulet, you have forged the Talisman of Clarity.<BR>When equipped in an Amulet, Charm, or Universal slot, it accelerates the dissipation of warp afflictions (nausea, blindness, unnatural hunger) and stabilizes your focus against spontaneous madness.
+
+tc.research_name.WARPSOMETHING=Hunk of Something
+tc.research_text.WARPSOMETHING=Writhing catalyst of chaos
+tc.research_page.WARPSOMETHING.1=In your alchemical experiments, you discovered that organic flesh subjected to concentrated eldritch and entropy aspects in a crucible transmutes into an unstable, writhing catalyst.<BR>Consuming this anomalous mass induces a violent surge of warp and unpredictable mental hallucinations.
+
+tc.research_name.WARPCLEANSER=Pure Tear
+tc.research_text.WARPCLEANSER=Radical soul cleansing
+tc.research_page.WARPCLEANSER.1=By infusing a Nether Star with Void Metal, Void Seeds, Salis Mundus, and Ghast Tears upon the Infusion Matrix, you have discovered an endgame method to violently purge all accumulated Warp from your mind.<BR>The process is perilous: purging large amounts of Warp triggers a chaotic mental cascade of eldritch hallucinations and distortions.
+
+tc.research_name.WARPAMULET=Purification Talisman
+tc.research_text.WARPAMULET=Continuous warp siphoning
+tc.research_page.WARPAMULET.1=By binding Pure Tears, Void Metal, and Sanity Soap into an enchanted bauble, you have created a talisman that continuously siphons mental corruption away from your soul.<BR>Can be equipped in Amulet, Body, Charm, or Universal bauble slots (Baubles-Expanded).
+
+tc.research_name.WARPPAPER=Arcane Litmus Paper
+tc.research_text.WARPPAPER=Mental Diagnosis
+tc.research_page.WARPPAPER.1=By combining paper with Salis Mundus, Void Seeds, and water essence on an Arcane Worktable, you have created a sensitive diagnostic sheet.<BR>Using the paper instantly measures your mental corruption, providing a precise breakdown of permanent, normal, and temporary Warp.
+
+# Compact Infusion Matrix
+tile.thaumicmadness.compact_infusion_matrix.name=Compact Infusion Matrix
+container.compact_infusion_matrix=Compact Infusion Matrix
+gui.compact_infusion.start=Start
+gui.compact_infusion.cancel=Cancel
+gui.compact_infusion.auto_on=Auto: ON
+gui.compact_infusion.auto_off=Auto: OFF
+
+tc.research_name.COMPACT_INFUSION_MATRIX=Compact Infusion Matrix
+tc.research_text.COMPACT_INFUSION_MATRIX=Multiblock altar in a single block
+tc.research_page.COMPACT_INFUSION_MATRIX.1=The traditional Infusion Altar is notoriously massive, demanding dozens of square meters for pedestals, stability stabilizers, and essentia jars.<BR>Through profound dimensional compression and thaumaturgical resonance, you have condensed the entire altar mechanism into a single 1x1 block.<BR>The Compact Infusion Matrix features 1 central input slot, 1 output result slot, 16 component item slots, and 4 dedicated stabilizer upgrade slots.
+tc.research_page.COMPACT_INFUSION_MATRIX.2=The matrix automatically pulls Essentia from adjacent or nearby jars (up to 12 blocks) and tubes without spraying flux.<BR>Inserting candles, skulls, sanity soap, or primal charms into the stabilizer slots boosts the internal stability rating to 100%, neutralizing instability events entirely.<BR>Supports full automation via Hoppers, Pipes, and ME Interfaces (Top: Central Input, Bottom: Output, Sides: Components).
+
+# Compact Infernal Furnace
+tile.thaumicmadness.compact_infernal_furnace.name=Compact Infernal Furnace
+container.compact_infernal_furnace=Compact Infernal Furnace
+
+tc.research_name.COMPACT_INFERNAL_FURNACE=Compact Infernal Furnace
+tc.research_text.COMPACT_INFERNAL_FURNACE=Infernal Metallurgy Compressed
+tc.research_page.COMPACT_INFERNAL_FURNACE.1=The 3x3x3 Infernal Furnace is imposing, but occupies substantial space and ejects outputs loosely into the environment.<BR>By fusing triple the infernal materials with a Primordial Pearl and a Brain in a Jar, you have engineered a 1x1 compact powerhouse.<BR>It performs hyper-fast smelting, yields double ingots from Native Clusters, and maintains high bonus nugget chances.
+tc.research_page.COMPACT_INFERNAL_FURNACE.2=The integrated Brain in a Jar captures 100% of smelting experience into a 30,000 XP internal reservoir.<BR>You can withdraw your stored experience at any time directly through the furnace GUI or by tapping the block with a wand.<BR>Upgrade slots accept up to 2 Arcane Bellows for maximum smelting acceleration and bonus nugget drop rates.<BR>All generated flux is safely contained and neutralized within the core.
+
+
+
+# Compact Infernal Furnace
+tile.thaumicmadness.compact_infernal_furnace.name=Compact Infernal Furnace
+container.compact_infernal_furnace=Compact Infernal Furnace
+item.thaumicmadness.silverwood_filter.name=Silverwood Filter
+item.thaumicmadness.silverwood_filter.desc1=Purifying Essentia Filter
+item.thaumicmadness.silverwood_filter.desc2=Absorbs up to 64 units of flux in the Compact Infernal Furnace.
+item.thaumicmadness.tainted_filter.name=Spent Tainted Filter
+item.thaumicmadness.tainted_filter.desc1=Infused with Taint Essentia
+item.thaumicmadness.tainted_filter.desc2=Contains 20 Vitium. Can be distilled in alchemy.
+
+tc.research_name.COMPACT_INFERNAL_FURNACE=Compact Infernal Furnace
+tc.research_text.COMPACT_INFERNAL_FURNACE=Infernal Flames in a single block
+tc.research_page.COMPACT_INFERNAL_FURNACE.1=The traditional 3x3x3 Infernal Furnace consumes vast amounts of space and pollutes the environment with flux if unattended.<BR>Combining spatial compression, a Brain in a Jar, and a Primordial Pearl, you have compressed the entire mechanism into a 1x1 block.<BR>Features 4 parallel smelting slots, 30,000 XP reservoir, and a flux filtration system.
+tc.research_page.COMPACT_INFERNAL_FURNACE.2=Silverwood Filters absorb flux generated during smelting (up to 64 units per filter), transforming into spent tainted filters rich in Vitium essentia.<BR>WARNING: If filters run out, the furnace will vent flux into the air and corrupt the surrounding biome into Tainted Land!
+tc.research_name.SILVERWOOD_FILTER=Silverwood Filters
+tc.research_text.SILVERWOOD_FILTER=Flux Protection & Taint Recycling
+tc.research_page.SILVERWOOD_FILTER.1=The Compact Infernal Furnace emits flux during operation (0.25 units per smelted item).<BR>To protect the environment, specialized Silverwood Filters were engineered.<BR>Each filter can absorb 64 units of flux (equivalent to smelting 256 items), completely neutralizing environmental taint emissions.
+tc.research_page.SILVERWOOD_FILTER.2=Once fully saturated, the filter transmutes into a Spent Tainted Filter.<BR>Tainted filters store massive amounts of Vitium essentia (20 units) and Entropy (16 units), making them highly valuable for essentia distillation in the Alchemical Furnace or Crucible.
+
+
+# ==============================================================================
+# Thaumic Madness - Authentic Thaumcraft Researches (English)
+# ==============================================================================
+tc.research_name.INFUSED_DIRT=Infused Dirt
+tc.research_text.INFUSED_DIRT=Elemental Fertility
+tc.research_page.INFUSED_DIRT.1=By infusing common soil with Terra essentia and binding clay on the Infusion Matrix, you have created a fertile substrate brimming with telluric vitality.<BR>This magical loam greatly accelerates crop growth and prevents farmland from drying out.
+tc.research_page.INFUSED_DIRT.2=Infused dirt acts as the ideal foundation for silverwood groves, mana beans, and rare botanical specimens.
+
+tc.research_name.CONSTANT_VIGILANCE=Constant Vigilance
+tc.research_text.CONSTANT_VIGILANCE=Shielding the Mind from the Void
+tc.research_page.CONSTANT_VIGILANCE.1=Gazing into the abyss of forbidden arcana, a thaumaturge constantly risks their own sanity. Understanding the ebb and flow of Warp is the crucial first step towards mental preservation.<BR>You have learned to detect subtle ripples in the cognitive ether, paving the way for protective amulets, charms of lucidity, and complete eldritch purgation.
+
+tc.research_name.COMPACT_INFUSION_MATRIX=Compact Infusion Matrix
+tc.research_text.COMPACT_INFUSION_MATRIX=Singularity of the Arcane Arts
+tc.research_page.COMPACT_INFUSION_MATRIX.1=The traditional Infusion Altar has long represented the zenith of thaumaturgical engineering, yet its sheer bulk and spatial vulnerability pose severe liabilities. Dozens of stone pedestals, strict symmetrical stabilizers, and endless jar arrays leave the laboratory fragile against sudden arcane shockwaves.<BR>Reflecting upon the nature of spatial folding and occult singularities, you achieved a monumental breakthrough. Binding ancient mechanisms, a Primordial Pearl, and dense alchemical matrices, you collapsed the entire infusion field into a single cubic meter.
+tc.research_page.COMPACT_INFUSION_MATRIX.2=Within this monolithic block lies an artificial pocket dimension. It houses a central pedestal, a finished artifact receptacle, 16 internal component pedestals, and 4 dedicated stabilizer matrices.<BR>The matrix autonomously siphons essentia from jars within a 12-block radius, completely containing all flux spillover.<BR>Stabilizers (candles, skulls, sanity charms) grant up to 100% ritual stability, eliminating ritual failure.<BR>Fully automatable via hoppers, conduits, and AE2 interfaces.
+
+tc.research_name.COMPACT_INFERNAL_FURNACE=Compact Infernal Furnace
+tc.research_text.COMPACT_INFERNAL_FURNACE=Bound Nether Flame
+tc.research_page.COMPACT_INFERNAL_FURNACE.1=The colossal 3x3x3 Infernal Furnace harnesses primordial Nether flame for rapid ore smelting. However, temperature regulation was crude and flux fumes routinely polluted the local aura.<BR>Combining a warded obsidian matrix with a Brain in a Jar and a Primordial Pearl, you engineered a 1x1 infernal construct.<BR>The pearl compresses the magma crucible into a localized point, while the preserved cerebral matrix regulates thermal throughput and captures raw cognitive experience.
+tc.research_page.COMPACT_INFERNAL_FURNACE.2=The furnace contains 4 independent parallel crucibles. Each input slot smelts independently.<BR>Slotting Arcane Bellows accelerates cooking up to a blistering 0.65 seconds and elevates bonus nugget yields to 70%.<BR>The Brain in a Jar stores up to 30,000 XP, extractable at will via the GUI buttons.<BR>Warning: each smelted item generates 0.25 flux units. Operating without Silverwood filters will rapidly taint the surrounding biome!
+
+tc.research_name.SILVERWOOD_FILTER=Silverwood Filters
+tc.research_text.SILVERWOOD_FILTER=Purifying Membranes & Taint Reclamation
+tc.research_page.SILVERWOOD_FILTER.1=Silverwood has long been revered for its aura-cleansing resonance. By weaving fine silverwood fibers with silk and setting them with quicksilver droplets at an Arcane Worktable, you created a porous thaumaturgic membrane capable of capturing volatile flux miasma.<BR>A single filter absorbs up to 64 units of flux (256 smelted items in the Compact Infernal Furnace), safeguarding your sanctum from corruption.
+tc.research_page.SILVERWOOD_FILTER.2=Once saturated, the silverwood lattice darkens into a Spent Tainted Filter.<BR>While unable to absorb further flux, it becomes an extraordinarily rich source of rare aspects: containing 20 units of Vitium (Taint), 8 units of Entropy, and Tenebrae.<BR>Distilling spent filters in an Alchemical Furnace or Crucible yields concentrated essentia for advanced thaumaturgical arts.
+
+tc.research_name.THAUMONOMICON_ATLAS=Thaumonomicon Atlas
+tc.research_text.THAUMONOMICON_ATLAS=Astral Cartography of Aura Nodes
+tc.research_page.THAUMONOMICON_ATLAS.1=Mapping aura nodes previously demanded endless wandering across the wilderness with a Thaumometer in hand. Fusing Goggles of Revealing, a Thaumometer, and a Vis Amulet upon the Infusion Matrix, you attuned the Thaumonomicon to resonate with ambient nodes across vast distances.<BR>The Atlas catalogs coordinates, node types, brightness, and real-time aspect capacities, projecting them onto an interactive astral chart with full JourneyMap waypoint integration.
+tc.research_page.THAUMONOMICON_ATLAS.2=Opening the Atlas allows instantaneous aspect filtering (Aer, Ignis, Terra, Aqua, Ordo, Perditio, and compound aspects), waypoint navigation, and live monitoring of node depletion.
+
+tc.research_name.SANITY_CHARM=Talisman of Clarity
+tc.research_text.SANITY_CHARM=Soothing the Turbulent Mind
+tc.research_page.SANITY_CHARM.1=Combining purifying soap, Order crystals, and restorative essences, you forged an amulet radiating waves of serene harmonic stability.<BR>Wearing the charm shields the psyche from sudden Warp tremors and dramatically accelerates the natural dissipation of temporary Warp.
+
+tc.research_name.WARPCLEANSER=Pure Tear
+tc.research_text.WARPCLEANSER=Spiritual Catharsis
+tc.research_page.WARPCLEANSER.1=Infusing a Nether Star with Void Metal, Void Seeds, Salis Mundus, and Ghast Tears upon the Infusion Matrix, you uncovered a method to violently purge all accumulated Warp from your mind.<BR>This process carries extreme danger: purging vast amounts of Warp unleashes a chaotic cognitive storm of eldritch hallucinations and reality tremors.
+
+tc.research_name.WARPAMULET=Purification Talisman
+tc.research_text.WARPAMULET=Continuous Taint Absorption
+tc.research_page.WARPAMULET.1=Binding Pure Tears, Void Metal, and Sanitizing Soap into an enchanted bauble, you created an artifact that continually drains corruption from your soul.<BR>Equippable in amulet, body, charm, or expanded Baubles slots.
+
+tc.research_name.WARPPAPER=Arcane Litmus Paper
+tc.research_text.WARPPAPER=Psychic Diagnostic Parchment
+tc.research_page.WARPPAPER.1=Combining parchment with Salis Mundus, Void Seeds, and Aqua essentia at the Arcane Worktable, you created an indicator scroll.<BR>Using the parchment instantly reveals your current Warp levels, categorized into Permanent, Normal, and Temporary distortion.
+
+tc.research_name.WARPSOMETHING=Unstable Catalyst
+tc.research_text.WARPSOMETHING=Concentrated Primal Entropy
+tc.research_page.WARPSOMETHING.1=Mixing rotten flesh, redstone, and Entropy essentia in a Crucible produces a pulsating mass of raw chaotic matter.<BR>Consumption causes unpredictable transmutations and sudden Warp spikes.
+tc.research_name.REF_INFUSION=Infusion Matrix
+tc.research_text.REF_INFUSION=Foundational Infusion Mechanics
+tc.research_page.REF_INFUSION.1=The original Infusion Matrix (from the Artifice tab) provides the essential prerequisite for compact infusion singularities.
+
+tc.research_name.REF_INFERNALFURNACE=Infernal Furnace
+tc.research_text.REF_INFERNALFURNACE=Foundational Nether Metallurgy
+tc.research_page.REF_INFERNALFURNACE.1=The colossal Infernal Furnace (from the Artifice tab) serves as the basis for hyper-compressed infernal crucibles.
+
+tc.research_name.REF_JARBRAIN=Brain in a Jar
+tc.research_text.REF_JARBRAIN=Experience Retention
+tc.research_page.REF_JARBRAIN.1=The Brain in a Jar (from the Artifice tab) is employed for the accumulation and preservation of mental experience.
+tc.research_name.TM.INFUSION=Infusion
+tc.research_text.TM.INFUSION=Spontaneous Creation
+tc.research_name.TM.INFERNALFURNACE=Infernal Furnace
+tc.research_text.TM.INFERNALFURNACE=Smelting with Fire
+tc.research_name.TM.JARBRAIN=Brain in a Jar
+tc.research_text.TM.JARBRAIN=Preserving Knowledge
